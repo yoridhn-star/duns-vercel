@@ -2,7 +2,11 @@ import "./globals.css";
 
 export const metadata = {
   title: "DUNS Lookup",
-  description: "Recherche de numéros D-U-N-S via DNB UPIK",
+  description: "Recherchez le numéro D-U-N-S d'une entreprise",
+  openGraph: {
+    title: "DUNS Lookup",
+    description: "Recherchez le numéro D-U-N-S d'une entreprise",
+  },
 };
 
 export default function RootLayout({ children }) {
