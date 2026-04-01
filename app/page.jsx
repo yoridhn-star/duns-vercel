@@ -43,7 +43,7 @@ export default function Home() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!companyName.trim() || !email.trim()) return;
+    if (!companyName.trim()) return;
 
     setStatus("loading");
     setResults([]);
@@ -146,17 +146,17 @@ export default function Home() {
               </select>
             </div>
 
-            {/* Email */}
+            {/* Email (optional) */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">
-                Email pour recevoir les résultats <span className="text-red-500">*</span>
+                Email{" "}
+                <span className="text-gray-400 font-normal">(optionnel — pour recevoir les résultats)</span>
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="vous@exemple.com"
-                required
                 disabled={status === "loading"}
                 className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none
                            focus:ring-2 focus:ring-blue-500 focus:border-transparent
@@ -168,7 +168,7 @@ export default function Home() {
             {/* Submit */}
             <button
               type="submit"
-              disabled={status === "loading" || !companyName.trim() || !email.trim()}
+              disabled={status === "loading" || !companyName.trim()}
               className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-300
                          text-white font-semibold rounded-lg shadow-md
                          transition-all duration-200 disabled:cursor-not-allowed
@@ -236,10 +236,12 @@ export default function Home() {
                   <ResultCard key={i} result={r} />
                 ))}
               </div>
-              <p className="text-xs text-gray-400 mt-4">
-                Les résultats ont également été envoyés à&nbsp;
-                <span className="font-medium text-gray-500">{email}</span>.
-              </p>
+              {email.trim() && (
+                <p className="text-xs text-gray-400 mt-4">
+                  Les résultats ont également été envoyés à&nbsp;
+                  <span className="font-medium text-gray-500">{email}</span>.
+                </p>
+              )}
             </div>
           )}
         </div>
