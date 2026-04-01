@@ -58,7 +58,7 @@ export default function Home() {
 
   // Request state
   const [status, setStatus]       = useState("idle"); // idle | loading | success | error
-  const [results, setResults]     = useState([]);
+  const [result, setResult]       = useState(null);
   const [errorMsg, setErrorMsg]   = useState("");
   const [elapsedSec, setElapsedSec] = useState(0);
 
@@ -70,7 +70,7 @@ export default function Home() {
     if (!companyName.trim()) return;
 
     setStatus("loading");
-    setResults([]);
+    setResult(null);
     setErrorMsg("");
     setElapsedSec(0);
 
@@ -87,7 +87,7 @@ export default function Home() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`);
-      setResults(data.results || []);
+      setResult(data.data || null);
       setStatus("success");
     } catch (err) {
       setErrorMsg(err.message || "Une erreur est survenue.");
@@ -250,8 +250,8 @@ export default function Home() {
                 </div>
               )}
 
-              {/* No results */}
-              {status === "success" && results.length === 0 && (
+              {/* No result */}
+              {status === "success" && !result && (
                 <div className="mt-5 p-4 bg-gray-50 border border-gray-200 rounded-xl text-center">
                   <p className="text-gray-500 text-sm">
                     Aucun résultat trouvé pour <strong>{companyName}</strong>.
@@ -259,20 +259,13 @@ export default function Home() {
                 </div>
               )}
 
-              {/* Results */}
-              {status === "success" && results.length > 0 && (
+              {/* Result */}
+              {status === "success" && result && (
                 <div className="mt-6">
-                  <p className="text-sm font-semibold text-gray-500 mb-3">
-                    {results.length} résultat{results.length > 1 ? "s" : ""} trouvé{results.length > 1 ? "s" : ""}
-                  </p>
-                  <div className="space-y-3">
-                    {results.map((r, i) => (
-                      <ResultCard key={i} result={r} />
-                    ))}
-                  </div>
+                  <ResultCard result={result} />
                   {email.trim() && (
-                    <p className="text-xs text-gray-400 mt-4">
-                      Les résultats ont également été envoyés à{" "}
+                    <p className="text-xs text-gray-400 mt-3">
+                      Le résultat a également été envoyé à{" "}
                       <span className="font-medium text-gray-500">{email}</span>.
                     </p>
                   )}
@@ -459,10 +452,14 @@ export default function Home() {
 // ── Sub-components ────────────────────────────────────────────────────────────
 
 function ResultCard({ result }) {
+  // API returns { companyName, dunsNumber, address }
+  const name    = result.companyName || result.name    || "";
+  const duns    = result.dunsNumber  || result.duns    || "";
+  const address = result.address     || "";
   return (
     <div className="p-5 border border-indigo-100 rounded-xl bg-indigo-50/40">
-      {result.name ? (
-        <p className="font-bold text-gray-900 text-base mb-3">{result.name}</p>
+      {name ? (
+        <p className="font-bold text-gray-900 text-base mb-3">{name}</p>
       ) : (
         <p className="font-bold text-gray-400 text-base mb-3 italic">Nom non disponible</p>
       )}
@@ -470,9 +467,9 @@ function ResultCard({ result }) {
         <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-20 flex-shrink-0">
           D-U-N-S
         </span>
-        {result.duns ? (
+        {duns ? (
           <span className="font-mono font-semibold text-indigo-700 bg-white border border-indigo-100 px-2.5 py-0.5 rounded-lg text-sm shadow-sm">
-            {formatDuns(result.duns)}
+            {formatDuns(duns)}
           </span>
         ) : (
           <span className="text-gray-400 text-sm italic">—</span>
@@ -482,8 +479,8 @@ function ResultCard({ result }) {
         <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-20 flex-shrink-0 mt-0.5">
           Adresse
         </span>
-        {result.address ? (
-          <span className="text-sm text-gray-700">{result.address}</span>
+        {address ? (
+          <span className="text-sm text-gray-700">{address}</span>
         ) : (
           <span className="text-gray-400 text-sm italic">—</span>
         )}
