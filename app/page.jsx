@@ -27,8 +27,6 @@ const COUNTRIES = [
   { label: "United States",       value: "Vereinigte Staaten von Amerika" },
 ];
 
-// Render free tier cold-start warning threshold (ms)
-const COLD_START_THRESHOLD_MS = 15_000;
 
 export default function Home() {
   const [companyName, setCompanyName] = useState("");
@@ -38,7 +36,6 @@ export default function Home() {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [results, setResults] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
-  const [showColdStartWarning, setShowColdStartWarning] = useState(false);
   const [elapsedSec, setElapsedSec] = useState(0);
 
   async function handleSubmit(e) {
@@ -48,13 +45,9 @@ export default function Home() {
     setStatus("loading");
     setResults([]);
     setErrorMsg("");
-    setShowColdStartWarning(false);
     setElapsedSec(0);
 
-    // Show cold-start warning after 15 s
     const startTime = Date.now();
-    const coldStartTimer = setTimeout(() => setShowColdStartWarning(true), COLD_START_THRESHOLD_MS);
-
     // Elapsed counter
     const ticker = setInterval(() => {
       setElapsedSec(Math.floor((Date.now() - startTime) / 1000));
@@ -79,9 +72,7 @@ export default function Home() {
       setErrorMsg(err.message || "Une erreur est survenue.");
       setStatus("error");
     } finally {
-      clearTimeout(coldStartTimer);
       clearInterval(ticker);
-      setShowColdStartWarning(false);
     }
   }
 
@@ -184,23 +175,6 @@ export default function Home() {
               )}
             </button>
           </form>
-
-          {/* Cold start warning */}
-          {showColdStartWarning && (
-            <div className="mt-5 p-4 bg-amber-50 border border-amber-200 rounded-lg flex gap-3">
-              <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-              </svg>
-              <div>
-                <p className="text-sm font-semibold text-amber-700">Démarrage du serveur…</p>
-                <p className="text-sm text-amber-600 mt-0.5">
-                  Le serveur est en cours de démarrage (cold&nbsp;start). La première requête peut
-                  prendre jusqu&rsquo;à 30&nbsp;secondes. Merci de patienter.
-                </p>
-              </div>
-            </div>
-          )}
 
           {/* Error */}
           {status === "error" && (
