@@ -53,6 +53,7 @@ const FAQ_ITEMS = [
 export default function Home() {
   // Form state
   const [companyName, setCompanyName] = useState("");
+  const [city, setCity]               = useState("");
   const [email, setEmail]             = useState("");
   const [country, setCountry]         = useState("Frankreich");
 
@@ -83,7 +84,7 @@ export default function Home() {
       const res = await fetch("/api/lookup-duns", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ companyName, country, email }),
+        body: JSON.stringify({ companyName, city, country, email }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`);
@@ -171,6 +172,25 @@ export default function Home() {
                   </div>
                 </div>
 
+                {/* City */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                    Ville <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    placeholder="Ex : Paris"
+                    required
+                    disabled={status === "loading"}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none
+                               focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+                               disabled:bg-gray-50 disabled:cursor-not-allowed
+                               transition text-gray-900 placeholder-gray-400"
+                  />
+                </div>
+
                 {/* Country */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-1.5">
@@ -213,7 +233,7 @@ export default function Home() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  disabled={status === "loading" || !companyName.trim()}
+                  disabled={status === "loading" || !companyName.trim() || !city.trim()}
                   className="w-full py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300
                              text-white font-semibold rounded-xl shadow
                              transition-all duration-200 disabled:cursor-not-allowed
