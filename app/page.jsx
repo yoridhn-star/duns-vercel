@@ -98,7 +98,7 @@ export default function Home() {
           </div>
           <h1 className="text-3xl font-bold text-gray-900">DUNS Lookup</h1>
           <p className="mt-2 text-gray-500">
-            Recherchez le numéro D-U-N-S d&rsquo;une entreprise via DNB&nbsp;UPIK
+            Recherchez le numéro D-U-N-S d&rsquo;une entreprise
           </p>
         </div>
 
@@ -246,17 +246,6 @@ export default function Home() {
           )}
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-6">
-          Données issues de&nbsp;
-          <a
-            href="https://www.dnb.com/de-de/upik.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-gray-600"
-          >
-            DNB&nbsp;UPIK
-          </a>
-        </p>
       </div>
     </main>
   );
@@ -266,23 +255,37 @@ export default function Home() {
 
 function ResultCard({ result }) {
   return (
-    <div className="p-4 border border-gray-200 rounded-xl bg-gray-50 hover:bg-white transition-colors">
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex-1 min-w-0">
-          {result.name && (
-            <p className="font-semibold text-gray-900 truncate">{result.name}</p>
-          )}
-          {result.address && (
-            <p className="text-sm text-gray-500 mt-0.5">{result.address}</p>
-          )}
-        </div>
-        {result.duns && (
-          <div className="flex-shrink-0">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-mono
-                             font-semibold bg-blue-100 text-blue-700">
-              {formatDuns(result.duns)}
-            </span>
-          </div>
+    <div className="p-5 border border-gray-200 rounded-xl bg-white shadow-sm">
+      {/* Company name */}
+      {result.name ? (
+        <p className="font-bold text-gray-900 text-base mb-3">{result.name}</p>
+      ) : (
+        <p className="font-bold text-gray-400 text-base mb-3 italic">Nom non disponible</p>
+      )}
+
+      {/* DUNS number */}
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-24 flex-shrink-0">
+          D-U-N-S
+        </span>
+        {result.duns ? (
+          <span className="font-mono font-semibold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-md text-sm">
+            {formatDuns(result.duns)}
+          </span>
+        ) : (
+          <span className="text-gray-400 text-sm italic">—</span>
+        )}
+      </div>
+
+      {/* Address */}
+      <div className="flex items-start gap-2">
+        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-24 flex-shrink-0 mt-0.5">
+          Adresse
+        </span>
+        {result.address ? (
+          <span className="text-sm text-gray-700">{result.address}</span>
+        ) : (
+          <span className="text-gray-400 text-sm italic">—</span>
         )}
       </div>
     </div>
