@@ -2,29 +2,29 @@
 
 import { useState } from "react";
 
-const EUROPEAN_COUNTRIES = [
-  "Frankreich",
-  "Deutschland",
-  "Belgien",
-  "Niederlande",
-  "Luxemburg",
-  "Schweiz",
-  "Österreich",
-  "Spanien",
-  "Portugal",
-  "Italien",
-  "Polen",
-  "Tschechien",
-  "Ungarn",
-  "Rumänien",
-  "Bulgarien",
-  "Griechenland",
-  "Schweden",
-  "Norwegen",
-  "Dänemark",
-  "Finnland",
-  "Irland",
-  "Vereinigtes Königreich",
+const COUNTRIES = [
+  { label: "France",              value: "Frankreich" },
+  { label: "Deutschland",         value: "Deutschland" },
+  { label: "Belgique / België",   value: "Belgien" },
+  { label: "Nederland",           value: "Niederlande" },
+  { label: "Luxembourg",          value: "Luxemburg" },
+  { label: "Schweiz / Suisse",    value: "Schweiz" },
+  { label: "Österreich",          value: "Österreich" },
+  { label: "España",              value: "Spanien" },
+  { label: "Portugal",            value: "Portugal" },
+  { label: "Italia",              value: "Italien" },
+  { label: "Polska",              value: "Polen" },
+  { label: "Česko",               value: "Tschechien" },
+  { label: "Magyarország",        value: "Ungarn" },
+  { label: "România",             value: "Rumänien" },
+  { label: "Ελλάδα",             value: "Griechenland" },
+  { label: "Sverige",             value: "Schweden" },
+  { label: "Norge",               value: "Norwegen" },
+  { label: "Danmark",             value: "Dänemark" },
+  { label: "Suomi",               value: "Finnland" },
+  { label: "Ireland",             value: "Irland" },
+  { label: "United Kingdom",      value: "Großbritannien" },
+  { label: "United States",       value: "Vereinigte Staaten von Amerika" },
 ];
 
 // Render free tier cold-start warning threshold (ms)
@@ -33,7 +33,7 @@ const COLD_START_THRESHOLD_MS = 15_000;
 export default function Home() {
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
-  const [country, setCountry] = useState("Frankreich");
+  const [country, setCountry] = useState("Frankreich"); // value sent to API
 
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [results, setResults] = useState([]);
@@ -138,9 +138,9 @@ export default function Home() {
                            disabled:bg-gray-100 disabled:cursor-not-allowed
                            transition text-gray-900 bg-white"
               >
-                {EUROPEAN_COUNTRIES.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
+                {COUNTRIES.map((c) => (
+                  <option key={c.value} value={c.value}>
+                    {c.label}
                   </option>
                 ))}
               </select>
