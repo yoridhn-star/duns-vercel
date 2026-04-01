@@ -22,9 +22,6 @@ export async function POST(request) {
   if (!companyName?.trim()) {
     return NextResponse.json({ error: "companyName is required" }, { status: 400 });
   }
-  if (!email?.trim()) {
-    return NextResponse.json({ error: "email is required" }, { status: 400 });
-  }
 
   const target = `${RENDER_API_URL.replace(/\/$/, "")}/api/lookup-duns`;
 
