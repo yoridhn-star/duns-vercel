@@ -136,7 +136,7 @@ function buildEmailHtml(result, companyName) {
               </table>
 
               <p style="margin:0;font-size:14px;color:#6b7280;line-height:1.6;">
-                Merci d'avoir utilisé DUNS Lookup. Ce résultat a été obtenu le ${date} via la base de données publique UPIK de Dun &amp; Bradstreet.
+                Merci d'avoir utilisé DUNS Lookup. Ce résultat a été obtenu le ${date}.
               </p>
             </td>
           </tr>
@@ -144,7 +144,6 @@ function buildEmailHtml(result, companyName) {
           <tr>
             <td style="background:#f8f7ff;border-top:1px solid #e0e7ff;padding:20px 40px;text-align:center;">
               <p style="margin:0;font-size:11px;color:#9ca3af;line-height:1.6;">
-                Service indépendant, non affilié à Dun &amp; Bradstreet&reg; · Les données proviennent de la base UPIK publique.<br>
                 © ${new Date().getFullYear()} DUNS Lookup — dunslookupofficial@gmail.com
               </p>
             </td>
