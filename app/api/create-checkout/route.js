@@ -27,7 +27,7 @@ export async function POST(request) {
           price_data: {
             currency: "eur",
             product_data: {
-              name: "Recherche DUNS",
+              name: "DUNS Verify",
               description: `Recherche du numéro D-U-N-S pour ${companyName}`,
             },
             unit_amount: 499,

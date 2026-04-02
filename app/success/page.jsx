@@ -90,7 +90,7 @@ function SuccessContent() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <a href="/" className="text-xl font-bold tracking-tight">
             <span className="text-indigo-600">DUNS</span>
-            <span className="text-gray-500 font-medium"> Lookup</span>
+            <span className="text-gray-500 font-medium"> Verify</span>
           </a>
         </div>
       </header>
