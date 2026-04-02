@@ -202,14 +202,14 @@ export default function Home() {
                 {/* Email */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                    Votre adresse email{" "}
-                    <span className="text-gray-400 font-normal">(optionnel)</span>
+                    Votre adresse email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="vous@exemple.com"
+                    required
                     disabled={status === "loading"}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none
                                focus:ring-2 focus:ring-indigo-500 focus:border-transparent
@@ -221,7 +221,7 @@ export default function Home() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  disabled={status === "loading" || !companyName.trim() || !city.trim()}
+                  disabled={status === "loading" || !companyName.trim() || !city.trim() || !email.trim()}
                   className="w-full py-3.5 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300
                              text-white font-semibold rounded-xl shadow
                              transition-all duration-200 disabled:cursor-not-allowed
