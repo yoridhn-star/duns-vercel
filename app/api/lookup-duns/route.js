@@ -30,8 +30,8 @@ export async function POST(request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ companyName, country, email }),
-      // Render cold start + scraping can take up to ~60 s
-      signal: AbortSignal.timeout(90_000),
+      // Render cold start (~60-90s) + scraping (~40-70s) = up to ~160s
+      signal: AbortSignal.timeout(180_000),
     });
 
     const data = await upstream.json();

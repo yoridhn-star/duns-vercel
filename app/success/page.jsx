@@ -55,6 +55,7 @@ function SuccessContent() {
             country: metadata.country,
             email: metadata.email,
           }),
+          signal: AbortSignal.timeout(180_000),
         });
         const data = await res.json();
         clearInterval(ticker);
@@ -106,12 +107,15 @@ function SuccessContent() {
                 </div>
               </div>
               <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                {status === "loading" ? "Vérification du paiement…" : "Recherche en cours…"}
+                {status === "loading" ? "Vérification du paiement…" : "Recherche de votre numéro D-U-N-S en cours…"}
               </h1>
               {status === "searching" && (
-                <p className="text-gray-500 text-sm">
-                  Recherche de votre numéro D-U-N-S ({elapsedSec}s)…
-                </p>
+                <>
+                  <p className="text-gray-500 text-sm mb-1">
+                    Cela peut prendre jusqu&apos;à 2 minutes, merci de patienter.
+                  </p>
+                  <p className="text-gray-400 text-sm">{elapsedSec}s</p>
+                </>
               )}
               {status === "loading" && (
                 <p className="text-gray-500 text-sm">Confirmation du paiement Stripe en cours.</p>
