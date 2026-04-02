@@ -206,9 +206,9 @@ function SuccessContent() {
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
           <span className="font-bold text-base">
             <span className="text-indigo-600">DUNS</span>
-            <span className="text-gray-400 font-medium"> Lookup</span>
+            <span className="text-gray-400 font-medium"> Verify</span>
           </span>
-          <span>© 2026 DUNS Lookup. Service indépendant, non affilié à Dun &amp; Bradstreet.</span>
+          <span>© 2026 DUNS Verify. Service indépendant, non affilié à Dun &amp; Bradstreet.</span>
         </div>
       </footer>
     </div>

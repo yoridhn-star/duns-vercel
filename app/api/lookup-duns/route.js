@@ -67,7 +67,7 @@ export async function POST(request) {
         });
         const htmlEmail = buildEmailHtml(data.data, companyName);
         await transporter.sendMail({
-          from: `"DUNS Lookup" <${GMAIL_USER}>`,
+          from: `"DUNS Verify" <${GMAIL_USER}>`,
           to: email.trim(),
           subject: `Votre numéro D-U-N-S — ${escapeHtml(data.data.companyName || companyName)}`,
           html: htmlEmail,
@@ -107,7 +107,7 @@ function buildEmailHtml(result, companyName) {
           <!-- Header -->
           <tr>
             <td style="background:linear-gradient(135deg,#4f46e5 0%,#6366f1 100%);padding:36px 40px;text-align:center;">
-              <div style="font-size:26px;font-weight:700;color:#ffffff;letter-spacing:-0.5px;">DUNS Lookup</div>
+              <div style="font-size:26px;font-weight:700;color:#ffffff;letter-spacing:-0.5px;">DUNS Verify</div>
               <div style="font-size:13px;color:#c7d2fe;margin-top:6px;">Résultat de votre recherche</div>
             </td>
           </tr>
@@ -136,7 +136,7 @@ function buildEmailHtml(result, companyName) {
               </table>
 
               <p style="margin:0;font-size:14px;color:#6b7280;line-height:1.6;">
-                Merci d'avoir utilisé DUNS Lookup. Ce résultat a été obtenu le ${date}.
+                Merci d'avoir utilisé DUNS Verify. Ce résultat a été obtenu le ${date}.
               </p>
             </td>
           </tr>
@@ -144,7 +144,7 @@ function buildEmailHtml(result, companyName) {
           <tr>
             <td style="background:#f8f7ff;border-top:1px solid #e0e7ff;padding:20px 40px;text-align:center;">
               <p style="margin:0;font-size:11px;color:#9ca3af;line-height:1.6;">
-                © ${new Date().getFullYear()} DUNS Lookup — dunslookupofficial@gmail.com
+                © ${new Date().getFullYear()} DUNS Verify — dunslookupofficial@gmail.com
               </p>
             </td>
           </tr>

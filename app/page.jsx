@@ -94,7 +94,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <a href="#formulaire" className="text-xl font-bold tracking-tight">
             <span className="text-indigo-600">DUNS</span>
-            <span className="text-gray-500 font-medium"> Lookup</span>
+            <span className="text-gray-500 font-medium"> Verify</span>
           </a>
           <nav className="hidden sm:flex items-center gap-6 text-sm font-medium text-gray-600">
             <a href="#comment-ca-marche" className="hover:text-indigo-600 transition-colors">Comment ça marche</a>
@@ -426,9 +426,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
           <span className="font-bold text-base">
             <span className="text-indigo-600">DUNS</span>
-            <span className="text-gray-400 font-medium"> Lookup</span>
+            <span className="text-gray-400 font-medium"> Verify</span>
           </span>
-          <span>© 2026 DUNS Lookup. Service indépendant, non affilié à Dun &amp; Bradstreet.</span>
+          <span>© 2026 DUNS Verify. Service indépendant, non affilié à Dun &amp; Bradstreet.</span>
         </div>
       </footer>
     </div>

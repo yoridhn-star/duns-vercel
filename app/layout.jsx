@@ -1,10 +1,10 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "DUNS Lookup — Trouvez votre numéro D-U-N-S gratuitement",
+  title: "DUNS Verify — Trouvez votre numéro D-U-N-S gratuitement",
   description: "Recherchez le numéro D-U-N-S de votre entreprise gratuitement en quelques secondes.",
   openGraph: {
-    title: "DUNS Lookup — Trouvez votre numéro D-U-N-S gratuitement",
+    title: "DUNS Verify — Trouvez votre numéro D-U-N-S gratuitement",
     description: "Recherchez le numéro D-U-N-S de votre entreprise gratuitement en quelques secondes.",
   },
 };
