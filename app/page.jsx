@@ -39,8 +39,8 @@ const FAQ_ITEMS = [
     a: "La recherche prend généralement entre 30 secondes et 2 minutes selon la charge du serveur.",
   },
   {
-    q: "Le service est-il vraiment gratuit ?",
-    a: "Oui, notre service est entièrement gratuit. Nous utilisons les données publiques disponibles.",
+    q: "Combien coûte le service ?",
+    a: "La recherche de numéro D-U-N-S est disponible pour 4,99 €. Le paiement est sécurisé par Stripe et vous obtenez votre résultat instantanément après confirmation.",
   },
   {
     q: "Que se passe-t-il si mon entreprise n'a pas de numéro DUNS ?",
@@ -58,10 +58,8 @@ export default function Home() {
   const [country, setCountry]         = useState("Frankreich");
 
   // Request state
-  const [status, setStatus]       = useState("idle"); // idle | loading | success | error
-  const [result, setResult]       = useState(null);
+  const [status, setStatus]       = useState("idle"); // idle | loading | error
   const [errorMsg, setErrorMsg]   = useState("");
-  const [elapsedSec, setElapsedSec] = useState(0);
 
   // FAQ accordion
   const [openFaq, setOpenFaq] = useState(null);
@@ -71,30 +69,20 @@ export default function Home() {
     if (!companyName.trim()) return;
 
     setStatus("loading");
-    setResult(null);
     setErrorMsg("");
-    setElapsedSec(0);
-
-    const startTime = Date.now();
-    const ticker = setInterval(() => {
-      setElapsedSec(Math.floor((Date.now() - startTime) / 1000));
-    }, 1000);
 
     try {
-      const res = await fetch("/api/lookup-duns", {
+      const res = await fetch("/api/create-checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ companyName, city, country, email }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`);
-      setResult(data.data || null);
-      setStatus("success");
+      window.location.href = data.url;
     } catch (err) {
       setErrorMsg(err.message || "Une erreur est survenue.");
       setStatus("error");
-    } finally {
-      clearInterval(ticker);
     }
   }
 
@@ -125,7 +113,7 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-1.5 bg-indigo-50 text-indigo-700 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
               <span>✨</span>
-              <span>Résultat instantané et gratuit</span>
+              <span>Résultat instantané — 4,99 €</span>
             </div>
 
             {/* Title */}
@@ -138,7 +126,7 @@ export default function Home() {
             {/* Subtitle */}
             <p className="text-lg text-gray-500 mb-10">
               Entrez le <strong className="text-gray-700">nom de votre entreprise</strong> et recevez votre identifiant
-              international Dun &amp; Bradstreet <strong className="text-gray-700">gratuitement</strong>.
+              international Dun &amp; Bradstreet pour <strong className="text-gray-700">4,99 €</strong>.
             </p>
 
             {/* Form card */}
@@ -243,17 +231,17 @@ export default function Home() {
                   {status === "loading" ? (
                     <>
                       <Spinner />
-                      Recherche en cours… ({elapsedSec}s)
+                      Redirection vers le paiement…
                     </>
                   ) : (
-                    "Rechercher mon DUNS →"
+                    "Obtenir mon DUNS — 4,99 €"
                   )}
                 </button>
               </form>
 
               {/* Trust line */}
               <p className="text-center text-xs text-gray-400 mt-4">
-                Service gratuit · Résultat affiché instantanément
+                Paiement sécurisé par Stripe · Résultat instantané
               </p>
 
               {/* Error */}
@@ -267,28 +255,6 @@ export default function Home() {
                     <p className="text-sm font-semibold text-red-700">Erreur</p>
                     <p className="text-sm text-red-600 mt-0.5">{errorMsg}</p>
                   </div>
-                </div>
-              )}
-
-              {/* No result */}
-              {status === "success" && !result && (
-                <div className="mt-5 p-4 bg-gray-50 border border-gray-200 rounded-xl text-center">
-                  <p className="text-gray-500 text-sm">
-                    Aucun résultat trouvé pour <strong>{companyName}</strong>.
-                  </p>
-                </div>
-              )}
-
-              {/* Result */}
-              {status === "success" && result && (
-                <div className="mt-6">
-                  <ResultCard result={result} />
-                  {email.trim() && (
-                    <p className="text-xs text-gray-400 mt-3">
-                      Le résultat a également été envoyé à{" "}
-                      <span className="font-medium text-gray-500">{email}</span>.
-                    </p>
-                  )}
                 </div>
               )}
             </div>
@@ -442,14 +408,14 @@ export default function Home() {
             </h2>
             <p className="text-indigo-200 mb-8">
               Saisissez le nom de votre entreprise et recevez votre identifiant
-              international en quelques secondes.
+              international en quelques secondes pour seulement 4,99 €.
             </p>
             <a
               href="#formulaire"
               className="inline-block bg-white text-indigo-600 font-semibold px-8 py-3.5 rounded-xl
                          shadow hover:shadow-md hover:bg-gray-50 transition-all"
             >
-              Rechercher mon DUNS →
+              Obtenir mon DUNS — 4,99 € →
             </a>
           </div>
         </section>
@@ -471,44 +437,6 @@ export default function Home() {
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
-function ResultCard({ result }) {
-  // API returns { companyName, dunsNumber, address }
-  const name    = result.companyName || result.name    || "";
-  const duns    = result.dunsNumber  || result.duns    || "";
-  const address = result.address     || "";
-  return (
-    <div className="p-5 border border-indigo-100 rounded-xl bg-indigo-50/40">
-      {name ? (
-        <p className="font-bold text-gray-900 text-base mb-3">{name}</p>
-      ) : (
-        <p className="font-bold text-gray-400 text-base mb-3 italic">Nom non disponible</p>
-      )}
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-20 flex-shrink-0">
-          D-U-N-S
-        </span>
-        {duns ? (
-          <span className="font-mono font-semibold text-indigo-700 bg-white border border-indigo-100 px-2.5 py-0.5 rounded-lg text-sm shadow-sm">
-            {formatDuns(duns)}
-          </span>
-        ) : (
-          <span className="text-gray-400 text-sm italic">—</span>
-        )}
-      </div>
-      <div className="flex items-start gap-2">
-        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-20 flex-shrink-0 mt-0.5">
-          Adresse
-        </span>
-        {address ? (
-          <span className="text-sm text-gray-700">{address}</span>
-        ) : (
-          <span className="text-gray-400 text-sm italic">—</span>
-        )}
-      </div>
-    </div>
-  );
-}
-
 function Spinner() {
   return (
     <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
@@ -516,10 +444,4 @@ function Spinner() {
       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
     </svg>
   );
-}
-
-function formatDuns(raw) {
-  const digits = String(raw).replace(/\D/g, "");
-  if (digits.length === 9) return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
-  return raw;
 }
