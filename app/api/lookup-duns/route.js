@@ -157,7 +157,7 @@ function buildEmailHtml(result, companyName, tr, lang) {
 
           <!-- ── HEADER ── -->
           <tr>
-            <td style="background-color:#1E3A5F;border-radius:16px 16px 0 0;padding:36px 40px;text-align:center;">
+            <td style="background-color:#1E3A5F;border-radius:16px 16px 0 0;padding:28px 20px;text-align:center;">
               <table cellpadding="0" cellspacing="0" border="0" style="display:inline-table;">
                 <tr>
                   <td style="padding-right:10px;vertical-align:middle;">
@@ -182,7 +182,7 @@ function buildEmailHtml(result, companyName, tr, lang) {
 
           <!-- ── BODY ── -->
           <tr>
-            <td style="background-color:#F8FAFC;padding:40px 40px 32px;">
+            <td style="background-color:#F8FAFC;padding:24px 20px 20px;">
 
               <p style="margin:0 0 8px;font-size:16px;color:#1E3A5F;font-weight:600;">${escapeHtml(tr.greeting)}</p>
               <p style="margin:0 0 32px;font-size:15px;color:#475569;line-height:1.7;">${escapeHtml(tr.intro)}</p>
@@ -191,7 +191,7 @@ function buildEmailHtml(result, companyName, tr, lang) {
               <table width="100%" cellpadding="0" cellspacing="0" border="0"
                 style="background-color:#ffffff;border-radius:12px;border-left:4px solid #10B981;box-shadow:0 2px 12px rgba(0,0,0,0.07);margin-bottom:32px;">
                 <tr>
-                  <td style="padding:28px 32px;">
+                  <td style="padding:16px;">
 
                     <!-- Company -->
                     <div style="font-size:11px;font-weight:700;color:#10B981;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;">${escapeHtml(tr.companyLabel)}</div>
@@ -201,8 +201,8 @@ function buildEmailHtml(result, companyName, tr, lang) {
                     <div style="font-size:11px;font-weight:700;color:#10B981;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px;">${escapeHtml(tr.dunsLabel)}</div>
                     <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
                       <tr>
-                        <td style="background-color:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:14px 24px;">
-                          <span style="font-family:'Courier New',Courier,monospace;font-size:26px;font-weight:800;color:#065F46;letter-spacing:3px;">${escapeHtml(duns)}</span>
+                        <td style="background-color:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:12px 16px;">
+                          <span style="font-family:'Courier New',Courier,monospace;font-size:20px;font-weight:800;color:#065F46;letter-spacing:2px;white-space:nowrap;">${escapeHtml(duns)}</span>
                         </td>
                       </tr>
                     </table>
@@ -232,7 +232,7 @@ function buildEmailHtml(result, companyName, tr, lang) {
 
           <!-- ── FOOTER ── -->
           <tr>
-            <td style="background-color:#F1F5F9;border-radius:0 0 16px 16px;border-top:1px solid #E2E8F0;padding:24px 40px;text-align:center;">
+            <td style="background-color:#F1F5F9;border-radius:0 0 16px 16px;border-top:1px solid #E2E8F0;padding:20px 16px;text-align:center;">
               <p style="margin:0 0 6px;font-size:13px;color:#64748B;">${escapeHtml(tr.footer)}</p>
               <p style="margin:0 0 4px;font-size:12px;color:#94A3B8;">&copy; ${year} DUNS Verify</p>
               <p style="margin:0;font-size:12px;color:#94A3B8;">
