@@ -77,6 +77,9 @@ export default async function Home({ params }) {
                   {label}
                 </a>
               ))}
+              <a href={`/${lang}/blog`} className="hover:text-slate-900 transition-colors">
+                Blog
+              </a>
               <LangSelector currentLang={lang} />
             </nav>
             <div className="sm:hidden">
