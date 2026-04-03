@@ -63,6 +63,7 @@ export default function SuccessContent({ t, lang }) {
             city: metadata.city,
             country: metadata.country,
             email: metadata.email,
+            lang: metadata.lang || lang,
           }),
           signal: AbortSignal.timeout(180_000),
         });

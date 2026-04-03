@@ -43,6 +43,7 @@ export async function POST(request) {
         city: city?.trim() || "",
         country: country || "",
         email: email?.trim() || "",
+        lang: lang || "fr",
       },
     });
 

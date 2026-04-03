@@ -4,6 +4,55 @@ import { Resend } from "resend";
 const RENDER_API_URL = process.env.RENDER_API_URL;
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// ── Translations ──────────────────────────────────────────────────────────────
+
+const emailTranslations = {
+  fr: {
+    subject: (company) => `Votre numéro D-U-N-S — ${company}`,
+    title: 'Votre numéro D-U-N-S',
+    greeting: 'Bonjour,',
+    intro: 'Voici le résultat de votre recherche D-U-N-S\u00ae\u00a0:',
+    companyLabel: 'Entreprise',
+    dunsLabel: 'Numéro D-U-N-S\u00ae',
+    addressLabel: 'Adresse',
+    footer: "Merci d\u2019avoir utilisé DUNS Verify.",
+    cta: 'Faire une nouvelle recherche',
+  },
+  en: {
+    subject: (company) => `Your D-U-N-S Number — ${company}`,
+    title: 'Your D-U-N-S Number',
+    greeting: 'Hello,',
+    intro: 'Here are the results of your D-U-N-S\u00ae lookup:',
+    companyLabel: 'Company',
+    dunsLabel: 'D-U-N-S\u00ae Number',
+    addressLabel: 'Address',
+    footer: 'Thank you for using DUNS Verify.',
+    cta: 'Start a new search',
+  },
+  de: {
+    subject: (company) => `Ihre D-U-N-S-Nummer — ${company}`,
+    title: 'Ihre D-U-N-S-Nummer',
+    greeting: 'Hallo,',
+    intro: 'Hier ist das Ergebnis Ihrer D-U-N-S\u00ae-Suche:',
+    companyLabel: 'Unternehmen',
+    dunsLabel: 'D-U-N-S\u00ae-Nummer',
+    addressLabel: 'Adresse',
+    footer: 'Vielen Dank für die Nutzung von DUNS Verify.',
+    cta: 'Neue Suche starten',
+  },
+  es: {
+    subject: (company) => `Su número D-U-N-S — ${company}`,
+    title: 'Su número D-U-N-S',
+    greeting: 'Hola,',
+    intro: 'Aquí está el resultado de su búsqueda D-U-N-S\u00ae:',
+    companyLabel: 'Empresa',
+    dunsLabel: 'Número D-U-N-S\u00ae',
+    addressLabel: 'Dirección',
+    footer: 'Gracias por utilizar DUNS Verify.',
+    cta: 'Iniciar una nueva búsqueda',
+  },
+};
+
 export async function POST(request) {
   if (!RENDER_API_URL) {
     return NextResponse.json(
@@ -19,7 +68,7 @@ export async function POST(request) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { companyName, country, email } = body;
+  const { companyName, country, email, lang } = body;
 
   if (!companyName?.trim()) {
     return NextResponse.json({ error: "companyName is required" }, { status: 400 });
@@ -34,9 +83,7 @@ export async function POST(request) {
     const upstream = await fetch(target, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      // Don't forward email — Render only scrapes, email is handled here
       body: JSON.stringify({ companyName, country }),
-      // Render cold start (~60-90s) + scraping (~40-70s) = up to ~160s
       signal: AbortSignal.timeout(180_000),
     });
 
@@ -56,17 +103,19 @@ export async function POST(request) {
     );
   }
 
-  // ── Send email via Resend (Vercel side) ──────────────────────────────────
+  // ── Send email via Resend ─────────────────────────────────────────────────
   if (data.success && data.data && email?.trim()) {
+    const resolvedLang = emailTranslations[lang] ? lang : "fr";
+    const tr = emailTranslations[resolvedLang];
     try {
-      const htmlEmail = buildEmailHtml(data.data, companyName);
+      const htmlEmail = buildEmailHtml(data.data, companyName, tr, resolvedLang);
       await resend.emails.send({
         from: "DUNS Verify <noreply@dunsverify.com>",
         to: email.trim(),
-        subject: `Votre numéro D-U-N-S — ${escapeHtml(data.data.companyName || companyName)}`,
+        subject: tr.subject(escapeHtml(data.data.companyName || companyName)),
         html: htmlEmail,
       });
-      console.log(`[email] sent to ${email.trim()}`);
+      console.log(`[email] sent to ${email.trim()} (lang=${resolvedLang})`);
     } catch (mailErr) {
       console.error("[email] send failed:", mailErr.message);
     }
@@ -77,72 +126,128 @@ export async function POST(request) {
 
 // ── Email HTML builder ────────────────────────────────────────────────────────
 
-function buildEmailHtml(result, companyName) {
-  const name = escapeHtml(result.companyName || companyName);
-  const duns = escapeHtml(result.dunsNumber || "—");
+function formatDuns(raw) {
+  const digits = String(raw).replace(/\D/g, "");
+  if (digits.length === 9) return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+  return raw;
+}
+
+function buildEmailHtml(result, companyName, tr, lang) {
+  const name    = escapeHtml(result.companyName || companyName);
+  const duns    = result.dunsNumber ? formatDuns(result.dunsNumber) : "—";
   const address = escapeHtml(result.address || "");
-  const date = new Date().toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
+  const year    = new Date().getFullYear();
+  const ctaUrl  = `https://dunsverify.com/${lang}`;
 
   return `<!DOCTYPE html>
-<html lang="fr">
+<html lang="${lang}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Votre numéro D-U-N-S</title>
+  <title>${escapeHtml(tr.title)}</title>
 </head>
-<body style="margin:0;padding:0;background:#f1f5f9;font-family:'Segoe UI',Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;padding:32px 0;">
+<body style="margin:0;padding:0;background-color:#F8FAFC;font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F8FAFC;padding:40px 16px;">
     <tr>
       <td align="center">
-        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(99,102,241,0.10);">
-          <!-- Header -->
+
+        <!-- Wrapper 600px -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
+
+          <!-- ── HEADER ── -->
           <tr>
-            <td style="background:linear-gradient(135deg,#4f46e5 0%,#6366f1 100%);padding:36px 40px;text-align:center;">
-              <div style="font-size:26px;font-weight:700;color:#ffffff;letter-spacing:-0.5px;">DUNS Verify</div>
-              <div style="font-size:13px;color:#c7d2fe;margin-top:6px;">Résultat de votre recherche</div>
+            <td style="background-color:#1E3A5F;border-radius:16px 16px 0 0;padding:36px 40px;text-align:center;">
+              <table cellpadding="0" cellspacing="0" border="0" style="display:inline-table;">
+                <tr>
+                  <td style="padding-right:10px;vertical-align:middle;">
+                    <!-- Checkmark icon -->
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="width:36px;height:36px;background-color:#10B981;border-radius:50%;text-align:center;vertical-align:middle;line-height:36px;">
+                          <span style="color:#ffffff;font-size:20px;font-weight:700;line-height:36px;">&#10003;</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td style="vertical-align:middle;">
+                    <span style="font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">DUNS</span>
+                    <span style="font-size:22px;font-weight:300;color:#93C5FD;letter-spacing:-0.5px;"> Verify</span>
+                  </td>
+                </tr>
+              </table>
+              <div style="margin-top:14px;font-size:13px;color:#93C5FD;letter-spacing:0.5px;">${escapeHtml(tr.title)}</div>
             </td>
           </tr>
-          <!-- Body -->
-          <tr>
-            <td style="padding:40px 40px 32px;">
-              <p style="margin:0 0 24px;font-size:15px;color:#374151;">Bonjour,</p>
-              <p style="margin:0 0 28px;font-size:15px;color:#374151;line-height:1.6;">
-                Votre recherche pour <strong>${name}</strong> a abouti. Voici votre numéro D-U-N-S&reg; :
-              </p>
 
-              <!-- Result card -->
-              <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8f7ff;border:1px solid #e0e7ff;border-radius:10px;margin-bottom:28px;">
+          <!-- ── BODY ── -->
+          <tr>
+            <td style="background-color:#F8FAFC;padding:40px 40px 32px;">
+
+              <p style="margin:0 0 8px;font-size:16px;color:#1E3A5F;font-weight:600;">${escapeHtml(tr.greeting)}</p>
+              <p style="margin:0 0 32px;font-size:15px;color:#475569;line-height:1.7;">${escapeHtml(tr.intro)}</p>
+
+              <!-- ── Result card ── -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                style="background-color:#ffffff;border-radius:12px;border-left:4px solid #10B981;box-shadow:0 2px 12px rgba(0,0,0,0.07);margin-bottom:32px;">
                 <tr>
                   <td style="padding:28px 32px;">
-                    <div style="font-size:12px;font-weight:600;color:#6366f1;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Entreprise</div>
-                    <div style="font-size:17px;font-weight:600;color:#111827;margin-bottom:20px;">${name}</div>
 
-                    <div style="font-size:12px;font-weight:600;color:#6366f1;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Numéro D-U-N-S&reg;</div>
-                    <div style="font-size:36px;font-weight:800;color:#4f46e5;letter-spacing:4px;margin-bottom:20px;">${duns}</div>
+                    <!-- Company -->
+                    <div style="font-size:11px;font-weight:700;color:#10B981;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;">${escapeHtml(tr.companyLabel)}</div>
+                    <div style="font-size:18px;font-weight:700;color:#1E3A5F;margin-bottom:24px;">${name}</div>
 
-                    ${address ? `<div style="font-size:12px;font-weight:600;color:#6366f1;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Adresse</div>
-                    <div style="font-size:14px;color:#374151;">${address}</div>` : ""}
+                    <!-- DUNS number -->
+                    <div style="font-size:11px;font-weight:700;color:#10B981;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px;">${escapeHtml(tr.dunsLabel)}</div>
+                    <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+                      <tr>
+                        <td style="background-color:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:14px 24px;">
+                          <span style="font-family:'Courier New',Courier,monospace;font-size:26px;font-weight:800;color:#065F46;letter-spacing:3px;">${escapeHtml(duns)}</span>
+                        </td>
+                      </tr>
+                    </table>
+
+                    ${address ? `<!-- Address -->
+                    <div style="font-size:11px;font-weight:700;color:#10B981;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px;">${escapeHtml(tr.addressLabel)}</div>
+                    <div style="font-size:14px;color:#475569;line-height:1.6;">${address}</div>` : ""}
+
                   </td>
                 </tr>
               </table>
 
-              <p style="margin:0;font-size:14px;color:#6b7280;line-height:1.6;">
-                Merci d'avoir utilisé DUNS Verify. Ce résultat a été obtenu le ${date}.
-              </p>
+              <!-- ── CTA button ── -->
+              <table cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 8px;">
+                <tr>
+                  <td style="background-color:#10B981;border-radius:10px;text-align:center;">
+                    <a href="${ctaUrl}"
+                      style="display:inline-block;padding:14px 32px;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;letter-spacing:0.2px;">
+                      ${escapeHtml(tr.cta)} &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
             </td>
           </tr>
-          <!-- Footer -->
+
+          <!-- ── FOOTER ── -->
           <tr>
-            <td style="background:#f8f7ff;border-top:1px solid #e0e7ff;padding:20px 40px;text-align:center;">
-              <p style="margin:0;font-size:11px;color:#9ca3af;line-height:1.6;">
-                © ${new Date().getFullYear()} DUNS Verify — contact@dunsverify.com
+            <td style="background-color:#F1F5F9;border-radius:0 0 16px 16px;border-top:1px solid #E2E8F0;padding:24px 40px;text-align:center;">
+              <p style="margin:0 0 6px;font-size:13px;color:#64748B;">${escapeHtml(tr.footer)}</p>
+              <p style="margin:0 0 4px;font-size:12px;color:#94A3B8;">&copy; ${year} DUNS Verify</p>
+              <p style="margin:0;font-size:12px;color:#94A3B8;">
+                <a href="mailto:contact@dunsverify.com" style="color:#94A3B8;text-decoration:none;">contact@dunsverify.com</a>
               </p>
             </td>
           </tr>
+
         </table>
+        <!-- /Wrapper -->
+
       </td>
     </tr>
   </table>
+
 </body>
 </html>`;
 }
