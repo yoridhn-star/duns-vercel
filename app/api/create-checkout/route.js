@@ -23,6 +23,26 @@ export async function POST(request) {
   const stripeLocaleMap = { no: 'nb' };
   const stripeLocale = stripeLocaleMap[lang] || lang || "fr";
 
+  const productDescriptions = {
+    fr: `Recherche du numéro D-U-N-S pour ${companyName}`,
+    en: `D-U-N-S number lookup for ${companyName}`,
+    de: `D-U-N-S-Nummer-Suche für ${companyName}`,
+    es: `Búsqueda del número D-U-N-S para ${companyName}`,
+    it: `Ricerca del numero D-U-N-S per ${companyName}`,
+    nl: `D-U-N-S-nummer opzoeken voor ${companyName}`,
+    pt: `Pesquisa do número D-U-N-S para ${companyName}`,
+    pl: `Wyszukiwanie numeru D-U-N-S dla ${companyName}`,
+    sv: `D-U-N-S-nummer sökning för ${companyName}`,
+    da: `D-U-N-S-nummer søgning for ${companyName}`,
+    no: `D-U-N-S-nummer søk for ${companyName}`,
+    fi: `D-U-N-S-numeron haku yritykselle ${companyName}`,
+    cs: `Vyhledávání čísla D-U-N-S pro ${companyName}`,
+    hu: `D-U-N-S szám keresése: ${companyName}`,
+    ro: `Căutare număr D-U-N-S pentru ${companyName}`,
+    el: `Αναζήτηση αριθμού D-U-N-S για ${companyName}`,
+  };
+  const productDescription = productDescriptions[lang] || productDescriptions.fr;
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -33,7 +53,7 @@ export async function POST(request) {
             currency: "eur",
             product_data: {
               name: "DUNS Verify",
-              description: `Recherche du numéro D-U-N-S pour ${companyName}`,
+              description: productDescription,
             },
             unit_amount: 499,
           },
