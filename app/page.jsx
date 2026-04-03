@@ -35,6 +35,10 @@ const FAQ_ITEMS = [
     a: "Le numéro D-U-N-S (Data Universal Numbering System) est un identifiant unique à 9 chiffres attribué par Dun & Bradstreet à chaque entité commerciale dans le monde.",
   },
   {
+    q: "Pourquoi payer 4,99 € alors que le DUNS est gratuit ?",
+    a: "Le processus officiel via Dun & Bradstreet prend jusqu'à 30 jours ouvrés. DUNS Verify vous donne le résultat en moins de 2 minutes. Vous payez pour la rapidité et la simplicité du service, pas pour le numéro lui-même.",
+  },
+  {
     q: "Combien de temps prend la recherche ?",
     a: "La recherche prend généralement entre 30 secondes et 2 minutes selon la charge du serveur.",
   },
@@ -112,21 +116,21 @@ export default function Home() {
 
             {/* Badge */}
             <div className="inline-flex items-center gap-1.5 bg-indigo-50 text-indigo-700 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-              <span>✨</span>
-              <span>Résultat instantané — 4,99 €</span>
+              <span>⚡</span>
+              <span>Résultat en 2 min — au lieu de 30 jours</span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-5">
-              Trouvez votre numéro{" "}
+              Obtenez votre numéro{" "}
               <span className="text-indigo-600">D-U-N-S</span>{" "}
-              en quelques clics
+              en 2 minutes
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg text-gray-500 mb-10">
-              Entrez le <strong className="text-gray-700">nom de votre entreprise</strong> et recevez votre identifiant
-              international Dun &amp; Bradstreet pour <strong className="text-gray-700">4,99 €</strong>.
+              Plus besoin d&apos;attendre 30 jours. Recevez votre identifiant D-U-N-S immédiatement par email
+              pour seulement <strong className="text-gray-700">4,99 €</strong>.
             </p>
 
             {/* Form card */}
@@ -234,14 +238,14 @@ export default function Home() {
                       Redirection vers le paiement…
                     </>
                   ) : (
-                    "Obtenir mon DUNS — 4,99 €"
+                    "Obtenir mon DUNS maintenant — 4,99 €"
                   )}
                 </button>
               </form>
 
               {/* Trust line */}
               <p className="text-center text-xs text-gray-400 mt-4">
-                Paiement sécurisé par Stripe · Résultat instantané
+                Paiement sécurisé par Stripe · Résultat en moins de 2 min · Envoyé par email
               </p>
 
               {/* Error */}
@@ -289,8 +293,8 @@ export default function Home() {
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   ),
-                  title: "Patientez quelques secondes",
-                  desc: "Notre système recherche automatiquement votre numéro D-U-N-S.",
+                  title: "Recherche automatique",
+                  desc: "Notre système interroge les bases de données internationales. Résultat en moins de 2 minutes.",
                 },
                 {
                   n: 3,
@@ -301,7 +305,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Recevez votre DUNS",
-                  desc: "Votre numéro DUNS est affiché instantanément sur la page.",
+                  desc: "Votre numéro D-U-N-S s'affiche à l'écran et vous est envoyé par email.",
                 },
               ].map(({ n, icon, title, desc }) => (
                 <div key={n} className="bg-gray-50 rounded-2xl p-6 flex flex-col items-start gap-4">
@@ -404,18 +408,18 @@ export default function Home() {
         <section className="py-20 px-4 bg-gradient-to-br from-indigo-600 to-indigo-700">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Prêt à trouver votre numéro DUNS&nbsp;?
+              Prêt à obtenir votre numéro DUNS&nbsp;?
             </h2>
             <p className="text-indigo-200 mb-8">
-              Saisissez le nom de votre entreprise et recevez votre identifiant
-              international en quelques secondes pour seulement 4,99 €.
+              Fini l&apos;attente de 30 jours. Obtenez votre identifiant international en 2 minutes
+              pour seulement 4,99 €.
             </p>
             <a
               href="#formulaire"
               className="inline-block bg-white text-indigo-600 font-semibold px-8 py-3.5 rounded-xl
                          shadow hover:shadow-md hover:bg-gray-50 transition-all"
             >
-              Obtenir mon DUNS — 4,99 € →
+              Obtenir mon DUNS maintenant →
             </a>
           </div>
         </section>

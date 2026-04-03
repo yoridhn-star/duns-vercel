@@ -1,11 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "DUNS Verify — Trouvez votre numéro D-U-N-S gratuitement",
-  description: "Recherchez le numéro D-U-N-S de votre entreprise gratuitement en quelques secondes.",
+  title: "DUNS Verify — Obtenez votre numéro D-U-N-S en 2 minutes",
+  description: "Plus besoin d'attendre 30 jours. Obtenez votre numéro D-U-N-S instantanément pour seulement 4,99 €. Résultat par email en moins de 2 minutes.",
   openGraph: {
-    title: "DUNS Verify — Trouvez votre numéro D-U-N-S gratuitement",
-    description: "Recherchez le numéro D-U-N-S de votre entreprise gratuitement en quelques secondes.",
+    title: "DUNS Verify — Obtenez votre numéro D-U-N-S en 2 minutes",
+    description: "Plus besoin d'attendre 30 jours. Obtenez votre numéro D-U-N-S instantanément pour seulement 4,99 €. Résultat par email en moins de 2 minutes.",
   },
 };
 
