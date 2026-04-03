@@ -28,11 +28,30 @@ const COUNTRIES = [
   { label: "United States",       value: "Vereinigte Staaten von Amerika" },
 ];
 
+const DEFAULT_COUNTRY = {
+  fr: 'Frankreich',
+  en: 'Großbritannien',
+  de: 'Deutschland',
+  es: 'Spanien',
+  it: 'Italien',
+  nl: 'Niederlande',
+  pt: 'Portugal',
+  pl: 'Polen',
+  sv: 'Schweden',
+  da: 'Dänemark',
+  no: 'Norwegen',
+  fi: 'Finnland',
+  cs: 'Tschechien',
+  hu: 'Ungarn',
+  ro: 'Rumänien',
+  el: 'Griechenland',
+};
+
 export default function HomeForm({ t, lang }) {
   const [companyName, setCompanyName] = useState("");
   const [city, setCity]               = useState("");
   const [email, setEmail]             = useState("");
-  const [country, setCountry]         = useState("Frankreich");
+  const [country, setCountry]         = useState(DEFAULT_COUNTRY[lang] || 'Frankreich');
   const [status, setStatus]           = useState("idle");
   const [errorMsg, setErrorMsg]       = useState("");
 
