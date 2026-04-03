@@ -88,7 +88,7 @@ export default async function Home({ params }) {
         <main className="flex-1">
 
           {/* ── Hero + Form ─────────────────────────────────────────────────── */}
-          <section id="formulaire" className="bg-white py-20 px-4">
+          <section id="formulaire" className="bg-white pt-6 pb-20 px-4">
             <div className="max-w-2xl mx-auto text-center">
 
               <div className="inline-flex items-center gap-1.5 bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
