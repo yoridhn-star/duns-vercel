@@ -17,6 +17,9 @@ const BLOG_CONFIG = {
   "numero-duns-marches-publics": { available: ["fr", "en", "de", "es", "it", "nl", "pt", "pl", "sv", "da", "no", "fi", "cs", "hu", "ro", "el"] },
   "verifier-numero-duns": { available: ["fr", "en", "de", "es", "it", "nl", "pt", "pl", "sv", "da", "no", "fi", "cs", "hu", "ro", "el"] },
   "duns-number-dun-bradstreet": { available: ["fr", "en", "de", "es", "it", "nl", "pt", "pl", "sv", "da", "no", "fi", "cs", "hu", "ro", "el"] },
+  "how-to-get-a-duns-number": { available: ["en"] },
+  "duns-number-vs-ein": { available: ["en"] },
+  "duns-number-vs-uei-sam": { available: ["en"] },
 };
 
 const UI = {
@@ -189,6 +192,15 @@ const ARTICLES_T = {
     ro: { title: "Dun & Bradstreet și Numărul DUNS: Tot ce Trebuie să Știți", excerpt: "Istoria fascinantă a Dun & Bradstreet, fondată în 1841, și crearea Numărului DUNS în 1962 care conectează astăzi 455 de milioane de companii." },
     el: { title: "Dun & Bradstreet και ο Αριθμός DUNS: Όλα όσα Πρέπει να Γνωρίζετε", excerpt: "Η συναρπαστική ιστορία της Dun & Bradstreet, που ιδρύθηκε το 1841, και η δημιουργία του Αριθμού DUNS το 1962 που σήμερα συνδέει 455 εκατομμύρια εταιρείες." },
   },
+  "how-to-get-a-duns-number": {
+    en: { title: "How to Get a DUNS Number in 2026: Fast & Easy Guide", excerpt: "Step-by-step guide to getting your DUNS number: free official D&B method (30 days), Apple lookup tool (5 days), or DUNS Verify (2 minutes)." },
+  },
+  "duns-number-vs-ein": {
+    en: { title: "DUNS Number vs EIN: Key Differences Explained", excerpt: "DUNS number vs EIN — two 9-digit identifiers, completely different purposes. Learn when you need each one and why most US businesses need both." },
+  },
+  "duns-number-vs-uei-sam": {
+    en: { title: "DUNS Number vs UEI: SAM.gov Transition Guide 2026", excerpt: "The US government replaced DUNS with UEI on SAM.gov in April 2022 — but DUNS is still required for Apple, Google Play, EU procurement, and business credit." },
+  },
 };
 
 export async function generateStaticParams() {
@@ -228,6 +240,9 @@ export default async function BlogIndex({ params }) {
     "numero-duns-marches-publics",
     "verifier-numero-duns",
     "duns-number-dun-bradstreet",
+    "how-to-get-a-duns-number",
+    "duns-number-vs-ein",
+    "duns-number-vs-uei-sam",
   ];
 
   const articles = articleSlugs

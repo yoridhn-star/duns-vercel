@@ -14,6 +14,13 @@ const BLOG_SLUGS = [
   'duns-number-dun-bradstreet',
 ];
 
+// EN-only articles — only indexed for the 'en' locale
+const BLOG_SLUGS_EN_ONLY = [
+  'how-to-get-a-duns-number',
+  'duns-number-vs-ein',
+  'duns-number-vs-uei-sam',
+];
+
 export default function sitemap() {
   const languages = Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}`]));
 
@@ -54,7 +61,7 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  // Blog article pages (French locale only for now — other locales will serve the same French content)
+  // Blog article pages (all locales)
   const blogArticlePages = LOCALES.flatMap((lang) =>
     BLOG_SLUGS.map((slug) => ({
       url: `${SITE_URL}/${lang}/blog/${slug}`,
@@ -64,5 +71,13 @@ export default function sitemap() {
     }))
   );
 
-  return [...langPages, ...staticPages, ...blogIndexPages, ...blogArticlePages];
+  // EN-only blog articles
+  const blogArticlePagesEN = BLOG_SLUGS_EN_ONLY.map((slug) => ({
+    url: `${SITE_URL}/en/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...langPages, ...staticPages, ...blogIndexPages, ...blogArticlePages, ...blogArticlePagesEN];
 }
