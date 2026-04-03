@@ -19,33 +19,49 @@ const FAQ_ITEMS = [
     q: "Que se passe-t-il si mon entreprise n'a pas de numéro DUNS ?",
     a: "Si votre entreprise n'est pas trouvée, vous pouvez en demander un gratuitement sur le site officiel de Dun & Bradstreet.",
   },
+  {
+    q: "Quelle est la différence entre le DUNS et le SIRET ?",
+    a: "Le SIRET est un identifiant national français attribué par l'INSEE. Le numéro D-U-N-S est un identifiant international attribué par Dun & Bradstreet, reconnu dans plus de 200 pays. Les deux sont complémentaires : le SIRET pour la France, le DUNS pour l'international.",
+  },
+  {
+    q: "Le numéro DUNS est-il obligatoire pour Apple Developer ?",
+    a: "Oui, Apple exige un numéro D-U-N-S valide pour toute inscription au Apple Developer Program ou au Apple Developer Enterprise Program en tant qu'organisation. Sans numéro DUNS, vous ne pouvez pas publier d'applications sur l'App Store au nom de votre entreprise.",
+  },
+  {
+    q: "Comment obtenir un numéro DUNS en France ?",
+    a: "La plupart des entreprises françaises enregistrées au registre du commerce possèdent déjà un numéro D-U-N-S. Utilisez notre service pour le retrouver instantanément en 2 minutes au lieu d'attendre 30 jours via le processus officiel.",
+  },
 ];
 
 const WHY_DUNS = [
   {
     Icon: Globe,
     title: "Appels d'offres internationaux",
-    desc: "Obligatoire pour répondre aux marchés publics européens et aux contrats avec le gouvernement américain (SAM.gov).",
+    desc: "Le numéro DUNS est obligatoire pour répondre aux marchés publics européens, aux appels d'offres internationaux et aux contrats avec le gouvernement américain via SAM.gov.",
+    ariaLabel: "Icône marchés publics et appels d'offres internationaux",
   },
   {
     Icon: Handshake,
     title: "Partenariats B2B",
-    desc: "De nombreuses multinationales exigent un numéro DUNS pour référencer leurs fournisseurs.",
+    desc: "De nombreuses multinationales exigent un numéro D-U-N-S pour référencer et vérifier leurs fournisseurs internationaux.",
+    ariaLabel: "Icône partenariats B2B et fournisseurs internationaux",
   },
   {
     Icon: Building,
     title: "Crédibilité financière",
-    desc: "Le DUNS renforce la confiance de vos partenaires et institutions bancaires.",
+    desc: "Le numéro DUNS renforce la crédibilité financière de votre entreprise auprès de vos partenaires, banques et investisseurs.",
+    ariaLabel: "Icône crédibilité financière entreprise",
   },
   {
     Icon: Smartphone,
     title: "Apple & Google",
-    desc: "Requis pour publier des apps sur l'App Store et le Google Play Store en tant qu'organisation.",
+    desc: "Le numéro D-U-N-S est requis pour publier des applications sur l'App Store (Apple Developer Program) et le Google Play Store en tant qu'organisation.",
+    ariaLabel: "Icône Apple Developer Program et Google Play Store",
   },
 ];
 
 const STEPS = [
-  { n: 1, Icon: Search,       title: "Entrez vos informations",  desc: "Saisissez le nom de votre entreprise, le pays et votre email." },
+  { n: 1, Icon: Search,       title: "Entrez vos informations",  desc: "Saisissez le nom de votre entreprise, la ville, le pays et votre email pour rechercher votre numéro DUNS." },
   { n: 2, Icon: Loader,       title: "Recherche automatique",    desc: "Notre système interroge les bases de données internationales. Résultat en moins de 2 minutes." },
   { n: 3, Icon: CheckCircle,  title: "Recevez votre DUNS",       desc: "Votre numéro D-U-N-S s'affiche à l'écran et vous est envoyé par email." },
 ];
@@ -62,7 +78,7 @@ export default function Home() {
         <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
             <a href="#formulaire" className="flex items-center gap-2">
-              <ShieldCheck className="w-6 h-6 text-[#1E3A5F]" />
+              <ShieldCheck className="w-6 h-6 text-[#1E3A5F]" aria-label="DUNS Verify - Vérification numéro DUNS" />
               <span className="text-xl font-bold text-[#1E3A5F] tracking-tight">DUNS</span>
               <span className="text-xl font-normal text-slate-500">Verify</span>
             </a>
@@ -92,7 +108,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-slate-500 mb-10">
-                Plus besoin d&apos;attendre 30 jours. Recevez votre identifiant D-U-N-S immédiatement par email
+                Plus besoin d&apos;attendre 30 jours. Trouvez et vérifiez le numéro D-U-N-S de votre entreprise immédiatement par email
                 pour seulement <strong className="text-slate-700">4,99 €</strong>.
               </p>
 
@@ -139,13 +155,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="grid sm:grid-cols-2 gap-6">
-                {WHY_DUNS.map(({ Icon, title, desc }) => (
+                {WHY_DUNS.map(({ Icon, title, desc, ariaLabel }) => (
                   <div
                     key={title}
                     className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all flex gap-4"
                   >
                     <div className="bg-blue-50 p-3 rounded-xl flex-shrink-0 self-start">
-                      <Icon className="w-6 h-6 text-blue-600" />
+                      <Icon className="w-6 h-6 text-blue-600" aria-label={ariaLabel} />
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">{title}</h3>
@@ -164,6 +180,18 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-[#1E3A5F]">Questions fréquentes</h2>
               </div>
               <FaqAccordion items={FAQ_ITEMS} />
+            </div>
+          </section>
+
+          {/* ── SEO Content ──────────────────────────────────────────────── */}
+          <section className="py-16 px-4 bg-white">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold text-[#1E3A5F] mb-6">Qu&rsquo;est-ce que le numéro D-U-N-S et pourquoi en avez-vous besoin&nbsp;?</h2>
+              <div className="prose prose-slate max-w-none text-slate-600 space-y-4">
+                <p>Le <strong>numéro D-U-N-S</strong> (Data Universal Numbering System) est un identifiant unique à 9 chiffres attribué par <strong>Dun &amp; Bradstreet</strong> à chaque entité commerciale dans le monde. Contrairement au <strong>numéro SIRET</strong> qui est limité à la France, le numéro DUNS est reconnu internationalement dans plus de 200 pays.</p>
+                <p>Que vous souhaitiez répondre à des <strong>appels d&rsquo;offres internationaux</strong>, rejoindre le <strong>Apple Developer Program</strong>, publier sur le <strong>Google Play Store</strong>, ou simplement renforcer la <strong>crédibilité de votre entreprise</strong> auprès de partenaires B2B, le numéro D-U-N-S est indispensable.</p>
+                <p>Avec <strong>DUNS Verify</strong>, obtenez votre numéro DUNS en <strong>2 minutes</strong> au lieu de 30 jours via le processus officiel. Notre service recherche instantanément votre identifiant dans la base de données internationale et vous l&rsquo;envoie par email.</p>
+              </div>
             </div>
           </section>
 
