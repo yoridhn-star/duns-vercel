@@ -255,7 +255,7 @@ function ContentEN({ lang }) {
           <p className="text-slate-700 text-sm leading-relaxed">Likely yes, if you need to publish apps on the App Store, work with international partners, participate in EU procurement, or build your D&amp;B credit profile. Your UEI and DUNS number serve different ecosystems and are both necessary for a complete business identity.</p>
         </div>
         <div>
-          <p className="font-semibold text="slate-800 mb-1">What happened to my old DUNS number after the SAM.gov transition?</p>
+          <p className="font-semibold text-slate-800 mb-1">What happened to my old DUNS number after the SAM.gov transition?</p>
           <p className="text-slate-700 text-sm leading-relaxed">Your old DUNS number still exists in the D&amp;B database and can still be used for all non-federal purposes. SAM.gov simply stopped using it as the primary identifier — but the DUNS number itself was not deleted or deactivated.</p>
         </div>
         <div>
