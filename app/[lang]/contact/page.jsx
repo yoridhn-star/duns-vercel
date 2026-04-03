@@ -1,14 +1,12 @@
-import { ShieldCheck, Mail } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import LangSelector from "../../_components/LangSelector";
-import ContactForm from "../../_components/ContactForm";
 import { getDictionary, LOCALES } from "../../i18n";
 
 export async function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }) {
-  const { lang } = await params;
+export async function generateMetadata() {
   return {
     title: "Contact | DUNS Verify",
     robots: { index: false },
@@ -23,33 +21,11 @@ export default async function ContactPage({ params }) {
   const c = isFr
     ? {
         title: "Contact",
-        intro: "Une question sur votre recherche D-U-N-S ? Notre équipe est disponible pour vous aider.",
-        emailLabel: "Email",
-        responseTime: "Nous répondons sous 24 h ouvrées.",
-        formTitle: "Envoyer un message",
-        name: "Nom",
-        namePlaceholder: "Votre nom",
-        email: "Email",
-        emailPlaceholder: "vous@exemple.com",
-        message: "Message",
-        messagePlaceholder: "Décrivez votre demande…",
-        submit: "Envoyer le message",
-        note: "Ce formulaire n'est pas encore connecté à un backend. En attendant, contactez-nous directement par email.",
+        intro: "Pour toute question, contactez-nous par email :",
       }
     : {
         title: "Contact",
-        intro: "Have a question about your D-U-N-S lookup? Our team is available to help.",
-        emailLabel: "Email",
-        responseTime: "We respond within 24 business hours.",
-        formTitle: "Send a message",
-        name: "Name",
-        namePlaceholder: "Your name",
-        email: "Email",
-        emailPlaceholder: "you@example.com",
-        message: "Message",
-        messagePlaceholder: "Describe your request…",
-        submit: "Send message",
-        note: "This form is not yet connected to a backend. In the meantime, contact us directly by email.",
+        intro: "For any questions, contact us by email:",
       };
 
   return (
@@ -67,31 +43,14 @@ export default async function ContactPage({ params }) {
 
       <main className="flex-1 py-16 px-4">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold text-[#1E3A5F] mb-4">{c.title}</h1>
-          <p className="text-slate-500 mb-10">{c.intro}</p>
-
-          {/* Email card */}
-          <div className="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 mb-10">
-            <div className="bg-blue-50 p-3 rounded-xl flex-shrink-0">
-              <Mail className="w-6 h-6 text-blue-600" />
-            </div>
-            <div>
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wide mb-0.5">{c.emailLabel}</p>
-              <a
-                href="mailto:contact@dunsverify.com"
-                className="text-[#1E3A5F] font-semibold hover:underline"
-              >
-                contact@dunsverify.com
-              </a>
-              <p className="text-xs text-slate-500 mt-1">{c.responseTime}</p>
-            </div>
-          </div>
-
-          {/* Contact form (front-end only) */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-            <h2 className="text-xl font-semibold text-slate-800 mb-6">{c.formTitle}</h2>
-            <ContactForm c={c} />
-          </div>
+          <h1 className="text-3xl font-bold text-[#1E3A5F] mb-6">{c.title}</h1>
+          <p className="text-slate-600 mb-3">{c.intro}</p>
+          <a
+            href="mailto:contact@dunsverify.com"
+            className="text-emerald-600 font-semibold hover:underline text-lg"
+          >
+            contact@dunsverify.com
+          </a>
         </div>
       </main>
 
