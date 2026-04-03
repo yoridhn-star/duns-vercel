@@ -2,6 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import {
+  ShieldCheck,
+  Loader,
+  Search,
+  CheckCircle,
+  AlertCircle,
+  XCircle,
+  MapPin,
+  ArrowLeft,
+} from "lucide-react";
 
 export default function SuccessContent({ t, lang }) {
   const searchParams = useSearchParams();
@@ -84,97 +94,108 @@ export default function SuccessContent({ t, lang }) {
   const homeHref = `/${lang}`;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-slate-50">
 
       {/* Header */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <a href={homeHref} className="text-xl font-bold tracking-tight">
-            <span className="text-indigo-600">DUNS</span>
-            <span className="text-gray-500 font-medium"> Verify</span>
+      <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center h-16">
+          <a href={homeHref} className="flex items-center gap-2">
+            <ShieldCheck className="w-6 h-6 text-[#1E3A5F]" aria-label="DUNS Verify" />
+            <span className="text-xl font-bold text-[#1E3A5F] tracking-tight">DUNS</span>
+            <span className="text-xl font-normal text-slate-500">Verify</span>
           </a>
         </div>
       </header>
 
-      <main className="flex-1 pt-16 bg-gray-50 flex items-center justify-center py-20 px-4">
+      <main className="flex-1 flex items-center justify-center py-20 px-4">
         <div className="max-w-xl w-full">
 
-          {/* Loading / Searching */}
-          {(status === "loading" || status === "searching") && (
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-10 text-center">
+          {/* ── Loading ── */}
+          {status === "loading" && (
+            <div className="bg-white rounded-2xl shadow-lg p-10 text-center">
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center">
-                  <Spinner />
-                </div>
+                <Loader className="w-12 h-12 text-emerald-500 animate-spin" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                {status === "loading" ? t.verifying : t.searching}
-              </h1>
-              {status === "searching" && (
-                <>
-                  <p className="text-gray-500 text-sm mb-1">{t.searchingDesc}</p>
-                  <p className="text-gray-400 text-sm">{elapsedSec}s</p>
-                </>
-              )}
-              {status === "loading" && (
-                <p className="text-gray-500 text-sm">{t.verifyingDesc}</p>
-              )}
+              <h1 className="text-2xl font-bold text-[#1E3A5F] mb-2">{t.verifying}</h1>
+              <p className="text-slate-500 text-sm">{t.verifyingDesc}</p>
             </div>
           )}
 
-          {/* Success */}
-          {status === "success" && result && (
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+          {/* ── Searching ── */}
+          {status === "searching" && (
+            <div className="bg-white rounded-2xl shadow-lg p-10 text-center">
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+                <Search className="w-12 h-12 text-emerald-500 animate-pulse" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 text-center mb-2">{t.found}</h1>
-              <p className="text-gray-500 text-sm text-center mb-6">{t.foundDesc}</p>
+              <h1 className="text-2xl font-bold text-[#1E3A5F] mb-2">{t.searching}</h1>
+              <p className="text-slate-500 text-sm mb-4">{t.searchingDesc}</p>
+              <div className="flex justify-center mb-5">
+                <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-sm font-medium px-3 py-1 rounded-full border border-amber-200">
+                  {elapsedSec}s
+                </span>
+              </div>
+              <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                <div className="h-full bg-emerald-500 rounded-full animate-progress" />
+              </div>
+            </div>
+          )}
+
+          {/* ── Success ── */}
+          {status === "success" && result && (
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="flex justify-center mb-6">
+                <CheckCircle className="w-16 h-16 text-emerald-500" />
+              </div>
+              <h1 className="text-2xl font-bold text-[#1E3A5F] text-center mb-2">{t.found}</h1>
+              <p className="text-slate-500 text-sm text-center mb-6">{t.foundDesc}</p>
               <ResultCard result={result} t={t} />
               <div className="mt-6 text-center">
-                <a href={homeHref} className="inline-block text-sm text-indigo-600 hover:text-indigo-700 font-medium transition-colors">
+                <a
+                  href={homeHref}
+                  className="inline-flex items-center gap-2 border border-[#1E3A5F] text-[#1E3A5F] hover:bg-slate-50 transition-colors text-sm font-medium px-5 py-2.5 rounded-lg"
+                >
+                  <ArrowLeft className="w-4 h-4" />
                   {t.newSearch}
                 </a>
               </div>
             </div>
           )}
 
-          {/* No result */}
+          {/* ── No result ── */}
           {status === "no-result" && (
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
+            <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-yellow-50 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                      d="M12 8v4m0 4h.01M21 12A9 9 0 113 12a9 9 0 0118 0z" />
-                  </svg>
-                </div>
+                <AlertCircle className="w-16 h-16 text-amber-500" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.notFound}</h1>
-              <p className="text-gray-500 text-sm mb-6">{t.notFoundDesc}</p>
-              <a href={homeHref} className="inline-block text-sm text-indigo-600 hover:text-indigo-700 font-medium transition-colors">
-                {t.newSearch}
+              <div className="border-l-4 border-amber-400 bg-amber-50 rounded-r-xl p-4 mb-6 text-left">
+                <p className="text-slate-600 text-sm">{t.notFoundDesc}</p>
+              </div>
+              <h1 className="text-2xl font-bold text-[#1E3A5F] mb-6">{t.notFound}</h1>
+              <a
+                href={homeHref}
+                className="inline-flex items-center gap-2 border border-[#1E3A5F] text-[#1E3A5F] hover:bg-slate-50 transition-colors text-sm font-medium px-5 py-2.5 rounded-lg"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                {t.back}
               </a>
             </div>
           )}
 
-          {/* Error */}
+          {/* ── Error ── */}
           {status === "error" && (
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
+            <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </div>
+                <XCircle className="w-16 h-16 text-red-500" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">{t.error}</h1>
-              <p className="text-red-600 text-sm mb-6">{errorMsg}</p>
-              <a href={homeHref} className="inline-block text-sm text-indigo-600 hover:text-indigo-700 font-medium transition-colors">
+              <h1 className="text-2xl font-bold text-[#1E3A5F] mb-2">{t.error}</h1>
+              <div className="border-l-4 border-red-400 bg-red-50 rounded-r-xl p-4 mb-6 text-left">
+                <p className="text-slate-600 text-sm">{errorMsg}</p>
+              </div>
+              <a
+                href={homeHref}
+                className="inline-flex items-center gap-2 border border-[#1E3A5F] text-[#1E3A5F] hover:bg-slate-50 transition-colors text-sm font-medium px-5 py-2.5 rounded-lg"
+              >
+                <ArrowLeft className="w-4 h-4" />
                 {t.back}
               </a>
             </div>
@@ -183,14 +204,20 @@ export default function SuccessContent({ t, lang }) {
         </div>
       </main>
 
-      <footer className="border-t border-gray-100 py-8 px-4">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
-          <span className="font-bold text-base">
-            <span className="text-indigo-600">DUNS</span>
-            <span className="text-gray-400 font-medium"> Verify</span>
+      {/* Footer */}
+      <footer className="bg-[#1E3A5F] py-8 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-300">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-white" />
+            <span className="font-bold text-base text-white">DUNS</span>
+            <span className="font-normal text-slate-300">Verify</span>
+          </div>
+          <span className="text-center text-slate-400 text-xs">
+            © {new Date().getFullYear()} DUNS Verify. All rights reserved.
           </span>
         </div>
       </footer>
+
     </div>
   );
 }
@@ -201,44 +228,33 @@ function ResultCard({ result, t }) {
   const address = result.address     || "";
 
   return (
-    <div className="p-5 border border-indigo-100 rounded-xl bg-indigo-50/40">
+    <div className="border-l-4 border-emerald-500 bg-white shadow-md rounded-r-xl p-5">
       {name ? (
-        <p className="font-bold text-gray-900 text-base mb-3">{name}</p>
+        <p className="font-bold text-[#1E3A5F] text-xl mb-3">{name}</p>
       ) : (
-        <p className="font-bold text-gray-400 text-base mb-3 italic">{t.nameUnavailable}</p>
+        <p className="font-bold text-slate-400 text-xl mb-3 italic">{t.nameUnavailable}</p>
       )}
-      <div className="flex items-center gap-2 mb-2">
-        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-20 flex-shrink-0">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide w-20 flex-shrink-0">
           {t.duns}
         </span>
         {duns ? (
-          <span className="font-mono font-semibold text-indigo-700 bg-white border border-indigo-100 px-2.5 py-0.5 rounded-lg text-sm shadow-sm">
+          <span className="font-mono font-semibold text-emerald-700 bg-emerald-50 px-4 py-2 rounded-lg text-lg">
             {formatDuns(duns)}
           </span>
         ) : (
-          <span className="text-gray-400 text-sm italic">—</span>
+          <span className="text-slate-400 text-sm italic">—</span>
         )}
       </div>
       <div className="flex items-start gap-2">
-        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-20 flex-shrink-0 mt-0.5">
-          {t.address}
-        </span>
+        <MapPin className="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" />
         {address ? (
-          <span className="text-sm text-gray-700">{address}</span>
+          <span className="text-sm text-slate-600">{address}</span>
         ) : (
-          <span className="text-gray-400 text-sm italic">—</span>
+          <span className="text-slate-400 text-sm italic">—</span>
         )}
       </div>
     </div>
-  );
-}
-
-function Spinner() {
-  return (
-    <svg className="animate-spin h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
-    </svg>
   );
 }
 
