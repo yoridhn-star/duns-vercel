@@ -19,10 +19,14 @@ export async function POST(request) {
 
   const baseUrl = process.env.NEXT_PUBLIC_URL || "http://localhost:3000";
 
+  // Stripe uses 'nb' for Norwegian (Bokmål); all other locales match directly
+  const stripeLocaleMap = { no: 'nb' };
+  const stripeLocale = stripeLocaleMap[lang] || lang || "fr";
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
-      locale: lang || "fr",
+      locale: stripeLocale,
       line_items: [
         {
           price_data: {

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Număr DUNS: Obțineți D-U-N-S în 2 minute | DUNS Verify",
+    "description": "Obțineți numărul DUNS instantaneu. Găsiți și verificați numărul D-U-N-S al companiei dvs. în România și Europa. Rezultat pe email în 2 min pentru 4,99 €.",
+    "ogTitle": "Număr DUNS: Obțineți D-U-N-S în 2 minute | DUNS Verify",
+    "ogDescription": "Găsiți numărul D-U-N-S al companiei dvs. instantaneu. Serviciu rapid, rezultat pe email. Indispensabil pentru Apple Developer, achiziții publice, parteneriate B2B.",
+    "twitterTitle": "Număr DUNS în 2 minute | DUNS Verify",
+    "twitterDescription": "Obțineți numărul D-U-N-S instantaneu. Fără așteptare 30 de zile.",
+    "keywords": "număr DUNS, număr D-U-N-S, obținere DUNS, căutare DUNS, DUNS România, identificator afaceri, CUI vs DUNS, CIF vs DUNS, DUNS Apple Developer, DUNS achiziții publice"
+  },
+  "header": {
+    "nav": ["Cum funcționează", "De ce DUNS", "FAQ"],
+    "navHrefs": ["#cum-functioneaza", "#de-ce-duns", "#faq"]
+  },
+  "hero": {
+    "badge": "Rezultat în 2 min — în loc de 30 de zile",
+    "title": "Obțineți numărul",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "în 2 minute",
+    "subtitle": "Fără așteptare 30 de zile. Găsiți și verificați numărul D-U-N-S al companiei dvs. imediat pe email pentru doar 4,99 €."
+  },
+  "form": {
+    "company": "Numele companiei dvs.",
+    "companyPlaceholder": "Ex: Petrom S.A.",
+    "city": "Oraș",
+    "cityPlaceholder": "Ex: București",
+    "country": "Țară",
+    "email": "Adresa dvs. de email",
+    "emailPlaceholder": "dvs@exemplu.ro",
+    "submit": "Obțin DUNS-ul meu acum — 4,99 €",
+    "loading": "Redirecționare către plată…",
+    "trust1": "Plată securizată prin Stripe",
+    "trust2": "Rezultat în mai puțin de 2 min",
+    "trust3": "Trimis pe email",
+    "error": "Eroare"
+  },
+  "howItWorks": {
+    "title": "Cum funcționează",
+    "subtitle": "Trei pași simpli pentru a obține numărul DUNS.",
+    "steps": [
+      { "title": "Introduceți informațiile dvs.", "desc": "Introduceți numele companiei, orașul, țara și emailul pentru a căuta numărul DUNS." },
+      { "title": "Căutare automată", "desc": "Sistemul nostru interoghează bazele de date internaționale. Rezultat în mai puțin de 2 minute." },
+      { "title": "Primiți DUNS-ul dvs.", "desc": "Numărul dvs. D-U-N-S apare pe ecran și vă este trimis pe email." }
+    ]
+  },
+  "whyDuns": {
+    "title": "De ce aveți nevoie de un număr DUNS?",
+    "subtitle": "Numărul D-U-N-S este pașaportul dvs. comercial internațional.",
+    "cards": [
+      {
+        "title": "Achiziții publice internaționale",
+        "desc": "Numărul DUNS este obligatoriu pentru achizițiile publice europene, licitațiile internaționale și contractele cu guvernul american prin SAM.gov.",
+        "ariaLabel": "Pictogramă pentru achiziții publice și licitații internaționale"
+      },
+      {
+        "title": "Parteneriate B2B",
+        "desc": "Multe companii multinaționale solicită un număr D-U-N-S pentru a înregistra și verifica furnizorii internaționali.",
+        "ariaLabel": "Pictogramă pentru parteneriate B2B și furnizori internaționali"
+      },
+      {
+        "title": "Credibilitate financiară",
+        "desc": "Numărul DUNS consolidează credibilitatea financiară a companiei dvs. față de parteneri, bănci și investitori.",
+        "ariaLabel": "Pictogramă pentru credibilitate financiară"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "Numărul D-U-N-S este necesar pentru publicarea aplicațiilor în App Store (Apple Developer Program) și Google Play Store ca organizație.",
+        "ariaLabel": "Pictogramă pentru Apple Developer Program și Google Play Store"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "items": [
+      { "q": "Ce este un număr D-U-N-S?", "a": "Numărul D-U-N-S (Data Universal Numbering System) este un identificator unic de 9 cifre atribuit de Dun & Bradstreet fiecărei entități comerciale din lume." },
+      { "q": "Cât durează căutarea?", "a": "Căutarea durează de obicei între 30 de secunde și 2 minute, în funcție de încărcarea serverului." },
+      { "q": "Cât costă serviciul?", "a": "Căutarea numărului D-U-N-S este disponibilă pentru 4,99 €. Plata este securizată prin Stripe și primiți rezultatul imediat după confirmare." },
+      { "q": "Ce se întâmplă dacă compania mea nu are număr DUNS?", "a": "Dacă compania dvs. nu este găsită, puteți solicita un număr gratuit pe site-ul oficial al Dun & Bradstreet." },
+      { "q": "Care este diferența dintre DUNS și CUI / CIF?", "a": "CUI (Codul Unic de Înregistrare) și CIF sunt identificatori naționali românești eliberați de ANAF. Numărul D-U-N-S este un identificator internațional emis de Dun & Bradstreet, recunoscut în peste 200 de țări. Sunt complementari: CUI/CIF pentru România, DUNS pentru uz internațional." },
+      { "q": "Numărul DUNS este obligatoriu pentru Apple Developer?", "a": "Da, Apple solicită un număr D-U-N-S valid pentru orice înregistrare la Apple Developer Program sau Apple Developer Enterprise Program ca organizație. Fără număr DUNS nu puteți publica aplicații în App Store în numele companiei dvs." },
+      { "q": "Cum să obțineți un număr DUNS în România?", "a": "Majoritatea companiilor românești înregistrate la Registrul Comerțului dețin deja un număr D-U-N-S. Utilizați serviciul nostru pentru a-l găsi instantaneu în 2 minute în loc de 30 de zile prin procedura oficială." }
+    ]
+  },
+  "seo": {
+    "title": "Ce este numărul D-U-N-S și de ce aveți nevoie de el?",
+    "paragraphs": [
+      "Numărul D-U-N-S (Data Universal Numbering System) este un identificator unic de 9 cifre atribuit de Dun & Bradstreet fiecărei entități comerciale din lume. Spre deosebire de CUI/CIF care sunt limitate la România, numărul DUNS este recunoscut internațional în peste 200 de țări.",
+      "Fie că doriți să participați la achiziții publice internaționale, să vă alăturați Apple Developer Program, să publicați pe Google Play Store sau pur și simplu să consolidați credibilitatea companiei dvs. la parteneri B2B, numărul D-U-N-S este indispensabil.",
+      "Cu DUNS Verify, obțineți numărul DUNS în 2 minute în loc de 30 de zile prin procedura oficială. Serviciul nostru caută instantaneu identificatorul dvs. în baza de date internațională și vi-l trimite pe email."
+    ]
+  },
+  "cta": {
+    "title": "Gata să obțineți numărul DUNS?",
+    "subtitle": "Fără așteptare 30 de zile. Obțineți identificatorul dvs. internațional în 2 minute pentru doar 4,99 €.",
+    "button": "Obțin DUNS-ul meu acum →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Serviciu independent, neafiliat cu Dun & Bradstreet.",
+    "links": ["Informații legale", "Termeni și condiții", "Contact"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Limbă",
+  "success": {
+    "verifying": "Verificare plată…",
+    "verifyingDesc": "Confirmare plată Stripe în curs.",
+    "searching": "Căutare număr D-U-N-S în curs…",
+    "searchingDesc": "Poate dura până la 2 minute, vă mulțumim pentru răbdare.",
+    "found": "Număr D-U-N-S găsit!",
+    "foundDesc": "Iată informațiile găsite pentru compania dvs.",
+    "notFound": "Niciun rezultat găsit",
+    "notFoundDesc": "Nu am găsit un număr D-U-N-S pentru această companie în baza noastră de date. Puteți solicita un număr gratuit pe site-ul oficial al Dun & Bradstreet.",
+    "error": "A apărut o eroare",
+    "newSearch": "← Căutare nouă",
+    "back": "← Înapoi la pagina principală",
+    "duns": "D-U-N-S",
+    "address": "Adresă",
+    "nameUnavailable": "Nume indisponibil",
+    "sessionError": "Sesiune negăsită. Vă rugăm să reîncercați.",
+    "paymentError": "Plată neconfirmată.",
+    "paymentVerifyError": "Imposibil de verificat plata."
+  },
+  "jsonLd": {
+    "websiteDescription": "Obțineți numărul D-U-N-S în 2 minute",
+    "serviceDescription": "Serviciu de căutare instantanee a numărului D-U-N-S pentru companii"
+  }
+}

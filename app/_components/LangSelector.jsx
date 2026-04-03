@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { LOCALES } from "../i18n";
 
-const FLAG_LABELS = { fr: "FR", en: "EN", de: "DE", es: "ES" };
+const FLAG_LABELS = { fr: "FR", en: "EN", de: "DE", es: "ES", it: "IT", nl: "NL", pt: "PT", pl: "PL", sv: "SV", da: "DA", no: "NO", fi: "FI", cs: "CS", hu: "HU", ro: "RO", el: "EL" };
 
 export default function LangSelector({ currentLang }) {
   const router = useRouter();

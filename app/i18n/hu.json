@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "DUNS szám: Szerezze meg D-U-N-S számát 2 perc alatt | DUNS Verify",
+    "description": "Szerezze meg DUNS számát azonnal. Keresse meg és ellenőrizze vállalata D-U-N-S számát Magyarországon és Európában. Eredmény emailben 2 perc alatt 4,99 €-ért.",
+    "ogTitle": "DUNS szám: Szerezze meg D-U-N-S számát 2 perc alatt | DUNS Verify",
+    "ogDescription": "Keresse meg vállalata D-U-N-S számát azonnal. Gyors szolgáltatás, eredmény emailben. Nélkülözhetetlen az Apple Developer programhoz, közbeszerzésekhez, B2B partnerségekhez.",
+    "twitterTitle": "DUNS szám 2 perc alatt | DUNS Verify",
+    "twitterDescription": "Szerezze meg D-U-N-S számát azonnal. Vége a 30 napos várakozásnak.",
+    "keywords": "DUNS szám, D-U-N-S szám, DUNS szám keresés, DUNS szám megszerzése, DUNS Magyarország, adószám vs DUNS, cégjegyzékszám vs DUNS, vállalati azonosító, DUNS Apple Developer, DUNS közbeszerzés"
+  },
+  "header": {
+    "nav": ["Hogyan működik", "Miért a DUNS", "GYIK"],
+    "navHrefs": ["#hogyan-mukodik", "#miert-a-duns", "#gyik"]
+  },
+  "hero": {
+    "badge": "Eredmény 2 perc alatt — 30 nap helyett",
+    "title": "Szerezze meg",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "számát 2 perc alatt",
+    "subtitle": "Vége a 30 napos várakozásnak. Keresse meg és ellenőrizze vállalata D-U-N-S számát azonnal emailben, mindössze 4,99 €-ért."
+  },
+  "form": {
+    "company": "Vállalata neve",
+    "companyPlaceholder": "Pl: OTP Bank Nyrt.",
+    "city": "Város",
+    "cityPlaceholder": "Pl: Budapest",
+    "country": "Ország",
+    "email": "Az Ön email-címe",
+    "emailPlaceholder": "on@pelda.hu",
+    "submit": "DUNS számomat kérem most — 4,99 €",
+    "loading": "Átirányítás a fizetéshez…",
+    "trust1": "Biztonságos fizetés Stripe-on keresztül",
+    "trust2": "Eredmény 2 perc alatt",
+    "trust3": "Emailben elküldve",
+    "error": "Hiba"
+  },
+  "howItWorks": {
+    "title": "Hogyan működik",
+    "subtitle": "Három egyszerű lépés a DUNS szám megszerzéséhez.",
+    "steps": [
+      { "title": "Adja meg adatait", "desc": "Adja meg vállalata nevét, városát, országát és email-címét a DUNS szám kereséséhez." },
+      { "title": "Automatikus keresés", "desc": "Rendszerünk lekérdezi a nemzetközi adatbázisokat. Eredmény 2 percen belül." },
+      { "title": "Megkapja DUNS számát", "desc": "D-U-N-S száma megjelenik a képernyőn és emailben is megküldjük." }
+    ]
+  },
+  "whyDuns": {
+    "title": "Miért van szüksége DUNS számra?",
+    "subtitle": "A D-U-N-S szám az Ön nemzetközi üzleti útlevele.",
+    "cards": [
+      {
+        "title": "Nemzetközi közbeszerzések",
+        "desc": "A DUNS szám kötelező az európai közbeszerzésekhez, nemzetközi pályázatokhoz és az amerikai kormányzati szerződésekhez a SAM.gov oldalon keresztül.",
+        "ariaLabel": "Ikon a közbeszerzésekhez és nemzetközi pályázatokhoz"
+      },
+      {
+        "title": "B2B partnerségek",
+        "desc": "Sok multinacionális vállalat D-U-N-S számot kér a nemzetközi szállítók regisztrálásához és ellenőrzéséhez.",
+        "ariaLabel": "Ikon a B2B partnerségekhez és nemzetközi szállítókhoz"
+      },
+      {
+        "title": "Pénzügyi hitelesség",
+        "desc": "A DUNS szám erősíti vállalata pénzügyi hitelességét a partnerek, bankok és befektetők előtt.",
+        "ariaLabel": "Ikon a vállalati pénzügyi hitelességhez"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "A D-U-N-S szám szükséges az App Store-ban (Apple Developer Program) és a Google Play Store-ban szervezetként való applikáció közzétételéhez.",
+        "ariaLabel": "Ikon az Apple Developer Programhoz és Google Play Store-hoz"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gyakran ismételt kérdések",
+    "items": [
+      { "q": "Mi a D-U-N-S szám?", "a": "A D-U-N-S szám (Data Universal Numbering System) egy egyedi 9 jegyű azonosító, amelyet a Dun & Bradstreet oszt ki minden kereskedelmi szervezetnek a világon." },
+      { "q": "Mennyi ideig tart a keresés?", "a": "A keresés általában 30 másodperctől 2 percig tart, a szerver terhelésétől függően." },
+      { "q": "Mennyibe kerül a szolgáltatás?", "a": "A D-U-N-S szám keresése 4,99 €-ba kerül. A fizetés biztonságos Stripe-on keresztül, és az eredményt azonnal megkapja a megerősítés után." },
+      { "q": "Mi történik, ha vállalatom nem rendelkezik DUNS számmal?", "a": "Ha vállalata nem található, ingyenesen igényelhet számot a Dun & Bradstreet hivatalos weboldalán." },
+      { "q": "Mi a különbség a DUNS szám és az adószám / cégjegyzékszám között?", "a": "Az adószám és a cégjegyzékszám a Magyar Állam által kiadott nemzeti azonosítók. A D-U-N-S szám a Dun & Bradstreet által kiadott nemzetközi azonosító, amelyet több mint 200 országban elismernek. Kiegészítik egymást: adószám/cégjegyzékszám Magyarországon, DUNS a nemzetközi üzleti életben." },
+      { "q": "Kötelező a DUNS szám az Apple Developerhez?", "a": "Igen, az Apple érvényes D-U-N-S számot kér az Apple Developer Program vagy az Apple Developer Enterprise Program szervezetként történő regisztrálásához. DUNS szám nélkül nem tehet közzé alkalmazásokat az App Store-ban vállalata nevében." },
+      { "q": "Hogyan lehet DUNS számot szerezni Magyarországon?", "a": "A legtöbb cégjegyzékbe bejegyzett magyar vállalat már rendelkezik D-U-N-S számmal. Használja szolgáltatásunkat, hogy azonnal 2 perc alatt megtalálja azt, a 30 napos hivatalos eljárás helyett." }
+    ]
+  },
+  "seo": {
+    "title": "Mi a D-U-N-S szám és miért van rá szüksége?",
+    "paragraphs": [
+      "A D-U-N-S szám (Data Universal Numbering System) egy egyedi 9 jegyű azonosító, amelyet a Dun & Bradstreet oszt ki minden kereskedelmi szervezetnek a világon. Az adószámmal vagy cégjegyzékszámmal ellentétben, amelyek Magyarországra korlátozódnak, a DUNS számot nemzetközileg több mint 200 országban elismerik.",
+      "Akár nemzetközi közbeszerzésekben kíván részt venni, az Apple Developer Programhoz szeretne csatlakozni, a Google Play Store-on közzétenni, vagy egyszerűen erősíteni vállalata hitelességét a B2B partnerek előtt – a D-U-N-S szám nélkülözhetetlen.",
+      "A DUNS Verify segítségével 2 perc alatt megszerzi DUNS számát, a 30 napos hivatalos eljárás helyett. Szolgáltatásunk azonnal megkeresi az azonosítót a nemzetközi adatbázisban, és emailben megküldi Önnek."
+    ]
+  },
+  "cta": {
+    "title": "Készen áll a DUNS szám megszerzésére?",
+    "subtitle": "Vége a 30 napos várakozásnak. Szerezze meg nemzetközi azonosítóját 2 perc alatt mindössze 4,99 €-ért.",
+    "button": "DUNS számomat kérem most →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Független szolgáltatás, nem áll kapcsolatban a Dun & Bradstreettel.",
+    "links": ["Jogi tájékoztató", "Általános szerződési feltételek", "Kapcsolat"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Nyelv",
+  "success": {
+    "verifying": "Fizetés ellenőrzése…",
+    "verifyingDesc": "Stripe fizetés megerősítése folyamatban.",
+    "searching": "D-U-N-S számának keresése folyamatban…",
+    "searchingDesc": "Ez akár 2 percig is tarthat, köszönjük türelmét.",
+    "found": "D-U-N-S szám megtalálva!",
+    "foundDesc": "Íme a vállalata számára talált információk.",
+    "notFound": "Nem található eredmény",
+    "notFoundDesc": "Nem találtunk D-U-N-S számot ehhez a vállalathoz adatbázisunkban. Ingyenesen igényelhet számot a Dun & Bradstreet hivatalos weboldalán.",
+    "error": "Hiba történt",
+    "newSearch": "← Új keresés",
+    "back": "← Vissza a főoldalra",
+    "duns": "D-U-N-S",
+    "address": "Cím",
+    "nameUnavailable": "Név nem elérhető",
+    "sessionError": "Munkamenet nem található. Kérjük, próbálja újra.",
+    "paymentError": "Fizetés nem megerősítve.",
+    "paymentVerifyError": "A fizetés nem ellenőrizhető."
+  },
+  "jsonLd": {
+    "websiteDescription": "Szerezze meg D-U-N-S számát 2 perc alatt",
+    "serviceDescription": "Azonnali D-U-N-S szám kereső szolgáltatás vállalatok számára"
+  }
+}

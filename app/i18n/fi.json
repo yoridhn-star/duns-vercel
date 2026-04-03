@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "DUNS-numero: Hanki D-U-N-S-numerosi 2 minuutissa | DUNS Verify",
+    "description": "Hanki DUNS-numerosi välittömästi. Löydä ja tarkista yrityksesi D-U-N-S-numero Suomessa ja Euroopassa. Tulos sähköpostitse 2 min 4,99 €:lla.",
+    "ogTitle": "DUNS-numero: Hanki D-U-N-S-numerosi 2 minuutissa | DUNS Verify",
+    "ogDescription": "Löydä yrityksesi D-U-N-S-numero välittömästi. Nopea palvelu, tulos sähköpostitse. Välttämätön Apple Developerille, julkisille hankinnoille, B2B-kumppanuuksille.",
+    "twitterTitle": "DUNS-numero 2 minuutissa | DUNS Verify",
+    "twitterDescription": "Hanki D-U-N-S-numerosi välittömästi. Lopeta 30 päivän odottelu.",
+    "keywords": "DUNS numero, D-U-N-S numero, hanki DUNS numero, etsi DUNS numero, DUNS Suomi, Y-tunnus vs DUNS, yritystunniste, DUNS Apple Developer, DUNS julkiset hankinnat"
+  },
+  "header": {
+    "nav": ["Miten se toimii", "Miksi DUNS", "UKK"],
+    "navHrefs": ["#miten-se-toimii", "#miksi-duns", "#ukk"]
+  },
+  "hero": {
+    "badge": "Tulos 2 min — 30 päivän sijaan",
+    "title": "Hanki",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "numerosi 2 minuutissa",
+    "subtitle": "Ei enää 30 päivän odottelua. Löydä ja tarkista yrityksesi D-U-N-S-numero välittömästi sähköpostitse vain 4,99 €:lla."
+  },
+  "form": {
+    "company": "Yrityksesi nimi",
+    "companyPlaceholder": "Esim: Nokia Oyj",
+    "city": "Kaupunki",
+    "cityPlaceholder": "Esim: Helsinki",
+    "country": "Maa",
+    "email": "Sähköpostiosoitteesi",
+    "emailPlaceholder": "sinä@esimerkki.fi",
+    "submit": "Hanki DUNS-numeroni nyt — 4,99 €",
+    "loading": "Ohjataan maksuun…",
+    "trust1": "Turvallinen maksu Stripen kautta",
+    "trust2": "Tulos alle 2 min",
+    "trust3": "Lähetetty sähköpostitse",
+    "error": "Virhe"
+  },
+  "howItWorks": {
+    "title": "Miten se toimii",
+    "subtitle": "Kolme yksinkertaista vaihetta DUNS-numerosi saamiseksi.",
+    "steps": [
+      { "title": "Syötä tietosi", "desc": "Syötä yrityksesi nimi, kaupunki, maa ja sähköposti etsiäksesi DUNS-numerosi." },
+      { "title": "Automaattinen haku", "desc": "Järjestelmämme hakee kansainvälisistä tietokannoista. Tulos alle 2 minuutissa." },
+      { "title": "Vastaanota DUNS-numerosi", "desc": "D-U-N-S-numerosi näkyy ruudulla ja lähetetään sähköpostiisi." }
+    ]
+  },
+  "whyDuns": {
+    "title": "Miksi tarvitset DUNS-numeron?",
+    "subtitle": "D-U-N-S-numero on kansainvälinen yrityspassisi.",
+    "cards": [
+      {
+        "title": "Kansainväliset hankinnat",
+        "desc": "DUNS-numero on pakollinen eurooppalaisissa julkisissa hankinnoissa, kansainvälisissä tarjouspyynnöissä ja sopimuksissa Yhdysvaltain hallituksen kanssa SAM.gov-sivuston kautta.",
+        "ariaLabel": "Kuvake julkisille hankinnoille ja kansainvälisille tarjouksille"
+      },
+      {
+        "title": "B2B-kumppanuudet",
+        "desc": "Monet monikansalliset yritykset edellyttävät D-U-N-S-numeroa kansainvälisten toimittajiensa rekisteröimiseksi ja tarkistamiseksi.",
+        "ariaLabel": "Kuvake B2B-kumppanuuksille ja kansainvälisille toimittajille"
+      },
+      {
+        "title": "Taloudellinen uskottavuus",
+        "desc": "DUNS-numero vahvistaa yrityksesi taloudellista uskottavuutta kumppaneiden, pankkien ja sijoittajien silmissä.",
+        "ariaLabel": "Kuvake yrityksen taloudelliselle uskottavuudelle"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "D-U-N-S-numero vaaditaan sovellusten julkaisemiseen App Storessa (Apple Developer Program) ja Google Play Storessa organisaationa.",
+        "ariaLabel": "Kuvake Apple Developer Programille ja Google Play Storelle"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "items": [
+      { "q": "Mikä on D-U-N-S-numero?", "a": "D-U-N-S-numero (Data Universal Numbering System) on Dun & Bradstreetin jokaiselle maailman kaupalliselle taholle myöntämä ainutlaatuinen 9-numeroinen tunniste." },
+      { "q": "Kuinka kauan haku kestää?", "a": "Haku kestää yleensä 30 sekuntia – 2 minuuttia palvelimen kuormituksesta riippuen." },
+      { "q": "Mitä palvelu maksaa?", "a": "D-U-N-S-numeron haku maksaa 4,99 €. Maksu tapahtuu turvallisesti Stripen kautta ja saat tuloksen välittömästi vahvistuksen jälkeen." },
+      { "q": "Mitä tapahtuu, jos yrityksellä ei ole DUNS-numeroa?", "a": "Jos yritystäsi ei löydy, voit hakea numeroa ilmaiseksi Dun & Bradstreetin viralliselta verkkosivustolta." },
+      { "q": "Mikä on ero DUNS-numeron ja Y-tunnuksen välillä?", "a": "Y-tunnus on suomalainen kansallinen yritystunnus, jonka myöntää Patentti- ja rekisterihallitus. D-U-N-S-numero on Dun & Bradstreetin myöntämä kansainvälinen tunniste, joka on tunnustettu yli 200 maassa. Ne täydentävät toisiaan: Y-tunnus Suomessa, DUNS kansainvälisessä käytössä." },
+      { "q": "Onko DUNS-numero pakollinen Apple Developerille?", "a": "Kyllä, Apple vaatii voimassa olevan D-U-N-S-numeron Apple Developer Program- tai Apple Developer Enterprise Program -rekisteröintiin organisaationa. Ilman DUNS-numeroa et voi julkaista sovelluksia App Storessa yrityksesi nimissä." },
+      { "q": "Miten saada DUNS-numero Suomessa?", "a": "Useimmilla kaupparekisteriin rekisteröidyillä suomalaisyrityksillä on jo D-U-N-S-numero. Käytä palveluamme löytääksesi sen välittömästi 2 minuutissa virallisen 30 päivän prosessin sijaan." }
+    ]
+  },
+  "seo": {
+    "title": "Mikä on D-U-N-S-numero ja miksi tarvitset sen?",
+    "paragraphs": [
+      "D-U-N-S-numero (Data Universal Numbering System) on Dun & Bradstreetin jokaiselle maailman kaupalliselle taholle myöntämä ainutlaatuinen 9-numeroinen tunniste. Toisin kuin Y-tunnus, joka on rajoitettu Suomeen, DUNS-numero on tunnustettu kansainvälisesti yli 200 maassa.",
+      "Halusitpa sitten osallistua kansainvälisiin hankintoihin, liittyä Apple Developer Programiin, julkaista Google Play Storessa tai yksinkertaisesti vahvistaa yrityksesi uskottavuutta B2B-kumppaneiden silmissä – D-U-N-S-numero on välttämätön.",
+      "DUNS Verifyn avulla saat DUNS-numerosi 2 minuutissa 30 päivän virallisen prosessin sijaan. Palvelumme etsii tunnisteen välittömästi kansainvälisestä tietokannasta ja lähettää sen sähköpostiisi."
+    ]
+  },
+  "cta": {
+    "title": "Valmis hankkimaan DUNS-numerosi?",
+    "subtitle": "Lopeta 30 päivän odottelu. Hanki kansainvälinen tunnistenumerosi 2 minuutissa vain 4,99 €:lla.",
+    "button": "Hanki DUNS-numeroni nyt →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Riippumaton palvelu, ei yhteydessä Dun & Bradstreetiin.",
+    "links": ["Oikeudelliset tiedot", "Käyttöehdot", "Yhteydenotto"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Kieli",
+  "success": {
+    "verifying": "Tarkistetaan maksu…",
+    "verifyingDesc": "Vahvistetaan Stripe-maksu.",
+    "searching": "Haetaan D-U-N-S-numeroasi…",
+    "searchingDesc": "Se voi kestää jopa 2 minuuttia, kiitos kärsivällisyydestäsi.",
+    "found": "D-U-N-S-numero löytyi!",
+    "foundDesc": "Tässä ovat yritykseltäsi löydetyt tiedot.",
+    "notFound": "Tuloksia ei löytynyt",
+    "notFoundDesc": "Emme löytäneet D-U-N-S-numeroa tälle yritykselle tietokannastamme. Voit hakea numeroa ilmaiseksi Dun & Bradstreetin viralliselta verkkosivustolta.",
+    "error": "Tapahtui virhe",
+    "newSearch": "← Uusi haku",
+    "back": "← Takaisin etusivulle",
+    "duns": "D-U-N-S",
+    "address": "Osoite",
+    "nameUnavailable": "Nimi ei saatavilla",
+    "sessionError": "Istuntoa ei löydy. Yritä uudelleen.",
+    "paymentError": "Maksua ei vahvistettu.",
+    "paymentVerifyError": "Maksun tarkistaminen epäonnistui."
+  },
+  "jsonLd": {
+    "websiteDescription": "Hanki D-U-N-S-numerosi 2 minuutissa",
+    "serviceDescription": "Välitön D-U-N-S-numeron hakupalvelu yrityksille"
+  }
+}

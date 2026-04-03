@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "DUNS-nummer: Verkrijg uw D-U-N-S in 2 minuten | DUNS Verify",
+    "description": "Verkrijg uw DUNS-nummer direct. Zoek en verifieer het D-U-N-S-nummer van uw bedrijf in Nederland en Europa. Resultaat per email in 2 min voor 4,99 €.",
+    "ogTitle": "DUNS-nummer: Verkrijg uw D-U-N-S in 2 minuten | DUNS Verify",
+    "ogDescription": "Zoek het D-U-N-S-nummer van uw bedrijf direct. Snelle service, resultaat per email. Onmisbaar voor Apple Developer, aanbestedingen, B2B-partnerschappen.",
+    "twitterTitle": "DUNS-nummer in 2 minuten | DUNS Verify",
+    "twitterDescription": "Verkrijg uw D-U-N-S-nummer direct. Geen 30 dagen wachten meer.",
+    "keywords": "DUNS nummer, D-U-N-S nummer, DUNS nummer verkrijgen, DUNS nummer zoeken, DUNS Nederland, KvK nummer vs DUNS, DUNS Apple Developer, DUNS aanbesteding, bedrijfsidentificatie"
+  },
+  "header": {
+    "nav": ["Hoe het werkt", "Waarom DUNS", "FAQ"],
+    "navHrefs": ["#hoe-het-werkt", "#waarom-duns", "#faq"]
+  },
+  "hero": {
+    "badge": "Resultaat in 2 min — in plaats van 30 dagen",
+    "title": "Verkrijg uw",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "in 2 minuten",
+    "subtitle": "Geen 30 dagen wachten meer. Zoek en verifieer het D-U-N-S-nummer van uw bedrijf direct per email voor slechts 4,99 €."
+  },
+  "form": {
+    "company": "Naam van uw bedrijf",
+    "companyPlaceholder": "Bijv: ASML Holding N.V.",
+    "city": "Stad",
+    "cityPlaceholder": "Bijv: Amsterdam",
+    "country": "Land",
+    "email": "Uw e-mailadres",
+    "emailPlaceholder": "u@voorbeeld.com",
+    "submit": "Mijn DUNS nu verkrijgen — 4,99 €",
+    "loading": "Doorverwijzing naar betaling…",
+    "trust1": "Veilige betaling via Stripe",
+    "trust2": "Resultaat in minder dan 2 min",
+    "trust3": "Verzonden per email",
+    "error": "Fout"
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "subtitle": "Drie eenvoudige stappen om uw DUNS-nummer te verkrijgen.",
+    "steps": [
+      { "title": "Voer uw gegevens in", "desc": "Voer de naam van uw bedrijf, de stad, het land en uw e-mail in om uw DUNS-nummer te zoeken." },
+      { "title": "Automatisch zoeken", "desc": "Ons systeem raadpleegt de internationale databases. Resultaat in minder dan 2 minuten." },
+      { "title": "Ontvang uw DUNS", "desc": "Uw D-U-N-S-nummer wordt op het scherm weergegeven en per email verzonden." }
+    ]
+  },
+  "whyDuns": {
+    "title": "Waarom heeft u een DUNS-nummer nodig?",
+    "subtitle": "Het D-U-N-S-nummer is uw internationaal handelspaspoort.",
+    "cards": [
+      {
+        "title": "Internationale aanbestedingen",
+        "desc": "Het DUNS-nummer is verplicht voor Europese overheidsopdrachten, internationale aanbestedingen en contracten met de Amerikaanse overheid via SAM.gov.",
+        "ariaLabel": "Pictogram overheidscontracten en internationale aanbestedingen"
+      },
+      {
+        "title": "B2B-partnerschappen",
+        "desc": "Veel multinationals vereisen een D-U-N-S-nummer om hun internationale leveranciers te registreren en te verifiëren.",
+        "ariaLabel": "Pictogram B2B-partnerschappen en internationale leveranciers"
+      },
+      {
+        "title": "Financiële geloofwaardigheid",
+        "desc": "Het DUNS-nummer versterkt de financiële geloofwaardigheid van uw bedrijf bij partners, banken en investeerders.",
+        "ariaLabel": "Pictogram financiële geloofwaardigheid bedrijf"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "Het D-U-N-S-nummer is vereist om apps te publiceren in de App Store (Apple Developer Program) en de Google Play Store als organisatie.",
+        "ariaLabel": "Pictogram Apple Developer Program en Google Play Store"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      { "q": "Wat is een D-U-N-S-nummer?", "a": "Het D-U-N-S-nummer (Data Universal Numbering System) is een uniek 9-cijferig identificatienummer dat door Dun & Bradstreet aan elke commerciële entiteit wereldwijd wordt toegekend." },
+      { "q": "Hoe lang duurt de zoekopdracht?", "a": "De zoekopdracht duurt doorgaans 30 seconden tot 2 minuten, afhankelijk van de serverbelasting." },
+      { "q": "Wat kost de service?", "a": "Het opzoeken van een D-U-N-S-nummer kost 4,99 €. De betaling verloopt veilig via Stripe en u ontvangt uw resultaat direct na bevestiging." },
+      { "q": "Wat als mijn bedrijf geen DUNS-nummer heeft?", "a": "Als uw bedrijf niet wordt gevonden, kunt u gratis een nummer aanvragen via de officiële website van Dun & Bradstreet." },
+      { "q": "Wat is het verschil tussen het DUNS-nummer en het KvK-nummer?", "a": "Het KvK-nummer is een nationaal Nederlands identificatienummer uitgegeven door de Kamer van Koophandel. Het D-U-N-S-nummer is een internationaal identificatienummer van Dun & Bradstreet, erkend in meer dan 200 landen. Beide zijn complementair: het KvK-nummer voor Nederland, het DUNS-nummer voor internationaal gebruik." },
+      { "q": "Is het DUNS-nummer verplicht voor Apple Developer?", "a": "Ja, Apple vereist een geldig D-U-N-S-nummer voor inschrijving bij het Apple Developer Program of Apple Developer Enterprise Program als organisatie. Zonder DUNS-nummer kunt u geen apps publiceren in de App Store namens uw bedrijf." },
+      { "q": "Hoe een DUNS-nummer verkrijgen in Nederland?", "a": "De meeste bij de Kamer van Koophandel ingeschreven Nederlandse bedrijven hebben al een D-U-N-S-nummer. Gebruik onze service om het direct in 2 minuten te vinden in plaats van 30 dagen te wachten via de officiële procedure." }
+    ]
+  },
+  "seo": {
+    "title": "Wat is het D-U-N-S-nummer en waarom heeft u het nodig?",
+    "paragraphs": [
+      "Het D-U-N-S-nummer (Data Universal Numbering System) is een uniek 9-cijferig identificatienummer dat door Dun & Bradstreet aan elke commerciële entiteit wereldwijd wordt toegekend. In tegenstelling tot het KvK-nummer dat beperkt is tot Nederland, wordt het DUNS-nummer internationaal erkend in meer dan 200 landen.",
+      "Of u nu wilt deelnemen aan internationale aanbestedingen, zich wilt inschrijven bij het Apple Developer Program, wilt publiceren op de Google Play Store, of gewoon de geloofwaardigheid van uw bedrijf bij B2B-partners wilt versterken — het D-U-N-S-nummer is onmisbaar.",
+      "Met DUNS Verify verkrijgt u uw DUNS-nummer in 2 minuten in plaats van 30 dagen via de officiële procedure. Onze service zoekt direct uw identificatienummer in de internationale database en stuurt het per email."
+    ]
+  },
+  "cta": {
+    "title": "Klaar om uw DUNS-nummer te verkrijgen?",
+    "subtitle": "Geen 30 dagen wachten meer. Verkrijg uw internationaal identificatienummer in 2 minuten voor slechts 4,99 €.",
+    "button": "Mijn DUNS nu verkrijgen →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Onafhankelijke service, niet gelieerd aan Dun & Bradstreet.",
+    "links": ["Juridische informatie", "Algemene voorwaarden", "Contact"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Taal",
+  "success": {
+    "verifying": "Betaling verifiëren…",
+    "verifyingDesc": "Stripe-betaling wordt bevestigd.",
+    "searching": "Uw D-U-N-S-nummer wordt gezocht…",
+    "searchingDesc": "Dit kan tot 2 minuten duren, bedankt voor uw geduld.",
+    "found": "D-U-N-S-nummer gevonden!",
+    "foundDesc": "Dit zijn de gevonden gegevens voor uw bedrijf.",
+    "notFound": "Geen resultaten gevonden",
+    "notFoundDesc": "We hebben geen D-U-N-S-nummer voor dit bedrijf in onze database gevonden. U kunt gratis een nummer aanvragen via de officiële website van Dun & Bradstreet.",
+    "error": "Er is een fout opgetreden",
+    "newSearch": "← Nieuwe zoekopdracht",
+    "back": "← Terug naar home",
+    "duns": "D-U-N-S",
+    "address": "Adres",
+    "nameUnavailable": "Naam niet beschikbaar",
+    "sessionError": "Sessie niet gevonden. Probeer opnieuw.",
+    "paymentError": "Betaling niet bevestigd.",
+    "paymentVerifyError": "Kan betaling niet verifiëren."
+  },
+  "jsonLd": {
+    "websiteDescription": "Verkrijg uw D-U-N-S-nummer in 2 minuten",
+    "serviceDescription": "Directe opzoekservice voor D-U-N-S-nummers voor bedrijven"
+  }
+}

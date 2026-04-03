@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "DUNS-nummer: Få dit D-U-N-S på 2 minutter | DUNS Verify",
+    "description": "Få dit DUNS-nummer med det samme. Find og verificer D-U-N-S-nummeret for din virksomhed i Danmark og Europa. Resultat pr. e-mail på 2 min for 4,99 €.",
+    "ogTitle": "DUNS-nummer: Få dit D-U-N-S på 2 minutter | DUNS Verify",
+    "ogDescription": "Find D-U-N-S-nummeret for din virksomhed med det samme. Hurtig service, resultat pr. e-mail. Uundværlig for Apple Developer, offentlige udbud, B2B-partnerskaber.",
+    "twitterTitle": "DUNS-nummer på 2 minutter | DUNS Verify",
+    "twitterDescription": "Få dit D-U-N-S-nummer med det samme. Slut med at vente 30 dage.",
+    "keywords": "DUNS nummer, D-U-N-S nummer, få DUNS nummer, finde DUNS nummer, DUNS Danmark, CVR nummer vs DUNS, virksomhedsidentifikation, DUNS Apple Developer, DUNS offentlig udbud"
+  },
+  "header": {
+    "nav": ["Sådan virker det", "Hvorfor DUNS", "FAQ"],
+    "navHrefs": ["#saadan-virker-det", "#hvorfor-duns", "#faq"]
+  },
+  "hero": {
+    "badge": "Resultat på 2 min — i stedet for 30 dage",
+    "title": "Få dit",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "på 2 minutter",
+    "subtitle": "Slut med at vente 30 dage. Find og verificer D-U-N-S-nummeret for din virksomhed med det samme pr. e-mail for kun 4,99 €."
+  },
+  "form": {
+    "company": "Navn på din virksomhed",
+    "companyPlaceholder": "F.eks: A.P. Møller-Mærsk A/S",
+    "city": "By",
+    "cityPlaceholder": "F.eks: København",
+    "country": "Land",
+    "email": "Din e-mailadresse",
+    "emailPlaceholder": "dig@eksempel.com",
+    "submit": "Hent mit DUNS nu — 4,99 €",
+    "loading": "Omdirigerer til betaling…",
+    "trust1": "Sikker betaling via Stripe",
+    "trust2": "Resultat på under 2 min",
+    "trust3": "Sendt pr. e-mail",
+    "error": "Fejl"
+  },
+  "howItWorks": {
+    "title": "Sådan virker det",
+    "subtitle": "Tre enkle trin for at få dit DUNS-nummer.",
+    "steps": [
+      { "title": "Indtast dine oplysninger", "desc": "Angiv din virksomheds navn, by, land og e-mail for at søge efter dit DUNS-nummer." },
+      { "title": "Automatisk søgning", "desc": "Vores system søger i internationale databaser. Resultat på under 2 minutter." },
+      { "title": "Modtag dit DUNS", "desc": "Dit D-U-N-S-nummer vises på skærmen og sendes til din e-mail." }
+    ]
+  },
+  "whyDuns": {
+    "title": "Hvorfor har du brug for et DUNS-nummer?",
+    "subtitle": "D-U-N-S-nummeret er dit internationale forretningspas.",
+    "cards": [
+      {
+        "title": "Internationale udbud",
+        "desc": "DUNS-nummeret er obligatorisk for europæiske offentlige udbud, internationale licitationer og kontrakter med den amerikanske regering via SAM.gov.",
+        "ariaLabel": "Ikon for offentlige udbud og internationale kontrakter"
+      },
+      {
+        "title": "B2B-partnerskaber",
+        "desc": "Mange multinationale virksomheder kræver et D-U-N-S-nummer for at registrere og verificere deres internationale leverandører.",
+        "ariaLabel": "Ikon for B2B-partnerskaber og internationale leverandører"
+      },
+      {
+        "title": "Finansiel troværdighed",
+        "desc": "DUNS-nummeret styrker din virksomheds finansielle troværdighed over for partnere, banker og investorer.",
+        "ariaLabel": "Ikon for virksomhedens finansielle troværdighed"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "D-U-N-S-nummeret kræves for at udgive apps i App Store (Apple Developer Program) og Google Play Store som organisation.",
+        "ariaLabel": "Ikon for Apple Developer Program og Google Play Store"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Ofte stillede spørgsmål",
+    "items": [
+      { "q": "Hvad er et D-U-N-S-nummer?", "a": "D-U-N-S-nummeret (Data Universal Numbering System) er et unikt 9-cifret identifikationsnummer, der tildeles af Dun & Bradstreet til enhver kommerciel enhed i verden." },
+      { "q": "Hvor lang tid tager søgningen?", "a": "Søgningen tager typisk 30 sekunder til 2 minutter afhængigt af serverbelastningen." },
+      { "q": "Hvad koster tjenesten?", "a": "Søgning efter D-U-N-S-nummer koster 4,99 €. Betalingen foregår sikkert via Stripe, og du modtager dit resultat med det samme efter bekræftelse." },
+      { "q": "Hvad sker der, hvis min virksomhed ikke har et DUNS-nummer?", "a": "Hvis din virksomhed ikke kan findes, kan du gratis ansøge om et nummer på Dun & Bradstreets officielle hjemmeside." },
+      { "q": "Hvad er forskellen på DUNS og CVR-nummer?", "a": "CVR-nummeret er et nationalt dansk identifikationsnummer udstedt af Erhvervsstyrelsen. D-U-N-S-nummeret er et internationalt identifikationsnummer udstedt af Dun & Bradstreet, anerkendt i mere end 200 lande. De to er komplementære: CVR-nummeret til Danmark, DUNS til international brug." },
+      { "q": "Er DUNS-nummeret påkrævet til Apple Developer?", "a": "Ja, Apple kræver et gyldigt D-U-N-S-nummer for tilmelding til Apple Developer Program eller Apple Developer Enterprise Program som organisation. Uden DUNS-nummer kan du ikke udgive apps i App Store på din virksomheds vegne." },
+      { "q": "Hvordan får man et DUNS-nummer i Danmark?", "a": "De fleste danske virksomheder registreret hos Erhvervsstyrelsen har allerede et D-U-N-S-nummer. Brug vores service til at finde det med det samme på 2 minutter i stedet for at vente 30 dage via den officielle procedure." }
+    ]
+  },
+  "seo": {
+    "title": "Hvad er D-U-N-S-nummeret og hvorfor har du brug for det?",
+    "paragraphs": [
+      "D-U-N-S-nummeret (Data Universal Numbering System) er et unikt 9-cifret identifikationsnummer tildelt af Dun & Bradstreet til enhver kommerciel enhed i verden. I modsætning til CVR-nummeret, der er begrænset til Danmark, anerkendes DUNS-nummeret internationalt i mere end 200 lande.",
+      "Uanset om du vil deltage i internationale udbud, tilmelde dig Apple Developer Program, udgive på Google Play Store eller blot styrke din virksomheds troværdighed hos B2B-partnere, er D-U-N-S-nummeret uundværligt.",
+      "Med DUNS Verify får du dit DUNS-nummer på 2 minutter i stedet for 30 dage via den officielle procedure. Vores service søger øjeblikkeligt efter dit identifikationsnummer i den internationale database og sender det til din e-mail."
+    ]
+  },
+  "cta": {
+    "title": "Klar til at få dit DUNS-nummer?",
+    "subtitle": "Slut med at vente 30 dage. Få dit internationale identifikationsnummer på 2 minutter for kun 4,99 €.",
+    "button": "Hent mit DUNS nu →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Uafhængig service, ikke tilknyttet Dun & Bradstreet.",
+    "links": ["Juridisk information", "Vilkår og betingelser", "Kontakt"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Sprog",
+  "success": {
+    "verifying": "Verificerer betaling…",
+    "verifyingDesc": "Bekræfter Stripe-betaling.",
+    "searching": "Søger efter dit D-U-N-S-nummer…",
+    "searchingDesc": "Det kan tage op til 2 minutter, tak for din tålmodighed.",
+    "found": "D-U-N-S-nummer fundet!",
+    "foundDesc": "Her er oplysningerne fundet for din virksomhed.",
+    "notFound": "Ingen resultater fundet",
+    "notFoundDesc": "Vi fandt ikke et D-U-N-S-nummer for denne virksomhed i vores database. Du kan gratis ansøge om et nummer på Dun & Bradstreets officielle hjemmeside.",
+    "error": "Der opstod en fejl",
+    "newSearch": "← Ny søgning",
+    "back": "← Tilbage til forsiden",
+    "duns": "D-U-N-S",
+    "address": "Adresse",
+    "nameUnavailable": "Navn ikke tilgængeligt",
+    "sessionError": "Session ikke fundet. Prøv igen.",
+    "paymentError": "Betaling ikke bekræftet.",
+    "paymentVerifyError": "Kan ikke verificere betalingen."
+  },
+  "jsonLd": {
+    "websiteDescription": "Få dit D-U-N-S-nummer på 2 minutter",
+    "serviceDescription": "Øjeblikkelig D-U-N-S-nummersøgning for virksomheder"
+  }
+}

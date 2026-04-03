@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Číslo DUNS: Získejte své D-U-N-S za 2 minuty | DUNS Verify",
+    "description": "Získejte své číslo DUNS okamžitě. Najděte a ověřte číslo D-U-N-S své firmy v České republice a Evropě. Výsledek emailem za 2 min za 4,99 €.",
+    "ogTitle": "Číslo DUNS: Získejte své D-U-N-S za 2 minuty | DUNS Verify",
+    "ogDescription": "Najděte číslo D-U-N-S své firmy okamžitě. Rychlá služba, výsledek emailem. Nezbytné pro Apple Developer, veřejné zakázky, B2B partnerství.",
+    "twitterTitle": "Číslo DUNS za 2 minuty | DUNS Verify",
+    "twitterDescription": "Získejte své číslo D-U-N-S okamžitě. Konec čekání 30 dní.",
+    "keywords": "číslo DUNS, číslo D-U-N-S, získat DUNS, najít DUNS, DUNS Česká republika, identifikátor firmy, IČO vs DUNS, DUNS Apple Developer, DUNS veřejné zakázky"
+  },
+  "header": {
+    "nav": ["Jak to funguje", "Proč DUNS", "FAQ"],
+    "navHrefs": ["#jak-to-funguje", "#proc-duns", "#faq"]
+  },
+  "hero": {
+    "badge": "Výsledek za 2 min — místo 30 dní",
+    "title": "Získejte své",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "za 2 minuty",
+    "subtitle": "Konec čekání 30 dní. Najděte a ověřte číslo D-U-N-S své firmy okamžitě emailem za pouhých 4,99 €."
+  },
+  "form": {
+    "company": "Název vaší firmy",
+    "companyPlaceholder": "Např: Škoda Auto a.s.",
+    "city": "Město",
+    "cityPlaceholder": "Např: Praha",
+    "country": "Země",
+    "email": "Vaše emailová adresa",
+    "emailPlaceholder": "vy@priklad.cz",
+    "submit": "Získat moje DUNS nyní — 4,99 €",
+    "loading": "Přesměrování na platbu…",
+    "trust1": "Bezpečná platba přes Stripe",
+    "trust2": "Výsledek do 2 min",
+    "trust3": "Zasláno emailem",
+    "error": "Chyba"
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Tři jednoduché kroky k získání čísla DUNS.",
+    "steps": [
+      { "title": "Zadejte své údaje", "desc": "Zadejte název firmy, město, zemi a email pro vyhledání čísla DUNS." },
+      { "title": "Automatické vyhledávání", "desc": "Náš systém prohledá mezinárodní databáze. Výsledek do 2 minut." },
+      { "title": "Obdržíte své DUNS", "desc": "Vaše číslo D-U-N-S se zobrazí na obrazovce a bude zasláno emailem." }
+    ]
+  },
+  "whyDuns": {
+    "title": "Proč potřebujete číslo DUNS?",
+    "subtitle": "Číslo D-U-N-S je váš mezinárodní obchodní pas.",
+    "cards": [
+      {
+        "title": "Mezinárodní veřejné zakázky",
+        "desc": "Číslo DUNS je povinné pro evropské veřejné zakázky, mezinárodní výběrová řízení a smlouvy s americkou vládou přes SAM.gov.",
+        "ariaLabel": "Ikona veřejných zakázek a mezinárodních výběrových řízení"
+      },
+      {
+        "title": "B2B partnerství",
+        "desc": "Mnoho nadnárodních společností vyžaduje číslo D-U-N-S pro registraci a ověření svých mezinárodních dodavatelů.",
+        "ariaLabel": "Ikona B2B partnerství a mezinárodních dodavatelů"
+      },
+      {
+        "title": "Finanční důvěryhodnost",
+        "desc": "Číslo DUNS posiluje finanční důvěryhodnost vaší firmy u partnerů, bank a investorů.",
+        "ariaLabel": "Ikona finanční důvěryhodnosti firmy"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "Číslo D-U-N-S je vyžadováno pro publikování aplikací v App Store (Apple Developer Program) a Google Play Store jako organizace.",
+        "ariaLabel": "Ikona Apple Developer Program a Google Play Store"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Časté dotazy",
+    "items": [
+      { "q": "Co je číslo D-U-N-S?", "a": "Číslo D-U-N-S (Data Universal Numbering System) je jedinečný 9místný identifikátor přidělovaný společností Dun & Bradstreet každé obchodní entitě na světě." },
+      { "q": "Jak dlouho trvá vyhledávání?", "a": "Vyhledávání obvykle trvá 30 sekund až 2 minuty v závislosti na zatížení serveru." },
+      { "q": "Kolik stojí služba?", "a": "Vyhledání čísla D-U-N-S je k dispozici za 4,99 €. Platba je zabezpečena přes Stripe a výsledek obdržíte ihned po potvrzení." },
+      { "q": "Co se stane, pokud moje firma nemá číslo DUNS?", "a": "Pokud vaše firma nebude nalezena, můžete o číslo zažádat zdarma na oficiálních stránkách Dun & Bradstreet." },
+      { "q": "Jaký je rozdíl mezi DUNS a IČO?", "a": "IČO (identifikační číslo osoby) je národní český identifikátor přidělovaný Ministerstvem spravedlnosti. Číslo D-U-N-S je mezinárodní identifikátor Dun & Bradstreet, uznávaný ve více než 200 zemích. Jsou vzájemně doplňující: IČO pro Českou republiku, DUNS pro mezinárodní použití." },
+      { "q": "Je číslo DUNS povinné pro Apple Developer?", "a": "Ano, Apple vyžaduje platné číslo D-U-N-S pro registraci v Apple Developer Program nebo Apple Developer Enterprise Program jako organizace. Bez čísla DUNS nemůžete publikovat aplikace v App Store jménem vaší firmy." },
+      { "q": "Jak získat číslo DUNS v České republice?", "a": "Většina českých firem registrovaných v obchodním rejstříku již číslo D-U-N-S má. Použijte naši službu k jeho okamžitému nalezení za 2 minuty místo čekání 30 dní na oficielní postup." }
+    ]
+  },
+  "seo": {
+    "title": "Co je číslo D-U-N-S a proč ho potřebujete?",
+    "paragraphs": [
+      "Číslo D-U-N-S (Data Universal Numbering System) je jedinečný 9místný identifikátor přidělovaný společností Dun & Bradstreet každé obchodní entitě na světě. Na rozdíl od IČO, které je omezeno na Českou republiku, je číslo DUNS mezinárodně uznáváno ve více než 200 zemích.",
+      "Ať již chcete účastnit se mezinárodních veřejných zakázek, přidat se do Apple Developer Program, publikovat na Google Play Store nebo jednoduše posílit důvěryhodnost vaší firmy u B2B partnerů, číslo D-U-N-S je nezbytné.",
+      "S DUNS Verify získáte číslo DUNS za 2 minuty místo 30 dní oficiálním postupem. Naše služba okamžitě vyhledá váš identifikátor v mezinárodní databázi a zašle ho emailem."
+    ]
+  },
+  "cta": {
+    "title": "Připraveni získat své číslo DUNS?",
+    "subtitle": "Konec čekání 30 dní. Získejte svůj mezinárodní identifikátor za 2 minuty za pouhých 4,99 €.",
+    "button": "Získat moje DUNS nyní →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Nezávislá služba, není přidružena k Dun & Bradstreet.",
+    "links": ["Právní informace", "Obchodní podmínky", "Kontakt"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Jazyk",
+  "success": {
+    "verifying": "Ověřování platby…",
+    "verifyingDesc": "Potvrzování platby Stripe probíhá.",
+    "searching": "Hledám vaše číslo D-U-N-S…",
+    "searchingDesc": "Může to trvat až 2 minuty, děkujeme za trpělivost.",
+    "found": "Číslo D-U-N-S nalezeno!",
+    "foundDesc": "Zde jsou informace nalezené pro vaši firmu.",
+    "notFound": "Žádné výsledky nenalezeny",
+    "notFoundDesc": "V naší databázi jsme pro tuto firmu číslo D-U-N-S nenašli. O číslo můžete zažádat zdarma na oficiálních stránkách Dun & Bradstreet.",
+    "error": "Došlo k chybě",
+    "newSearch": "← Nové vyhledávání",
+    "back": "← Zpět na hlavní stránku",
+    "duns": "D-U-N-S",
+    "address": "Adresa",
+    "nameUnavailable": "Název není k dispozici",
+    "sessionError": "Relace nenalezena. Zkuste to znovu.",
+    "paymentError": "Platba nepotvrzena.",
+    "paymentVerifyError": "Platbu nelze ověřit."
+  },
+  "jsonLd": {
+    "websiteDescription": "Získejte své číslo D-U-N-S za 2 minuty",
+    "serviceDescription": "Okamžitá vyhledávací služba čísla D-U-N-S pro firmy"
+  }
+}

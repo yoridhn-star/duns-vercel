@@ -1,5 +1,5 @@
 const SITE_URL = process.env.SITE_URL || "https://dunsverify.com";
-const LOCALES = ['fr', 'en', 'de', 'es'];
+const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl', 'pt', 'pl', 'sv', 'da', 'no', 'fi', 'cs', 'hu', 'ro', 'el'];
 
 export default function sitemap() {
   const languages = Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}`]));
