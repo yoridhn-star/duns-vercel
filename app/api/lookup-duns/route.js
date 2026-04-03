@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 const RENDER_API_URL = process.env.RENDER_API_URL;
-const GMAIL_USER = process.env.GMAIL_USER;
-const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   if (!RENDER_API_URL) {
@@ -57,27 +56,19 @@ export async function POST(request) {
     );
   }
 
-  // ── Send email via Gmail SMTP (Vercel side) ───────────────────────────────
+  // ── Send email via Resend (Vercel side) ──────────────────────────────────
   if (data.success && data.data && email?.trim()) {
-    if (GMAIL_USER && GMAIL_APP_PASSWORD) {
-      try {
-        const transporter = nodemailer.createTransport({
-          service: "gmail",
-          auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },
-        });
-        const htmlEmail = buildEmailHtml(data.data, companyName);
-        await transporter.sendMail({
-          from: `"DUNS Verify" <${GMAIL_USER}>`,
-          to: email.trim(),
-          subject: `Votre numéro D-U-N-S — ${escapeHtml(data.data.companyName || companyName)}`,
-          html: htmlEmail,
-        });
-        console.log(`[email] sent to ${email.trim()}`);
-      } catch (mailErr) {
-        console.error("[email] send failed:", mailErr.message);
-      }
-    } else {
-      console.warn("[email] GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping email");
+    try {
+      const htmlEmail = buildEmailHtml(data.data, companyName);
+      await resend.emails.send({
+        from: "DUNS Verify <noreply@dunsverify.com>",
+        to: email.trim(),
+        subject: `Votre numéro D-U-N-S — ${escapeHtml(data.data.companyName || companyName)}`,
+        html: htmlEmail,
+      });
+      console.log(`[email] sent to ${email.trim()}`);
+    } catch (mailErr) {
+      console.error("[email] send failed:", mailErr.message);
     }
   }
 
