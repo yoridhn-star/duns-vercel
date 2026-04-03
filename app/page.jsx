@@ -35,10 +35,6 @@ const FAQ_ITEMS = [
     a: "Le numéro D-U-N-S (Data Universal Numbering System) est un identifiant unique à 9 chiffres attribué par Dun & Bradstreet à chaque entité commerciale dans le monde.",
   },
   {
-    q: "Pourquoi payer 4,99 € alors que le DUNS est gratuit ?",
-    a: "Le processus officiel via Dun & Bradstreet prend jusqu'à 30 jours ouvrés. DUNS Verify vous donne le résultat en moins de 2 minutes. Vous payez pour la rapidité et la simplicité du service, pas pour le numéro lui-même.",
-  },
-  {
     q: "Combien de temps prend la recherche ?",
     a: "La recherche prend généralement entre 30 secondes et 2 minutes selon la charge du serveur.",
   },
