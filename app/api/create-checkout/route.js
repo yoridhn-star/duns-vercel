@@ -22,6 +22,7 @@ export async function POST(request) {
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
+      locale: lang || "fr",
       line_items: [
         {
           price_data: {
