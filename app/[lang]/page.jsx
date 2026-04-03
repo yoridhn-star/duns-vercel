@@ -96,9 +96,9 @@ export default async function Home({ params }) {
                 <span>{t.hero.badge}</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-[#1E3A5F] leading-tight mb-5">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1E3A5F] leading-tight mb-5">
                 {t.hero.title}{" "}
-                <span className="text-emerald-500">{t.hero.titleHighlight}</span>{" "}
+                <span className="text-emerald-500 whitespace-nowrap">{t.hero.titleHighlight}</span>{" "}
                 {t.hero.titleEnd}
               </h1>
 
@@ -216,7 +216,7 @@ export default async function Home({ params }) {
               {t.footer.links.map((link, i) => (
                 <span key={i} className="flex items-center gap-4">
                   {i > 0 && <span>·</span>}
-                  <a href={t.footer.hrefs[i]} className="hover:text-white transition-colors">{link}</a>
+                  <a href={`/${lang}${t.footer.hrefs[i]}`} className="hover:text-white transition-colors">{link}</a>
                 </span>
               ))}
             </nav>
