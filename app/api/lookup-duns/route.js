@@ -135,7 +135,7 @@ function buildEmailHtml(result, companyName) {
           <tr>
             <td style="background:#f8f7ff;border-top:1px solid #e0e7ff;padding:20px 40px;text-align:center;">
               <p style="margin:0;font-size:11px;color:#9ca3af;line-height:1.6;">
-                © ${new Date().getFullYear()} DUNS Verify — dunslookupofficial@gmail.com
+                © ${new Date().getFullYear()} DUNS Verify — contact@dunsverify.com
               </p>
             </td>
           </tr>
