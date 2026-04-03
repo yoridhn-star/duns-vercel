@@ -1,13 +1,18 @@
 const SITE_URL = process.env.SITE_URL || "https://dunsverify.com";
+const LOCALES = ['fr', 'en', 'de', 'es'];
 
 export default function sitemap() {
-  return [
-    {
-      url: SITE_URL,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
+  const languages = Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}`]));
+
+  const langPages = LOCALES.map((lang) => ({
+    url: `${SITE_URL}/${lang}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 1.0,
+    alternates: { languages },
+  }));
+
+  const staticPages = [
     {
       url: `${SITE_URL}/mentions-legales`,
       lastModified: new Date(),
@@ -27,4 +32,6 @@ export default function sitemap() {
       priority: 0.4,
     },
   ];
+
+  return [...langPages, ...staticPages];
 }

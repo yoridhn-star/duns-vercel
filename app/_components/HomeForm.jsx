@@ -28,7 +28,7 @@ const COUNTRIES = [
   { label: "United States",       value: "Vereinigte Staaten von Amerika" },
 ];
 
-export default function HomeForm() {
+export default function HomeForm({ t, lang }) {
   const [companyName, setCompanyName] = useState("");
   const [city, setCity]               = useState("");
   const [email, setEmail]             = useState("");
@@ -45,13 +45,13 @@ export default function HomeForm() {
       const res = await fetch("/api/create-checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ companyName, city, country, email }),
+        body: JSON.stringify({ companyName, city, country, email, lang }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`);
+      if (!res.ok) throw new Error(data.error || `Error ${res.status}`);
       window.location.href = data.url;
     } catch (err) {
-      setErrorMsg(err.message || "Une erreur est survenue.");
+      setErrorMsg(err.message || t.error);
       setStatus("error");
     }
   }
@@ -63,7 +63,7 @@ export default function HomeForm() {
         {/* Company name */}
         <div>
           <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Nom de votre entreprise <span className="text-red-500">*</span>
+            {t.company} <span className="text-red-500">*</span>
           </label>
           <div className="relative">
             <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -73,7 +73,7 @@ export default function HomeForm() {
               type="text"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
-              placeholder="Ex : Airbus SAS"
+              placeholder={t.companyPlaceholder}
               required
               disabled={status === "loading"}
               className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none
@@ -87,7 +87,7 @@ export default function HomeForm() {
         {/* City */}
         <div>
           <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Ville <span className="text-red-500">*</span>
+            {t.city} <span className="text-red-500">*</span>
           </label>
           <div className="relative">
             <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -97,7 +97,7 @@ export default function HomeForm() {
               type="text"
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              placeholder="Ex : Paris"
+              placeholder={t.cityPlaceholder}
               required
               disabled={status === "loading"}
               className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none
@@ -111,7 +111,7 @@ export default function HomeForm() {
         {/* Country */}
         <div>
           <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Pays
+            {t.country}
           </label>
           <div className="relative">
             <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -136,7 +136,7 @@ export default function HomeForm() {
         {/* Email */}
         <div>
           <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Votre adresse email <span className="text-red-500">*</span>
+            {t.email} <span className="text-red-500">*</span>
           </label>
           <div className="relative">
             <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -146,7 +146,7 @@ export default function HomeForm() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="vous@exemple.com"
+              placeholder={t.emailPlaceholder}
               required
               disabled={status === "loading"}
               className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none
@@ -170,11 +170,11 @@ export default function HomeForm() {
           {status === "loading" ? (
             <>
               <Spinner />
-              Redirection vers le paiement…
+              {t.loading}
             </>
           ) : (
             <>
-              Obtenir mon DUNS maintenant — 4,99 €
+              {t.submit}
               <ArrowRight className="w-5 h-5" />
             </>
           )}
@@ -183,11 +183,11 @@ export default function HomeForm() {
 
       {/* Trust line */}
       <p className="text-center text-xs text-slate-400 mt-4 flex items-center justify-center gap-3">
-        <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Paiement sécurisé par Stripe</span>
+        <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> {t.trust1}</span>
         <span>·</span>
-        <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> Résultat en moins de 2 min</span>
+        <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {t.trust2}</span>
         <span>·</span>
-        <span>Envoyé par email</span>
+        <span>{t.trust3}</span>
       </p>
 
       {/* Error */}
@@ -198,7 +198,7 @@ export default function HomeForm() {
               d="M12 8v4m0 4h.01M21 12A9 9 0 113 12a9 9 0 0118 0z" />
           </svg>
           <div>
-            <p className="text-sm font-semibold text-red-700">Erreur</p>
+            <p className="text-sm font-semibold text-red-700">{t.error}</p>
             <p className="text-sm text-red-600 mt-0.5">{errorMsg}</p>
           </div>
         </div>

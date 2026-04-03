@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Número DUNS: Obtenga su D-U-N-S en 2 minutos | DUNS Verify",
+    "description": "Encuentre su número DUNS al instante. Busque y verifique el número D-U-N-S de su empresa en España y Europa. Resultado por email en 2 min por 4,99 €.",
+    "ogTitle": "Número DUNS: Obtenga su D-U-N-S en 2 minutos | DUNS Verify",
+    "ogDescription": "Encuentre el número D-U-N-S de su empresa al instante. Búsqueda rápida, resultado por email. Imprescindible para Apple Developer, licitaciones públicas, socios B2B.",
+    "twitterTitle": "Número DUNS en 2 minutos | DUNS Verify",
+    "twitterDescription": "Encuentre su número D-U-N-S al instante. Sin esperar 30 días.",
+    "keywords": "número DUNS, número D-U-N-S, buscar DUNS, obtener DUNS, DUNS empresa, DUNS Apple Developer, DUNS licitaciones, DUNS SAM.gov, DUNS España"
+  },
+  "header": {
+    "nav": ["Cómo funciona", "Por qué DUNS", "FAQ"],
+    "navHrefs": ["#como-funciona", "#por-que-duns", "#faq"]
+  },
+  "hero": {
+    "badge": "Resultado en 2 min — en lugar de 30 días",
+    "title": "Obtenga su número",
+    "titleHighlight": "D-U-N-S",
+    "titleEnd": "en 2 minutos",
+    "subtitle": "Sin esperar 30 días. Encuentre y verifique el número D-U-N-S de su empresa al instante por email por solo 4,99 €."
+  },
+  "form": {
+    "company": "Nombre de su empresa",
+    "companyPlaceholder": "Ej: Telefónica S.A.",
+    "city": "Ciudad",
+    "cityPlaceholder": "Ej: Madrid",
+    "country": "País",
+    "email": "Su dirección de email",
+    "emailPlaceholder": "usted@ejemplo.com",
+    "submit": "Obtener mi número DUNS ahora — 4,99 €",
+    "loading": "Redirigiendo al pago…",
+    "trust1": "Pago seguro con Stripe",
+    "trust2": "Resultado en menos de 2 min",
+    "trust3": "Enviado por email",
+    "error": "Error"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Tres sencillos pasos para obtener su número DUNS.",
+    "steps": [
+      { "title": "Ingrese sus datos", "desc": "Introduzca el nombre de su empresa, la ciudad, el país y su email para buscar su número DUNS." },
+      { "title": "Búsqueda automática", "desc": "Nuestro sistema consulta bases de datos internacionales. Resultado en menos de 2 minutos." },
+      { "title": "Reciba su DUNS", "desc": "Su número D-U-N-S se muestra en pantalla y se le envía por email." }
+    ]
+  },
+  "whyDuns": {
+    "title": "¿Por qué necesita un número DUNS?",
+    "subtitle": "El número D-U-N-S es su pasaporte comercial internacional.",
+    "cards": [
+      {
+        "title": "Licitaciones y contratos públicos",
+        "desc": "El número DUNS es obligatorio para contratos con el gobierno de EE.UU. a través de SAM.gov, licitaciones públicas europeas y concursos internacionales.",
+        "ariaLabel": "Icono para licitaciones públicas e internacionales"
+      },
+      {
+        "title": "Asociaciones B2B",
+        "desc": "Muchas multinacionales exigen un número D-U-N-S para registrar y verificar a sus proveedores y socios internacionales.",
+        "ariaLabel": "Icono para asociaciones B2B"
+      },
+      {
+        "title": "Credibilidad financiera",
+        "desc": "El número DUNS refuerza la credibilidad financiera de su empresa ante socios, bancos e inversores.",
+        "ariaLabel": "Icono para credibilidad financiera"
+      },
+      {
+        "title": "Apple & Google",
+        "desc": "El número D-U-N-S es necesario para publicar apps en el App Store (Apple Developer Program) y Google Play Store como organización.",
+        "ariaLabel": "Icono para Apple Developer Program y Google Play Store"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      { "q": "¿Qué es un número D-U-N-S?", "a": "El número D-U-N-S (Data Universal Numbering System) es un identificador único de 9 dígitos asignado por Dun & Bradstreet a cada entidad comercial del mundo." },
+      { "q": "¿Cuánto tarda la búsqueda?", "a": "La búsqueda generalmente toma entre 30 segundos y 2 minutos según la carga del servidor." },
+      { "q": "¿Cuánto cuesta el servicio?", "a": "La búsqueda del número D-U-N-S está disponible por 4,99 €. El pago está asegurado por Stripe y recibe su resultado al instante tras la confirmación." },
+      { "q": "¿Qué ocurre si mi empresa no tiene número DUNS?", "a": "Si su empresa no se encuentra, puede solicitar uno gratuitamente en el sitio oficial de Dun & Bradstreet." },
+      { "q": "¿Cuál es la diferencia entre DUNS y NIF/CIF?", "a": "El NIF/CIF es un identificador fiscal nacional español. El número D-U-N-S es un identificador internacional asignado por Dun & Bradstreet y reconocido en más de 200 países. Ambos son complementarios." },
+      { "q": "¿Es obligatorio el número DUNS para Apple Developer?", "a": "Sí, Apple exige un número D-U-N-S válido para inscribirse en el Apple Developer Program o Apple Developer Enterprise Program como organización. Sin número DUNS no puede publicar apps en el App Store en nombre de su empresa." },
+      { "q": "¿Cómo encontrar el número DUNS de mi empresa?", "a": "La mayoría de las empresas registradas ya tienen un número D-U-N-S. Use nuestro servicio para encontrarlo en 2 minutos en lugar de esperar 30 días con el proceso oficial." }
+    ]
+  },
+  "seo": {
+    "title": "¿Qué es el número D-U-N-S y por qué lo necesita?",
+    "paragraphs": [
+      "El número D-U-N-S (Data Universal Numbering System) es un identificador único de 9 dígitos asignado por Dun & Bradstreet a cada entidad comercial del mundo. A diferencia del NIF/CIF limitado a España, el número DUNS está reconocido internacionalmente en más de 200 países.",
+      "Ya sea para participar en licitaciones a través de SAM.gov, unirse al Apple Developer Program, publicar en Google Play Store o simplemente reforzar la credibilidad de su empresa ante socios B2B, el número D-U-N-S es imprescindible.",
+      "Con DUNS Verify, obtenga su número DUNS en 2 minutos en lugar de 30 días con el proceso oficial. Nuestro servicio busca instantáneamente su identificador en la base de datos internacional y se lo envía por email."
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para obtener su número DUNS?",
+    "subtitle": "Sin esperar 30 días. Obtenga su identificador internacional en 2 minutos por solo 4,99 €.",
+    "button": "Obtener mi número DUNS ahora →"
+  },
+  "footer": {
+    "copyright": "© 2026 DUNS Verify. Servicio independiente, no afiliado a Dun & Bradstreet.",
+    "links": ["Aviso legal", "Términos", "Contacto"],
+    "hrefs": ["/mentions-legales", "/cgv", "/contact"]
+  },
+  "langSelector": "Idioma",
+  "success": {
+    "verifying": "Verificando el pago…",
+    "verifyingDesc": "Confirmando su pago de Stripe.",
+    "searching": "Buscando su número D-U-N-S…",
+    "searchingDesc": "Esto puede tardar hasta 2 minutos, por favor espere.",
+    "found": "¡Número D-U-N-S encontrado!",
+    "foundDesc": "Aquí está la información encontrada para su empresa.",
+    "notFound": "No se encontraron resultados",
+    "notFoundDesc": "No encontramos un número D-U-N-S para esta empresa en nuestra base de datos. Puede solicitar uno gratuitamente en el sitio oficial de Dun & Bradstreet.",
+    "error": "Se produjo un error",
+    "newSearch": "← Nueva búsqueda",
+    "back": "← Volver al inicio",
+    "duns": "D-U-N-S",
+    "address": "Dirección",
+    "nameUnavailable": "Nombre no disponible",
+    "sessionError": "Sesión no encontrada. Por favor, inténtelo de nuevo.",
+    "paymentError": "Pago no confirmado.",
+    "paymentVerifyError": "No se pudo verificar el pago."
+  },
+  "jsonLd": {
+    "websiteDescription": "Obtenga su número D-U-N-S en 2 minutos",
+    "serviceDescription": "Servicio de búsqueda instantánea de número D-U-N-S para empresas"
+  }
+}

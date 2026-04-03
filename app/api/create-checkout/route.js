@@ -11,7 +11,7 @@ export async function POST(request) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { companyName, city, country, email } = body;
+  const { companyName, city, country, email, lang } = body;
 
   if (!companyName?.trim()) {
     return NextResponse.json({ error: "companyName is required" }, { status: 400 });
@@ -36,8 +36,8 @@ export async function POST(request) {
         },
       ],
       customer_email: email || undefined,
-      success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: baseUrl,
+      success_url: `${baseUrl}/${lang || 'fr'}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/${lang || 'fr'}`,
       metadata: {
         companyName: companyName.trim(),
         city: city?.trim() || "",
