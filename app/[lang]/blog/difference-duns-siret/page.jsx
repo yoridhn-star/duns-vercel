@@ -1,24 +1,25 @@
+import { notFound } from "next/navigation";
 import BlogHeader from "../../../_components/BlogHeader";
 import BlogFooter from "../../../_components/BlogFooter";
 import BlogCTA from "../../../_components/BlogCTA";
-import { LOCALES } from "../../../i18n";
 
 const SITE_URL = process.env.SITE_URL || "https://dunsverify.com";
 
 export async function generateStaticParams() {
-  return LOCALES.map((lang) => ({ lang }));
+  return [{ lang: "fr" }];
 }
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
+  if (lang !== "fr") return {};
   return {
     title: "Différence DUNS et SIRET : Comparaison Complète des Identifiants Entreprise | DUNS Verify",
     description: "Quelle différence entre le numéro DUNS et le SIRET ? Comparatif complet : portée, attribution, usage, structure. Lequel vous faut-il vraiment ?",
-    alternates: { canonical: `${SITE_URL}/${lang}/blog/difference-duns-siret` },
+    alternates: { canonical: `${SITE_URL}/fr/blog/difference-duns-siret` },
     openGraph: {
       title: "Différence DUNS vs SIRET : Comparaison Complète",
       description: "DUNS vs SIRET : portée, attribution, usage. Quel identifiant vous faut-il selon votre situation ?",
-      url: `${SITE_URL}/${lang}/blog/difference-duns-siret`,
+      url: `${SITE_URL}/fr/blog/difference-duns-siret`,
       siteName: "DUNS Verify",
       type: "article",
     },
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Article({ params }) {
   const { lang } = await params;
+  if (lang !== "fr") return notFound();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -37,7 +39,7 @@ export default async function Article({ params }) {
     publisher: { "@type": "Organization", name: "DUNS Verify", url: SITE_URL },
     datePublished: "2026-01-01",
     dateModified: "2026-04-01",
-    url: `${SITE_URL}/${lang}/blog/difference-duns-siret`,
+    url: `${SITE_URL}/fr/blog/difference-duns-siret`,
   };
 
   return (
