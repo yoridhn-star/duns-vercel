@@ -1,4 +1,4 @@
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, Mail } from "lucide-react";
 import LangSelector from "../../_components/LangSelector";
 import { getDictionary, LOCALES } from "../../i18n";
 
@@ -21,11 +21,11 @@ export default async function ContactPage({ params }) {
   const c = isFr
     ? {
         title: "Contact",
-        intro: "Pour toute question, contactez-nous par email :",
+        intro: "Pour toute question concernant notre service, contactez-nous par email :",
       }
     : {
         title: "Contact",
-        intro: "For any questions, contact us by email:",
+        intro: "For any questions about our service, contact us by email:",
       };
 
   return (
@@ -47,8 +47,9 @@ export default async function ContactPage({ params }) {
           <p className="text-slate-600 mb-3">{c.intro}</p>
           <a
             href="mailto:contact@dunsverify.com"
-            className="text-emerald-600 font-semibold hover:underline text-lg"
+            className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:underline text-lg"
           >
+            <Mail className="w-5 h-5" />
             contact@dunsverify.com
           </a>
         </div>
