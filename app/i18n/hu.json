@@ -1,11 +1,11 @@
 ﻿{
   "meta": {
-    "title": "DUNS szám: Szerezze meg D-U-N-S számát 2 perc alatt | DUNS Verify",
-    "description": "Szerezze meg DUNS számát azonnal. Keresse meg és ellenőrizze vállalata D-U-N-S számát Magyarországon és Európában. Eredmény emailben 2 perc alatt 4,99 €-ért.",
-    "ogTitle": "DUNS szám: Szerezze meg D-U-N-S számát 2 perc alatt | DUNS Verify",
+    "title": "DUNS szám: Keresse meg D-U-N-S számát 2 perc alatt | DUNS Verify",
+    "description": "Keresse meg DUNS számát azonnal. Keresse meg és ellenőrizze vállalata D-U-N-S számát Magyarországon és Európában. Eredmény emailben 2 perc alatt 4,99 €-ért.",
+    "ogTitle": "DUNS szám: Keresse meg D-U-N-S számát 2 perc alatt | DUNS Verify",
     "ogDescription": "Keresse meg vállalata D-U-N-S számát azonnal. Gyors szolgáltatás, eredmény emailben. Nélkülözhetetlen az Apple Developer programhoz, közbeszerzésekhez, B2B partnerségekhez.",
     "twitterTitle": "DUNS szám 2 perc alatt | DUNS Verify",
-    "twitterDescription": "Szerezze meg D-U-N-S számát azonnal. Vége a 30 napos várakozásnak.",
+    "twitterDescription": "Keresse meg D-U-N-S számát azonnal. Vége a 30 napos várakozásnak.",
     "keywords": "DUNS szám, D-U-N-S szám, DUNS szám keresés, DUNS szám megszerzése, DUNS Magyarország, adószám vs DUNS, cégjegyzékszám vs DUNS, vállalati azonosító, DUNS Apple Developer, DUNS közbeszerzés"
   },
   "header": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Eredmény 2 perc alatt — 30 nap helyett",
-    "title": "Szerezze meg",
+    "title": "Keresse meg",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "számát 2 perc alatt",
     "subtitle": "Vége a 30 napos várakozásnak. Keresse meg és ellenőrizze vállalata D-U-N-S számát azonnal emailben, mindössze 4,99 €-ért."
@@ -27,7 +27,7 @@
     "country": "Ország",
     "email": "Az Ön email-címe",
     "emailPlaceholder": "on@pelda.hu",
-    "submit": "DUNS számomat kérem most — 4,99 €",
+    "submit": "DUNS számomat keresem most — 4,99 €",
     "loading": "Átirányítás a fizetéshez…",
     "trust1": "Biztonságos fizetés Stripe-on keresztül",
     "trust2": "Eredmény 2 perc alatt",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "Mi a D-U-N-S szám?", "a": "A D-U-N-S szám (Data Universal Numbering System) egy egyedi 9 jegyű azonosító, amelyet a Dun & Bradstreet oszt ki minden kereskedelmi szervezetnek a világon." },
       { "q": "Mennyi ideig tart a keresés?", "a": "A keresés általában 30 másodperctől 2 percig tart, a szerver terhelésétől függően." },
-      { "q": "Mennyibe kerül a szolgáltatás?", "a": "A D-U-N-S szám keresése 4,99 €-ba kerül. A fizetés biztonságos Stripe-on keresztül, és az eredményt azonnal megkapja a megerősítés után." },
+      { "q": "Mennyibe kerül a szolgáltatás?", "a": "A D-U-N-S szám keresése 4,99 €-ba kerül. A fizetés biztonságos Stripe-on keresztül, és az eredményt azonnal megkapja a megerősítés után. A keresési szolgáltatásért fizet, nem magáért a számért (amelyet a Dun & Bradstreet ingyenesen oszt ki a dnb.com oldalon)." },
       { "q": "Mi történik, ha vállalatom nem rendelkezik DUNS számmal?", "a": "Ha vállalata nem található, ingyenesen igényelhet számot a Dun & Bradstreet hivatalos weboldalán." },
       { "q": "Mi a különbség a DUNS szám és az adószám / cégjegyzékszám között?", "a": "Az adószám és a cégjegyzékszám a Magyar Állam által kiadott nemzeti azonosítók. A D-U-N-S szám a Dun & Bradstreet által kiadott nemzetközi azonosító, amelyet több mint 200 országban elismernek. Kiegészítik egymást: adószám/cégjegyzékszám Magyarországon, DUNS a nemzetközi üzleti életben." },
       { "q": "Kötelező a DUNS szám az Apple Developerhez?", "a": "Igen, az Apple érvényes D-U-N-S számot kér az Apple Developer Program vagy az Apple Developer Enterprise Program szervezetként történő regisztrálásához. DUNS szám nélkül nem tehet közzé alkalmazásokat az App Store-ban vállalata nevében." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Készen áll a DUNS szám megszerzésére?",
-    "subtitle": "Vége a 30 napos várakozásnak. Szerezze meg nemzetközi azonosítóját 2 perc alatt mindössze 4,99 €-ért.",
-    "button": "DUNS számomat kérem most →"
+    "title": "Készen áll a DUNS szám megkeresésére?",
+    "subtitle": "Vége a 30 napos várakozásnak. Keresse meg nemzetközi azonosítóját 2 perc alatt mindössze 4,99 €-ért.",
+    "button": "DUNS számomat keresem most →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Független szolgáltatás, nem áll kapcsolatban a Dun & Bradstreettel.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "A D-U-N-S®-számot a Dun & Bradstreet (dnb.com) ingyenesen osztja ki. A DUNS Verify egy független, fizetős keresési szolgáltatás (4,99 €), amely segít megtalálni meglévő számát 2 percen belül. Nem áll kapcsolatban a Dun & Bradstreet-tel.",
   "jsonLd": {
-    "websiteDescription": "Szerezze meg D-U-N-S számát 2 perc alatt",
+    "websiteDescription": "Keresse meg D-U-N-S számát 2 perc alatt",
     "serviceDescription": "Azonnali D-U-N-S szám kereső szolgáltatás vállalatok számára"
   }
 }

@@ -1,11 +1,11 @@
 ﻿{
   "meta": {
     "title": "Número DUNS: Obtenha o seu D-U-N-S em 2 minutos | DUNS Verify",
-    "description": "Obtenha o seu número DUNS instantaneamente. Encontre e verifique o número D-U-N-S da sua empresa em Portugal e na Europa. Resultado por email em 2 min por 4,99 €.",
+    "description": "Encontre o seu número DUNS instantaneamente. Encontre e verifique o número D-U-N-S da sua empresa em Portugal e na Europa. Resultado por email em 2 min por 4,99 €.",
     "ogTitle": "Número DUNS: Obtenha o seu D-U-N-S em 2 minutos | DUNS Verify",
     "ogDescription": "Encontre o número D-U-N-S da sua empresa instantaneamente. Serviço rápido, resultado por email. Indispensável para Apple Developer, concursos públicos, parcerias B2B.",
     "twitterTitle": "Número DUNS em 2 minutos | DUNS Verify",
-    "twitterDescription": "Obtenha o seu número D-U-N-S instantaneamente. Sem esperar 30 dias.",
+    "twitterDescription": "Encontre o seu número D-U-N-S instantaneamente. Sem esperar 30 dias.",
     "keywords": "número DUNS, número D-U-N-S, obter DUNS, encontrar DUNS, DUNS Portugal, DUNS number, verificar DUNS, DUNS Apple Developer, DUNS concursos públicos, identificador empresarial, NIF vs DUNS, NIPC vs DUNS"
   },
   "header": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Resultado em 2 min — em vez de 30 dias",
-    "title": "Obtenha o seu número",
+    "title": "Encontre o seu número",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "em 2 minutos",
     "subtitle": "Sem mais esperas de 30 dias. Encontre e verifique o número D-U-N-S da sua empresa imediatamente por email por apenas 4,99 €."
@@ -27,7 +27,7 @@
     "country": "País",
     "email": "O seu endereço de email",
     "emailPlaceholder": "voce@exemplo.com",
-    "submit": "Obter o meu DUNS agora — 4,99 €",
+    "submit": "Encontrar o meu DUNS agora — 4,99 €",
     "loading": "A redirecionar para o pagamento…",
     "trust1": "Pagamento seguro via Stripe",
     "trust2": "Resultado em menos de 2 min",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "O que é um número D-U-N-S?", "a": "O número D-U-N-S (Data Universal Numbering System) é um identificador único de 9 dígitos atribuído pela Dun & Bradstreet a cada entidade comercial no mundo." },
       { "q": "Quanto tempo demora a pesquisa?", "a": "A pesquisa demora geralmente entre 30 segundos e 2 minutos, dependendo da carga do servidor." },
-      { "q": "Quanto custa o serviço?", "a": "A pesquisa do número D-U-N-S está disponível por 4,99 €. O pagamento é seguro via Stripe e obtém o resultado imediatamente após confirmação." },
+      { "q": "Quanto custa o serviço?", "a": "A pesquisa do número D-U-N-S está disponível por 4,99 €. O pagamento é seguro via Stripe e obtém o resultado imediatamente após confirmação. Paga pelo serviço de pesquisa, não pelo número em si (atribuído gratuitamente pela Dun & Bradstreet em dnb.com)." },
       { "q": "O que acontece se a minha empresa não tiver número DUNS?", "a": "Se a sua empresa não for encontrada, pode solicitar um gratuitamente no site oficial da Dun & Bradstreet." },
       { "q": "Qual a diferença entre o DUNS e o NIF / NIPC?", "a": "O NIF (Número de Identificação Fiscal) e o NIPC (Número de Identificação de Pessoa Coletiva) são identificadores nacionais portugueses emitidos pela Autoridade Tributária. O número D-U-N-S é um identificador internacional emitido pela Dun & Bradstreet, reconhecido em mais de 200 países. São complementares: o NIF/NIPC para Portugal, o DUNS para o plano internacional." },
       { "q": "O número DUNS é obrigatório para o Apple Developer?", "a": "Sim, a Apple exige um número D-U-N-S válido para qualquer inscrição no Apple Developer Program ou no Apple Developer Enterprise Program como organização. Sem número DUNS não pode publicar aplicações na App Store em nome da sua empresa." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Pronto para obter o seu número DUNS?",
+    "title": "Pronto para encontrar o seu número DUNS?",
     "subtitle": "Sem esperar 30 dias. Obtenha o seu identificador internacional em 2 minutos por apenas 4,99 €.",
-    "button": "Obter o meu DUNS agora →"
+    "button": "Encontrar o meu DUNS agora →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Serviço independente, não afiliado à Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "O número D-U-N-S® é atribuído gratuitamente pela Dun & Bradstreet (dnb.com). O DUNS Verify é um serviço de pesquisa independente e pago (4,99 €) que o ajuda a encontrar o seu número existente em 2 minutos. Não afiliado à Dun & Bradstreet.",
   "jsonLd": {
-    "websiteDescription": "Obtenha o seu número D-U-N-S em 2 minutos",
+    "websiteDescription": "Encontre o seu número D-U-N-S em 2 minutos",
     "serviceDescription": "Serviço de pesquisa instantânea de número D-U-N-S para empresas"
   }
 }

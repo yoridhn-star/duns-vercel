@@ -111,7 +111,15 @@ export default async function Home({ params }) {
 
               {/* ── Legal disclaimer (OVH/D&B compliance) ────────────────────── */}
               <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-8 text-xs text-amber-800 text-left leading-relaxed">
-                <span className="font-semibold">ℹ️ </span>{t.disclaimer}
+                <span className="font-semibold">ℹ️ </span>
+                {t.disclaimer.split("dnb.com")[0]}
+                <a
+                  href="https://www.dnb.com/duns/get-a-duns.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline font-semibold hover:text-amber-900"
+                >dnb.com</a>
+                {t.disclaimer.split("dnb.com")[1]}
               </div>
 
               <HomeForm t={t.form} lang={lang} />

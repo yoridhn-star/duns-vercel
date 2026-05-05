@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Resultado en 2 min — en lugar de 30 días",
-    "title": "Obtenga su número",
+    "title": "Encuentre su número",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "en 2 minutos",
     "subtitle": "Sin esperar 30 días. Encuentre y verifique el número D-U-N-S de su empresa al instante por email por solo 4,99 €."
@@ -27,7 +27,7 @@
     "country": "País",
     "email": "Su dirección de email",
     "emailPlaceholder": "usted@ejemplo.com",
-    "submit": "Obtener mi número DUNS ahora — 4,99 €",
+    "submit": "Encontrar mi número DUNS ahora — 4,99 €",
     "loading": "Redirigiendo al pago…",
     "trust1": "Pago seguro con Stripe",
     "trust2": "Resultado en menos de 2 min",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "¿Qué es un número D-U-N-S?", "a": "El número D-U-N-S (Data Universal Numbering System) es un identificador único de 9 dígitos asignado por Dun & Bradstreet a cada entidad comercial del mundo." },
       { "q": "¿Cuánto tarda la búsqueda?", "a": "La búsqueda generalmente toma entre 30 segundos y 2 minutos según la carga del servidor." },
-      { "q": "¿Cuánto cuesta el servicio?", "a": "La búsqueda del número D-U-N-S está disponible por 4,99 €. El pago está asegurado por Stripe y recibe su resultado al instante tras la confirmación." },
+      { "q": "¿Cuánto cuesta el servicio?", "a": "La búsqueda del número D-U-N-S está disponible por 4,99 €. El pago está asegurado por Stripe y recibe su resultado al instante tras la confirmación. Usted paga por el servicio de búsqueda, no por el número en sí (asignado gratuitamente por Dun & Bradstreet en dnb.com)." },
       { "q": "¿Qué ocurre si mi empresa no tiene número DUNS?", "a": "Si su empresa no se encuentra, puede solicitar uno gratuitamente en el sitio oficial de Dun & Bradstreet." },
       { "q": "¿Cuál es la diferencia entre DUNS y NIF/CIF?", "a": "El NIF/CIF es un identificador fiscal nacional español. El número D-U-N-S es un identificador internacional asignado por Dun & Bradstreet y reconocido en más de 200 países. Ambos son complementarios." },
       { "q": "¿Es obligatorio el número DUNS para Apple Developer?", "a": "Sí, Apple exige un número D-U-N-S válido para inscribirse en el Apple Developer Program o Apple Developer Enterprise Program como organización. Sin número DUNS no puede publicar apps en el App Store en nombre de su empresa." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "¿Listo para obtener su número DUNS?",
+    "title": "¿Listo para encontrar su número DUNS?",
     "subtitle": "Sin esperar 30 días. Obtenga su identificador internacional en 2 minutos por solo 4,99 €.",
-    "button": "Obtener mi número DUNS ahora →"
+    "button": "Encontrar mi número DUNS ahora →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Servicio independiente, no afiliado a Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "El número D-U-N-S® es asignado gratuitamente por Dun & Bradstreet (dnb.com). DUNS Verify es un servicio de búsqueda independiente y de pago (4,99 €) que le ayuda a encontrar su número existente en 2 minutos. No afiliado a Dun & Bradstreet.",
   "jsonLd": {
-    "websiteDescription": "Obtenga su número D-U-N-S en 2 minutos",
+    "websiteDescription": "Encuentre su número D-U-N-S en 2 minutos",
     "serviceDescription": "Servicio de búsqueda instantánea de número D-U-N-S para empresas"
   }
 }

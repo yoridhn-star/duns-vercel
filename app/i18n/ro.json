@@ -1,11 +1,11 @@
 ﻿{
   "meta": {
     "title": "Număr DUNS: Obțineți D-U-N-S în 2 minute | DUNS Verify",
-    "description": "Obțineți numărul DUNS instantaneu. Găsiți și verificați numărul D-U-N-S al companiei dvs. în România și Europa. Rezultat pe email în 2 min pentru 4,99 €.",
+    "description": "Găsiți numărul DUNS instantaneu. Găsiți și verificați numărul D-U-N-S al companiei dvs. în România și Europa. Rezultat pe email în 2 min pentru 4,99 €.",
     "ogTitle": "Număr DUNS: Obțineți D-U-N-S în 2 minute | DUNS Verify",
     "ogDescription": "Găsiți numărul D-U-N-S al companiei dvs. instantaneu. Serviciu rapid, rezultat pe email. Indispensabil pentru Apple Developer, achiziții publice, parteneriate B2B.",
     "twitterTitle": "Număr DUNS în 2 minute | DUNS Verify",
-    "twitterDescription": "Obțineți numărul D-U-N-S instantaneu. Fără așteptare 30 de zile.",
+    "twitterDescription": "Găsiți numărul D-U-N-S instantaneu. Fără așteptare 30 de zile.",
     "keywords": "număr DUNS, număr D-U-N-S, obținere DUNS, căutare DUNS, DUNS România, identificator afaceri, CUI vs DUNS, CIF vs DUNS, DUNS Apple Developer, DUNS achiziții publice"
   },
   "header": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Rezultat în 2 min — în loc de 30 de zile",
-    "title": "Obțineți numărul",
+    "title": "Găsiți numărul",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "în 2 minute",
     "subtitle": "Fără așteptare 30 de zile. Găsiți și verificați numărul D-U-N-S al companiei dvs. imediat pe email pentru doar 4,99 €."
@@ -27,7 +27,7 @@
     "country": "Țară",
     "email": "Adresa dvs. de email",
     "emailPlaceholder": "dvs@exemplu.ro",
-    "submit": "Obțin DUNS-ul meu acum — 4,99 €",
+    "submit": "Găsesc DUNS-ul meu acum — 4,99 €",
     "loading": "Redirecționare către plată…",
     "trust1": "Plată securizată prin Stripe",
     "trust2": "Rezultat în mai puțin de 2 min",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "Ce este un număr D-U-N-S?", "a": "Numărul D-U-N-S (Data Universal Numbering System) este un identificator unic de 9 cifre atribuit de Dun & Bradstreet fiecărei entități comerciale din lume." },
       { "q": "Cât durează căutarea?", "a": "Căutarea durează de obicei între 30 de secunde și 2 minute, în funcție de încărcarea serverului." },
-      { "q": "Cât costă serviciul?", "a": "Căutarea numărului D-U-N-S este disponibilă pentru 4,99 €. Plata este securizată prin Stripe și primiți rezultatul imediat după confirmare." },
+      { "q": "Cât costă serviciul?", "a": "Căutarea numărului D-U-N-S este disponibilă pentru 4,99 €. Plata este securizată prin Stripe și primiți rezultatul imediat după confirmare. Plătiți pentru serviciul de căutare, nu pentru numărul în sine (atribuit gratuit de Dun & Bradstreet pe dnb.com)." },
       { "q": "Ce se întâmplă dacă compania mea nu are număr DUNS?", "a": "Dacă compania dvs. nu este găsită, puteți solicita un număr gratuit pe site-ul oficial al Dun & Bradstreet." },
       { "q": "Care este diferența dintre DUNS și CUI / CIF?", "a": "CUI (Codul Unic de Înregistrare) și CIF sunt identificatori naționali românești eliberați de ANAF. Numărul D-U-N-S este un identificator internațional emis de Dun & Bradstreet, recunoscut în peste 200 de țări. Sunt complementari: CUI/CIF pentru România, DUNS pentru uz internațional." },
       { "q": "Numărul DUNS este obligatoriu pentru Apple Developer?", "a": "Da, Apple solicită un număr D-U-N-S valid pentru orice înregistrare la Apple Developer Program sau Apple Developer Enterprise Program ca organizație. Fără număr DUNS nu puteți publica aplicații în App Store în numele companiei dvs." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Gata să obțineți numărul DUNS?",
+    "title": "Gata să găsiți numărul DUNS?",
     "subtitle": "Fără așteptare 30 de zile. Obțineți identificatorul dvs. internațional în 2 minute pentru doar 4,99 €.",
-    "button": "Obțin DUNS-ul meu acum →"
+    "button": "Găsesc DUNS-ul meu acum →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Serviciu independent, neafiliat cu Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "Numărul D-U-N-S® este atribuit gratuit de Dun & Bradstreet (dnb.com). DUNS Verify este un serviciu independent de căutare cu plată (4,99 €) care vă ajută să găsiți numărul dvs. existent în 2 minute. Nu este afiliat cu Dun & Bradstreet.",
   "jsonLd": {
-    "websiteDescription": "Obțineți numărul D-U-N-S în 2 minute",
+    "websiteDescription": "Găsiți numărul D-U-N-S în 2 minute",
     "serviceDescription": "Serviciu de căutare instantanee a numărului D-U-N-S pentru companii"
   }
 }

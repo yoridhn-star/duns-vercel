@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Result in 2 min — instead of 30 days",
-    "title": "Get your",
+    "title": "Find your",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "number in 2 minutes",
     "subtitle": "No more waiting 30 days. Find and verify your company's D-U-N-S number instantly by email for only €4.99."
@@ -27,7 +27,7 @@
     "country": "Country",
     "email": "Your email address",
     "emailPlaceholder": "you@example.com",
-    "submit": "Get my DUNS number now — €4.99",
+    "submit": "Find my DUNS number now — €4.99",
     "loading": "Redirecting to payment…",
     "trust1": "Secure payment by Stripe",
     "trust2": "Result in under 2 min",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "What is a D-U-N-S number?", "a": "The D-U-N-S number (Data Universal Numbering System) is a unique 9-digit identifier assigned by Dun & Bradstreet to every business entity worldwide." },
       { "q": "How long does the lookup take?", "a": "The search typically takes between 30 seconds and 2 minutes depending on server load." },
-      { "q": "How much does the service cost?", "a": "The D-U-N-S number lookup is available for €4.99. Payment is secured by Stripe and you receive your result instantly after confirmation." },
+      { "q": "How much does the service cost?", "a": "The D-U-N-S number lookup is available for €4.99. Payment is secured by Stripe and you receive your result instantly after confirmation. You pay for the search service, not for the number itself (assigned free of charge by Dun & Bradstreet at dnb.com)." },
       { "q": "What if my company doesn't have a DUNS number?", "a": "If your company is not found, you can request a free DUNS number on the official Dun & Bradstreet website." },
       { "q": "What is the difference between a DUNS number and a tax ID?", "a": "A tax ID (EIN, VAT number, etc.) is a national identifier issued by your government. The D-U-N-S number is an international identifier issued by Dun & Bradstreet and recognized in over 200 countries. Both are complementary." },
       { "q": "Is a DUNS number required for Apple Developer?", "a": "Yes, Apple requires a valid D-U-N-S number to enroll in the Apple Developer Program or Apple Developer Enterprise Program as an organization. Without a DUNS number, you cannot publish apps on the App Store under your company name." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Ready to get your DUNS number?",
-    "subtitle": "No more 30-day waits. Get your international business identifier in 2 minutes for only €4.99.",
-    "button": "Get my DUNS number now →"
+    "title": "Ready to find your DUNS number?",
+    "subtitle": "No more 30-day waits. Find your international business identifier in 2 minutes for only €4.99.",
+    "button": "Find my DUNS number now →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Independent service, not affiliated with Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "The D-U-N-S® Number is assigned free of charge by Dun & Bradstreet (dnb.com). DUNS Verify is an independent paid search service (€4.99) that helps you find your existing number in 2 minutes. Not affiliated with Dun & Bradstreet.",
   "jsonLd": {
-    "websiteDescription": "Get your D-U-N-S number in 2 minutes",
+    "websiteDescription": "Find your D-U-N-S number in 2 minutes",
     "serviceDescription": "Instant D-U-N-S number lookup service for businesses"
   }
 }

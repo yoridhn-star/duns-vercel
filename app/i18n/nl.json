@@ -1,11 +1,11 @@
 ﻿{
   "meta": {
-    "title": "DUNS-nummer: Verkrijg uw D-U-N-S in 2 minuten | DUNS Verify",
-    "description": "Verkrijg uw DUNS-nummer direct. Zoek en verifieer het D-U-N-S-nummer van uw bedrijf in Nederland en Europa. Resultaat per email in 2 min voor 4,99 €.",
-    "ogTitle": "DUNS-nummer: Verkrijg uw D-U-N-S in 2 minuten | DUNS Verify",
+    "title": "DUNS-nummer: Vind uw D-U-N-S in 2 minuten | DUNS Verify",
+    "description": "Vind uw DUNS-nummer direct. Zoek en verifieer het D-U-N-S-nummer van uw bedrijf in Nederland en Europa. Resultaat per email in 2 min voor 4,99 €.",
+    "ogTitle": "DUNS-nummer: Vind uw D-U-N-S in 2 minuten | DUNS Verify",
     "ogDescription": "Zoek het D-U-N-S-nummer van uw bedrijf direct. Snelle service, resultaat per email. Onmisbaar voor Apple Developer, aanbestedingen, B2B-partnerschappen.",
     "twitterTitle": "DUNS-nummer in 2 minuten | DUNS Verify",
-    "twitterDescription": "Verkrijg uw D-U-N-S-nummer direct. Geen 30 dagen wachten meer.",
+    "twitterDescription": "Vind uw D-U-N-S-nummer direct. Geen 30 dagen wachten meer.",
     "keywords": "DUNS nummer, D-U-N-S nummer, DUNS nummer verkrijgen, DUNS nummer zoeken, DUNS Nederland, KvK nummer vs DUNS, DUNS Apple Developer, DUNS aanbesteding, bedrijfsidentificatie"
   },
   "header": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Resultaat in 2 min — in plaats van 30 dagen",
-    "title": "Verkrijg uw",
+    "title": "Vind uw",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "in 2 minuten",
     "subtitle": "Geen 30 dagen wachten meer. Zoek en verifieer het D-U-N-S-nummer van uw bedrijf direct per email voor slechts 4,99 €."
@@ -27,7 +27,7 @@
     "country": "Land",
     "email": "Uw e-mailadres",
     "emailPlaceholder": "u@voorbeeld.com",
-    "submit": "Mijn DUNS nu verkrijgen — 4,99 €",
+    "submit": "Mijn DUNS nu vinden — 4,99 €",
     "loading": "Doorverwijzing naar betaling…",
     "trust1": "Veilige betaling via Stripe",
     "trust2": "Resultaat in minder dan 2 min",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "Wat is een D-U-N-S-nummer?", "a": "Het D-U-N-S-nummer (Data Universal Numbering System) is een uniek 9-cijferig identificatienummer dat door Dun & Bradstreet aan elke commerciële entiteit wereldwijd wordt toegekend." },
       { "q": "Hoe lang duurt de zoekopdracht?", "a": "De zoekopdracht duurt doorgaans 30 seconden tot 2 minuten, afhankelijk van de serverbelasting." },
-      { "q": "Wat kost de service?", "a": "Het opzoeken van een D-U-N-S-nummer kost 4,99 €. De betaling verloopt veilig via Stripe en u ontvangt uw resultaat direct na bevestiging." },
+      { "q": "Wat kost de service?", "a": "Het opzoeken van een D-U-N-S-nummer kost 4,99 €. De betaling verloopt veilig via Stripe en u ontvangt uw resultaat direct na bevestiging. U betaalt voor de zoekdienst, niet voor het nummer zelf (gratis toegewezen door Dun & Bradstreet op dnb.com)." },
       { "q": "Wat als mijn bedrijf geen DUNS-nummer heeft?", "a": "Als uw bedrijf niet wordt gevonden, kunt u gratis een nummer aanvragen via de officiële website van Dun & Bradstreet." },
       { "q": "Wat is het verschil tussen het DUNS-nummer en het KvK-nummer?", "a": "Het KvK-nummer is een nationaal Nederlands identificatienummer uitgegeven door de Kamer van Koophandel. Het D-U-N-S-nummer is een internationaal identificatienummer van Dun & Bradstreet, erkend in meer dan 200 landen. Beide zijn complementair: het KvK-nummer voor Nederland, het DUNS-nummer voor internationaal gebruik." },
       { "q": "Is het DUNS-nummer verplicht voor Apple Developer?", "a": "Ja, Apple vereist een geldig D-U-N-S-nummer voor inschrijving bij het Apple Developer Program of Apple Developer Enterprise Program als organisatie. Zonder DUNS-nummer kunt u geen apps publiceren in de App Store namens uw bedrijf." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Klaar om uw DUNS-nummer te verkrijgen?",
-    "subtitle": "Geen 30 dagen wachten meer. Verkrijg uw internationaal identificatienummer in 2 minuten voor slechts 4,99 €.",
-    "button": "Mijn DUNS nu verkrijgen →"
+    "title": "Klaar om uw DUNS-nummer te vinden?",
+    "subtitle": "Geen 30 dagen wachten meer. Vind uw internationaal identificatienummer in 2 minuten voor slechts 4,99 €.",
+    "button": "Mijn DUNS nu vinden →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Onafhankelijke service, niet gelieerd aan Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "Het D-U-N-S®-nummer wordt gratis toegewezen door Dun & Bradstreet (dnb.com). DUNS Verify is een onafhankelijke betaalde zoekdienst (€ 4,99) waarmee u uw bestaande nummer in 2 minuten kunt vinden. Niet gelieerd aan Dun & Bradstreet.",
   "jsonLd": {
-    "websiteDescription": "Verkrijg uw D-U-N-S-nummer in 2 minuten",
+    "websiteDescription": "Vind uw D-U-N-S-nummer in 2 minuten",
     "serviceDescription": "Directe opzoekservice voor D-U-N-S-nummers voor bedrijven"
   }
 }

@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Ergebnis in 2 Min. — statt 30 Tagen",
-    "title": "Erhalten Sie Ihre",
+    "title": "Finden Sie Ihre",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "Nummer in 2 Minuten",
     "subtitle": "Kein 30-tägiges Warten mehr. Finden und verifizieren Sie die D-U-N-S-Nummer Ihres Unternehmens sofort per E-Mail für nur 4,99 €."
@@ -27,7 +27,7 @@
     "country": "Land",
     "email": "Ihre E-Mail-Adresse",
     "emailPlaceholder": "sie@beispiel.de",
-    "submit": "Meine DUNS-Nummer jetzt erhalten — 4,99 €",
+    "submit": "Meine DUNS-Nummer jetzt finden — 4,99 €",
     "loading": "Weiterleitung zur Zahlung…",
     "trust1": "Sichere Zahlung per Stripe",
     "trust2": "Ergebnis in unter 2 Min.",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "Was ist eine D-U-N-S-Nummer?", "a": "Die D-U-N-S-Nummer (Data Universal Numbering System) ist eine eindeutige 9-stellige Kennung, die Dun & Bradstreet jedem Unternehmen weltweit zuweist." },
       { "q": "Wie lange dauert die Suche?", "a": "Die Suche dauert in der Regel zwischen 30 Sekunden und 2 Minuten, je nach Serverauslastung." },
-      { "q": "Was kostet der Service?", "a": "Die DUNS-Nummer-Suche ist für 4,99 € verfügbar. Die Zahlung wird über Stripe abgesichert und Sie erhalten Ihr Ergebnis sofort nach der Bestätigung." },
+      { "q": "Was kostet der Service?", "a": "Die DUNS-Nummer-Suche ist für 4,99 € verfügbar. Die Zahlung wird über Stripe abgesichert und Sie erhalten Ihr Ergebnis sofort nach der Bestätigung. Sie zahlen für den Suchdienst, nicht für die Nummer selbst (kostenlos von Dun & Bradstreet auf dnb.com)." },
       { "q": "Was passiert, wenn mein Unternehmen keine DUNS-Nummer hat?", "a": "Wenn Ihr Unternehmen nicht gefunden wird, können Sie kostenlos eine DUNS-Nummer auf der offiziellen Website von Dun & Bradstreet beantragen." },
       { "q": "Was ist der Unterschied zwischen DUNS und Handelsregisternummer?", "a": "Die Handelsregisternummer ist eine nationale Kennung für in Deutschland eingetragene Unternehmen. Die D-U-N-S-Nummer ist eine internationale Kennung von Dun & Bradstreet, die in über 200 Ländern anerkannt wird. Beide ergänzen sich." },
       { "q": "Ist eine DUNS-Nummer für Apple Developer erforderlich?", "a": "Ja, Apple verlangt eine gültige D-U-N-S-Nummer für die Registrierung beim Apple Developer Program oder Apple Developer Enterprise Program als Organisation. Ohne DUNS-Nummer können Sie keine Apps im App Store unter Ihrem Firmennamen veröffentlichen." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Bereit, Ihre DUNS-Nummer zu erhalten?",
-    "subtitle": "Kein 30-tägiges Warten mehr. Erhalten Sie Ihre internationale Unternehmenskennung in 2 Minuten für nur 4,99 €.",
-    "button": "Meine DUNS-Nummer jetzt erhalten →"
+    "title": "Bereit, Ihre DUNS-Nummer zu finden?",
+    "subtitle": "Kein 30-tägiges Warten mehr. Finden Sie Ihre internationale Unternehmenskennung in 2 Minuten für nur 4,99 €.",
+    "button": "Meine DUNS-Nummer jetzt finden →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Unabhängiger Service, nicht verbunden mit Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "Die D-U-N-S®-Nummer wird kostenlos von Dun & Bradstreet (dnb.com) vergeben. DUNS Verify ist ein unabhängiger, kostenpflichtiger Suchdienst (4,99 €), der Ihnen hilft, Ihre bestehende Nummer in 2 Minuten zu finden. Nicht mit Dun & Bradstreet verbunden.",
   "jsonLd": {
-    "websiteDescription": "Erhalten Sie Ihre D-U-N-S-Nummer in 2 Minuten",
+    "websiteDescription": "Finden Sie Ihre D-U-N-S-Nummer in 2 Minuten",
     "serviceDescription": "Sofortiger D-U-N-S-Nummer-Suchdienst für Unternehmen"
   }
 }

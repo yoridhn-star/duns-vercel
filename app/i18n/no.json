@@ -1,11 +1,11 @@
 ﻿{
   "meta": {
-    "title": "DUNS-nummer: Få ditt D-U-N-S på 2 minutter | DUNS Verify",
-    "description": "Få ditt DUNS-nummer umiddelbart. Finn og verifiser D-U-N-S-nummeret for bedriften din i Norge og Europa. Resultat på e-post på 2 min for 4,99 €.",
-    "ogTitle": "DUNS-nummer: Få ditt D-U-N-S på 2 minutter | DUNS Verify",
+    "title": "DUNS-nummer: Finn ditt D-U-N-S på 2 minutter | DUNS Verify",
+    "description": "Finn ditt DUNS-nummer umiddelbart. Finn og verifiser D-U-N-S-nummeret for bedriften din i Norge og Europa. Resultat på e-post på 2 min for 4,99 €.",
+    "ogTitle": "DUNS-nummer: Finn ditt D-U-N-S på 2 minutter | DUNS Verify",
     "ogDescription": "Finn D-U-N-S-nummeret for bedriften din umiddelbart. Rask tjeneste, resultat på e-post. Uunnværlig for Apple Developer, offentlige anbud, B2B-partnerskap.",
     "twitterTitle": "DUNS-nummer på 2 minutter | DUNS Verify",
-    "twitterDescription": "Få ditt D-U-N-S-nummer umiddelbart. Slutt å vente 30 dager.",
+    "twitterDescription": "Finn ditt D-U-N-S-nummer umiddelbart. Slutt å vente 30 dager.",
     "keywords": "DUNS nummer, D-U-N-S nummer, få DUNS nummer, finne DUNS nummer, DUNS Norge, organisasjonsnummer vs DUNS, bedriftsidentifikator, DUNS Apple Developer, DUNS offentlig anskaffelse"
   },
   "header": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Resultat på 2 min — i stedet for 30 dager",
-    "title": "Få ditt",
+    "title": "Finn ditt",
     "titleHighlight": "D-U-N-S",
     "titleEnd": "på 2 minutter",
     "subtitle": "Slutt å vente 30 dager. Finn og verifiser D-U-N-S-nummeret for bedriften din umiddelbart på e-post for bare 4,99 €."
@@ -27,7 +27,7 @@
     "country": "Land",
     "email": "Din e-postadresse",
     "emailPlaceholder": "deg@eksempel.com",
-    "submit": "Hent mitt DUNS nå — 4,99 €",
+    "submit": "Finn mitt DUNS nå — 4,99 €",
     "loading": "Omdirigerer til betaling…",
     "trust1": "Sikker betaling via Stripe",
     "trust2": "Resultat på under 2 min",
@@ -74,7 +74,7 @@
     "items": [
       { "q": "Hva er et D-U-N-S-nummer?", "a": "D-U-N-S-nummeret (Data Universal Numbering System) er et unikt 9-sifret identifikasjonsnummer tildelt av Dun & Bradstreet til enhver kommersiell enhet i verden." },
       { "q": "Hvor lang tid tar søket?", "a": "Søket tar vanligvis 30 sekunder til 2 minutter avhengig av serverbelastningen." },
-      { "q": "Hva koster tjenesten?", "a": "Søk etter D-U-N-S-nummer koster 4,99 €. Betalingen skjer trygt via Stripe og du mottar resultatet umiddelbart etter bekreftelse." },
+      { "q": "Hva koster tjenesten?", "a": "Søk etter D-U-N-S-nummer koster 4,99 €. Betalingen skjer trygt via Stripe og du mottar resultatet umiddelbart etter bekreftelse. Du betaler for søketjenesten, ikke for nummeret i seg selv (tildeles gratis av Dun & Bradstreet på dnb.com)." },
       { "q": "Hva skjer hvis bedriften min ikke har DUNS-nummer?", "a": "Hvis bedriften din ikke finnes, kan du søke om et gratis nummer på Dun & Bradstreets offisielle nettside." },
       { "q": "Hva er forskjellen mellom DUNS og organisasjonsnummer?", "a": "Organisasjonsnummeret er et nasjonalt norsk identifikasjonsnummer utstedt av Brønnøysundregistrene. D-U-N-S-nummeret er et internasjonalt identifikasjonsnummer utstedt av Dun & Bradstreet, anerkjent i mer enn 200 land. De to er komplementære: organisasjonsnummer for Norge, DUNS for internasjonal bruk." },
       { "q": "Er DUNS-nummeret påkrevd for Apple Developer?", "a": "Ja, Apple krever et gyldig D-U-N-S-nummer for registrering i Apple Developer Program eller Apple Developer Enterprise Program som organisasjon. Uten DUNS-nummer kan du ikke publisere apper i App Store på vegne av bedriften din." },
@@ -90,9 +90,9 @@
     ]
   },
   "cta": {
-    "title": "Klar til å skaffe DUNS-nummeret ditt?",
+    "title": "Klar til å finne DUNS-nummeret ditt?",
     "subtitle": "Slutt å vente 30 dager. Få det internasjonale identifikasjonsnummeret ditt på 2 minutter for bare 4,99 €.",
-    "button": "Hent mitt DUNS nå →"
+    "button": "Finn mitt DUNS nå →"
   },
   "footer": {
     "copyright": "© 2026 DUNS Verify. Uavhengig tjeneste, ikke tilknyttet Dun & Bradstreet.",
@@ -121,7 +121,7 @@
   },
   "disclaimer": "D-U-N-S®-nummeret tildeles gratis av Dun & Bradstreet (dnb.com). DUNS Verify er en uavhengig betalt søketjeneste (4,99 €) som hjelper deg med å finne ditt eksisterende nummer på 2 minutter. Ikke tilknyttet Dun & Bradstreet.",
   "jsonLd": {
-    "websiteDescription": "Få ditt D-U-N-S-nummer på 2 minutter",
+    "websiteDescription": "Finn ditt D-U-N-S-nummer på 2 minutter",
     "serviceDescription": "Umiddelbar D-U-N-S-nummersøketjeneste for bedrifter"
   }
 }
