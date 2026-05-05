@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "Număr DUNS: Obțineți D-U-N-S în 2 minute | DUNS Verify",
     "description": "Obțineți numărul DUNS instantaneu. Găsiți și verificați numărul D-U-N-S al companiei dvs. în România și Europa. Rezultat pe email în 2 min pentru 4,99 €.",
@@ -119,6 +119,7 @@
     "paymentError": "Plată neconfirmată.",
     "paymentVerifyError": "Imposibil de verificat plata."
   },
+  "disclaimer": "Numărul D-U-N-S® este atribuit gratuit de Dun & Bradstreet (dnb.com). DUNS Verify este un serviciu independent de căutare cu plată (4,99 €) care vă ajută să găsiți numărul dvs. existent în 2 minute. Nu este afiliat cu Dun & Bradstreet.",
   "jsonLd": {
     "websiteDescription": "Obțineți numărul D-U-N-S în 2 minute",
     "serviceDescription": "Serviciu de căutare instantanee a numărului D-U-N-S pentru companii"

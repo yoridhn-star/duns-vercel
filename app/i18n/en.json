@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "DUNS Number: Get Your D-U-N-S in 2 Minutes | DUNS Verify",
     "description": "Find your DUNS number instantly. Look up and verify your company's D-U-N-S number in Europe and worldwide. Result by email in 2 min for €4.99.",
@@ -119,6 +119,7 @@
     "paymentError": "Payment not confirmed.",
     "paymentVerifyError": "Unable to verify payment."
   },
+  "disclaimer": "The D-U-N-S® Number is assigned free of charge by Dun & Bradstreet (dnb.com). DUNS Verify is an independent paid search service (€4.99) that helps you find your existing number in 2 minutes. Not affiliated with Dun & Bradstreet.",
   "jsonLd": {
     "websiteDescription": "Get your D-U-N-S number in 2 minutes",
     "serviceDescription": "Instant D-U-N-S number lookup service for businesses"

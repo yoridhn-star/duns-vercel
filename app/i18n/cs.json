@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "Číslo DUNS: Získejte své D-U-N-S za 2 minuty | DUNS Verify",
     "description": "Získejte své číslo DUNS okamžitě. Najděte a ověřte číslo D-U-N-S své firmy v České republice a Evropě. Výsledek emailem za 2 min za 4,99 €.",
@@ -119,6 +119,7 @@
     "paymentError": "Platba nepotvrzena.",
     "paymentVerifyError": "Platbu nelze ověřit."
   },
+  "disclaimer": "Číslo D-U-N-S® je přidělovno zdarma společností Dun & Bradstreet (dnb.com). DUNS Verify je nezávislá placená vyhledávací služba (4,99 €), která vám pomůže najít vaše stávající číslo za 2 minuty. Není přidružena k Dun & Bradstreet.",
   "jsonLd": {
     "websiteDescription": "Získejte své číslo D-U-N-S za 2 minuty",
     "serviceDescription": "Okamžitá vyhledávací služba čísla D-U-N-S pro firmy"

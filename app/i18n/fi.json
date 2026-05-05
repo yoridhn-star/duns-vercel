@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "DUNS-numero: Hanki D-U-N-S-numerosi 2 minuutissa | DUNS Verify",
     "description": "Hanki DUNS-numerosi välittömästi. Löydä ja tarkista yrityksesi D-U-N-S-numero Suomessa ja Euroopassa. Tulos sähköpostitse 2 min 4,99 €:lla.",
@@ -119,6 +119,7 @@
     "paymentError": "Maksua ei vahvistettu.",
     "paymentVerifyError": "Maksun tarkistaminen epäonnistui."
   },
+  "disclaimer": "D-U-N-S®-numero myönnetään ilmaiseksi Dun & Bradstreet -yhtiön toimesta (dnb.com). DUNS Verify on riippumaton maksullinen hakupalvelu (4,99 €), joka auttaa sinua löytämään olemassa olevan numerosi 2 minuutissa. Ei yhteydessä Dun & Bradstreet -yhtiöön.",
   "jsonLd": {
     "websiteDescription": "Hanki D-U-N-S-numerosi 2 minuutissa",
     "serviceDescription": "Välitön D-U-N-S-numeron hakupalvelu yrityksille"

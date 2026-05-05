@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "DUNS-nummer: Verkrijg uw D-U-N-S in 2 minuten | DUNS Verify",
     "description": "Verkrijg uw DUNS-nummer direct. Zoek en verifieer het D-U-N-S-nummer van uw bedrijf in Nederland en Europa. Resultaat per email in 2 min voor 4,99 €.",
@@ -119,6 +119,7 @@
     "paymentError": "Betaling niet bevestigd.",
     "paymentVerifyError": "Kan betaling niet verifiëren."
   },
+  "disclaimer": "Het D-U-N-S®-nummer wordt gratis toegewezen door Dun & Bradstreet (dnb.com). DUNS Verify is een onafhankelijke betaalde zoekdienst (€ 4,99) waarmee u uw bestaande nummer in 2 minuten kunt vinden. Niet gelieerd aan Dun & Bradstreet.",
   "jsonLd": {
     "websiteDescription": "Verkrijg uw D-U-N-S-nummer in 2 minuten",
     "serviceDescription": "Directe opzoekservice voor D-U-N-S-nummers voor bedrijven"

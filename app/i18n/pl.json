@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "Numer DUNS: Uzyskaj swój D-U-N-S w 2 minuty | DUNS Verify",
     "description": "Uzyskaj swój numer DUNS natychmiast. Znajdź i zweryfikuj numer D-U-N-S swojej firmy w Polsce i Europie. Wynik na email w 2 min za 4,99 €.",
@@ -119,6 +119,7 @@
     "paymentError": "Płatność nie została potwierdzona.",
     "paymentVerifyError": "Nie można zweryfikować płatności."
   },
+  "disclaimer": "Numer D-U-N-S® jest przyznawany bezpłatnie przez Dun & Bradstreet (dnb.com). DUNS Verify to niezależna płatna usługa wyszukiwania (4,99 €), która pomaga znaleźć istniejący numer w 2 minuty. Niezwiązana z Dun & Bradstreet.",
   "jsonLd": {
     "websiteDescription": "Uzyskaj swój numer D-U-N-S w 2 minuty",
     "serviceDescription": "Usługa natychmiastowego wyszukiwania numeru D-U-N-S dla firm"

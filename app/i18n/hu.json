@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "DUNS szám: Szerezze meg D-U-N-S számát 2 perc alatt | DUNS Verify",
     "description": "Szerezze meg DUNS számát azonnal. Keresse meg és ellenőrizze vállalata D-U-N-S számát Magyarországon és Európában. Eredmény emailben 2 perc alatt 4,99 €-ért.",
@@ -119,6 +119,7 @@
     "paymentError": "Fizetés nem megerősítve.",
     "paymentVerifyError": "A fizetés nem ellenőrizhető."
   },
+  "disclaimer": "A D-U-N-S®-számot a Dun & Bradstreet (dnb.com) ingyenesen osztja ki. A DUNS Verify egy független, fizetős keresési szolgáltatás (4,99 €), amely segít megtalálni meglévő számát 2 percen belül. Nem áll kapcsolatban a Dun & Bradstreet-tel.",
   "jsonLd": {
     "websiteDescription": "Szerezze meg D-U-N-S számát 2 perc alatt",
     "serviceDescription": "Azonnali D-U-N-S szám kereső szolgáltatás vállalatok számára"

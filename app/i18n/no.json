@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "DUNS-nummer: Få ditt D-U-N-S på 2 minutter | DUNS Verify",
     "description": "Få ditt DUNS-nummer umiddelbart. Finn og verifiser D-U-N-S-nummeret for bedriften din i Norge og Europa. Resultat på e-post på 2 min for 4,99 €.",
@@ -119,6 +119,7 @@
     "paymentError": "Betaling ikke bekreftet.",
     "paymentVerifyError": "Kan ikke verifisere betalingen."
   },
+  "disclaimer": "D-U-N-S®-nummeret tildeles gratis av Dun & Bradstreet (dnb.com). DUNS Verify er en uavhengig betalt søketjeneste (4,99 €) som hjelper deg med å finne ditt eksisterende nummer på 2 minutter. Ikke tilknyttet Dun & Bradstreet.",
   "jsonLd": {
     "websiteDescription": "Få ditt D-U-N-S-nummer på 2 minutter",
     "serviceDescription": "Umiddelbar D-U-N-S-nummersøketjeneste for bedrifter"
