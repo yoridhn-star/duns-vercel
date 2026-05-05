@@ -120,6 +120,8 @@
     "paymentVerifyError": "Maksun tarkistaminen epäonnistui."
   },
   "disclaimer": "D-U-N-S®-numero myönnetään ilmaiseksi Dun & Bradstreet -yhtiön toimesta (dnb.com). DUNS Verify on riippumaton maksullinen hakupalvelu (4,99 €), joka auttaa sinua löytämään olemassa olevan numerosi 2 minuutissa. Ei yhteydessä Dun & Bradstreet -yhtiöön.",
+  "refunded": "Palautettu automaattisesti",
+  "refundedDesc": "Tälle yritykselle ei löytynyt tuloksia. 4,99 euron maksusi on palautettu automaattisesti maksutapaasi.",
   "jsonLd": {
     "websiteDescription": "Löydä D-U-N-S-numerosi 2 minuutissa",
     "serviceDescription": "Välitön D-U-N-S-numeron hakupalvelu yrityksille"

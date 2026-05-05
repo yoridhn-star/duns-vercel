@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
+import Stripe from "stripe";
 import { Resend } from "resend";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const RENDER_API_URL = process.env.RENDER_API_URL;
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -200,7 +203,7 @@ export async function POST(request) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { companyName, country, email, lang } = body;
+  const { companyName, country, email, lang, sessionId } = body;
 
   if (!companyName?.trim()) {
     return NextResponse.json({ error: "companyName is required" }, { status: 400 });
@@ -250,6 +253,26 @@ export async function POST(request) {
       console.log(`[email] sent to ${email.trim()} (lang=${resolvedLang})`);
     } catch (mailErr) {
       console.error("[email] send failed:", mailErr.message);
+    }
+  }
+
+  // ── Auto-refund if no result found ───────────────────────────────────────
+  const hasResult = data.success && data.data;
+  if (!hasResult && sessionId) {
+    try {
+      const session = await stripe.checkout.sessions.retrieve(sessionId);
+      if (session.payment_status === "paid" && session.payment_intent) {
+        await stripe.refunds.create({
+          payment_intent: session.payment_intent,
+          reason: "requested_by_customer",
+          metadata: { reason: "no_duns_found", company: companyName },
+        });
+        data.refunded = true;
+        console.log(`[refund] auto-refunded session ${sessionId} — no result for "${companyName}"`);
+      }
+    } catch (refundErr) {
+      // Log but don't fail the response — client still gets no-result info
+      console.error("[refund] failed:", refundErr.message);
     }
   }
 

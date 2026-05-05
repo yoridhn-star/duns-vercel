@@ -120,6 +120,8 @@
     "paymentVerifyError": "Impossible de vérifier le paiement."
   },
   "disclaimer": "Le numéro D-U-N-S® est attribué gratuitement par Dun & Bradstreet (dnb.com). DUNS Verify est un service de recherche indépendant (4,99 €) qui vous aide à retrouver votre numéro existant en 2 minutes. Non affilié à Dun & Bradstreet.",
+  "refunded": "Remboursé automatiquement",
+  "refundedDesc": "Aucun résultat trouvé pour cette entreprise. Votre paiement de 4,99 € a été remboursé automatiquement sur votre moyen de paiement.",
   "jsonLd": {
     "websiteDescription": "Retrouvez votre numéro D-U-N-S en 2 minutes",
     "serviceDescription": "Service de recherche instantanée de numéro D-U-N-S pour les entreprises"

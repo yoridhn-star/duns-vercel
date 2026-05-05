@@ -20,6 +20,7 @@ export default function SuccessContent({ t, lang }) {
   const [status, setStatus] = useState("loading"); // loading | searching | success | error | no-result
   const [result, setResult] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
+  const [refunded, setRefunded] = useState(false);
   const [elapsedSec, setElapsedSec] = useState(0);
 
   useEffect(() => {
@@ -64,6 +65,7 @@ export default function SuccessContent({ t, lang }) {
             country: metadata.country,
             email: metadata.email,
             lang: metadata.lang || lang,
+            sessionId,
           }),
           signal: AbortSignal.timeout(180_000),
         });
@@ -80,6 +82,7 @@ export default function SuccessContent({ t, lang }) {
           setResult(data.data);
           setStatus("success");
         } else {
+          if (data.refunded) setRefunded(true);
           setStatus("no-result");
         }
       } catch (err) {
@@ -166,12 +169,19 @@ export default function SuccessContent({ t, lang }) {
           {status === "no-result" && (
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
               <div className="flex justify-center mb-6">
-                <AlertCircle className="w-16 h-16 text-amber-500" />
+                {refunded
+                  ? <CheckCircle className="w-16 h-16 text-emerald-500" />
+                  : <AlertCircle className="w-16 h-16 text-amber-500" />
+                }
               </div>
-              <div className="border-l-4 border-amber-400 bg-amber-50 rounded-r-xl p-4 mb-6 text-left">
-                <p className="text-slate-600 text-sm">{t.notFoundDesc}</p>
+              <h1 className="text-2xl font-bold text-[#1E3A5F] mb-4">
+                {refunded ? t.refunded : t.notFound}
+              </h1>
+              <div className={`border-l-4 ${refunded ? "border-emerald-400 bg-emerald-50" : "border-amber-400 bg-amber-50"} rounded-r-xl p-4 mb-6 text-left`}>
+                <p className="text-slate-600 text-sm">
+                  {refunded ? t.refundedDesc : t.notFoundDesc}
+                </p>
               </div>
-              <h1 className="text-2xl font-bold text-[#1E3A5F] mb-6">{t.notFound}</h1>
               <a
                 href={homeHref}
                 className="inline-flex items-center gap-2 border border-[#1E3A5F] text-[#1E3A5F] hover:bg-slate-50 transition-colors text-sm font-medium px-5 py-2.5 rounded-lg"

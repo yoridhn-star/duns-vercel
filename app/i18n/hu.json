@@ -120,6 +120,8 @@
     "paymentVerifyError": "A fizetés nem ellenőrizhető."
   },
   "disclaimer": "A D-U-N-S®-számot a Dun & Bradstreet (dnb.com) ingyenesen osztja ki. A DUNS Verify egy független, fizetős keresési szolgáltatás (4,99 €), amely segít megtalálni meglévő számát 2 percen belül. Nem áll kapcsolatban a Dun & Bradstreet-tel.",
+  "refunded": "Automatikusan visszatérítve",
+  "refundedDesc": "Ehhez a céghez nem találtunk eredményt. A 4,99 €-os kifizetése automatikusan visszatérítésre került a fizetési módjára.",
   "jsonLd": {
     "websiteDescription": "Keresse meg D-U-N-S számát 2 perc alatt",
     "serviceDescription": "Azonnali D-U-N-S szám kereső szolgáltatás vállalatok számára"

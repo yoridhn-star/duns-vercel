@@ -120,6 +120,8 @@
     "paymentVerifyError": "Platbu nelze ověřit."
   },
   "disclaimer": "Číslo D-U-N-S® je přidělovno zdarma společností Dun & Bradstreet (dnb.com). DUNS Verify je nezávislá placená vyhledávací služba (4,99 €), která vám pomůže najít vaše stávající číslo za 2 minuty. Není přidružena k Dun & Bradstreet.",
+  "refunded": "Automaticky vráceno",
+  "refundedDesc": "Pro tuto firmu nebyl nalezen žádný výsledek. Vaše platba 4,99 € byla automaticky vrácena na váš platební prostředek.",
   "jsonLd": {
     "websiteDescription": "Najděte své číslo D-U-N-S za 2 minuty",
     "serviceDescription": "Okamžitá vyhledávací služba čísla D-U-N-S pro firmy"

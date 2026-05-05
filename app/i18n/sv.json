@@ -120,6 +120,8 @@
     "paymentVerifyError": "Kan inte verifiera betalningen."
   },
   "disclaimer": "D-U-N-S®-numret tilldelas kostnadsfritt av Dun & Bradstreet (dnb.com). DUNS Verify är en oberoende betaltjänst (4,99 €) som hjälper dig att hitta ditt befintliga nummer på 2 minuter. Inte associerad med Dun & Bradstreet.",
+  "refunded": "Automatiskt återbetald",
+  "refundedDesc": "Inget resultat hittades för detta företag. Din betalning på 4,99 € har automatiskt återbetalats till din betalningsmetod.",
   "jsonLd": {
     "websiteDescription": "Hitta ditt D-U-N-S-nummer på 2 minuter",
     "serviceDescription": "Omedelbar D-U-N-S-nummertjänst för företag"
